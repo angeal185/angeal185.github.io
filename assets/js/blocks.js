@@ -3,15 +3,15 @@ $("a").attr("href", "javascript:void(0)");
 
 $("#mt,#ctm").attr("href", href="mailto:beneaves01@hotmail.com");
 $("#nv-0,#nv-1,#nv-2,#nv-3,#nv-4,#nv-5").addClass("tm nav-parent");
+$("#cdpt,#jsft,#gtlt,#lndt,#flkrt,#fsc,#ctm,#gth2 ").addClass("fa");
 $("#wbs1,#wbs2,#wbs3,#wbs4,#cdpt,#jsft,#gtlt,#lndt").addClass("ani fadeIn");
 $("#wbs1,#wbs2,#wbs3,#wbs4 ").addClass("octicon");
-$("#cdpt,#jsft,#gtlt,#lndt,#flkrt,#fsc,#ctm,#gth2 ").addClass("fa");
-$( "#wbs1,#wbs2,#wbs3,#wbs4,#cdpt,#jsft,#gtlt,#lndt" ).data( "ani-duration" ) === "5s";
+
 $("#cc0,#cc1,#cc2,#cc3 ").addClass("children collapse").add;
 
 
 
-$("#fsc,#ctm,#gth2").addClass("pull-left");
+
 $("#imgh").attr({
         "src" : "assets/images/avatars/github-512.png",
         "class" : "img-responsive img-circle"
@@ -26,25 +26,26 @@ $("#fsc").attr({
         "title" : "fullscreen",
     });
 
-$("#ctm").attr("title", "contact me");
+$("#ctm").attr({
+        "title" : "contact me",
+        "class" : "toggle"
+        });
+
 $("#gth2").attr({
         "src" : "assets/images/avatars/github.png",
+        "class" : "toggle",
         "title" : "back to github"
     });
 
-$.get('http://jsonip.com', function (res) {
-        $('#ip').html( 'Your IP: ' +res.ip);
-    });
-//document.getElementById("imgh").src = ("assets/images/avatars/github-512.png");
-//$("#imgh").addClass("img-responsive img-circle");
+//$.get('http://jsonip.com', function (res) {
+  //      $('#ip').html( 'Your IP: ' +res.ip);
+  //  });
+$("#fsc,#ctm,#gth2").addClass("pull-left");
 
 
 
 document.getElementById('ctm').title = 'contact me';
 
-//document.getElementById('indx').title = 'index';
-//document.getElementById("imgh").src = "assets/images/avatars/github-512.png";
-    //document.getElementById("div1").classList.add("classToBeAdded");
 
 
 $(function() {
