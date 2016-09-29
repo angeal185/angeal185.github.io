@@ -657,19 +657,19 @@ function lnd() {
 }
 $('#wbs1').addClass("octicon-flame").prop('title', 'My website');
 function wbs() {
-    window.open("http://angeal185.byethost6.com/html");
+    window.open("http://angeal185.gitlab.io/angeal185/");
 }
 $('#wbs2').addClass("octicon-database").prop('title', 'My Portfolio');
 function wbsp() {
-    window.open("http://angeal185.byethost6.com/portfolio.html");
+    window.open("http://angeal185.gitlab.io/angeal185/");
 }
 $('#wbs3').addClass("octicon-file-text").prop('title', 'Contact me');
 function wbsc() {
-    window.open("https://angeal185.byethost6.com/contact.html");
+    window.open("http://angeal185.gitlab.io/angeal185/");
 }
 $('#wbs4').addClass("octicon-comment-discussion").prop('title', 'My resume');
 function wbscv() {
-    window.open("https://angeal185.byethost6.com/contact.html");
+    window.open("http://angeal185.gitlab.io/angeal185/");
 }
 
 
