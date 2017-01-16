@@ -1,3 +1,4 @@
+
 //js
 $("a").attr("href", "javascript:void(0)");
 
@@ -49,7 +50,7 @@ document.getElementById('ctm').title = 'contact me';
 
 
 $(function() {
-         $( "#pagecontainer" ).load( "blocks/page/index.html" );
+         $( "#pagecontainer" ).load( "blocks/page/index.tpl" );
 
 });
 
@@ -254,18 +255,14 @@ $(function() {
 $(function() {
 
     $.preload([
-        'blocks/page/h-projects.html',
-        'blocks/page/j-projects.html',
-        'blocks/page/p-projects.html',
-        'blocks/page/py-projects.html',
-        'blocks/page/p-sites.html',
-        'blocks/page/py-sites.html',
-        'blocks/page/j-sites.html',
-        'blocks/page/h-sites.html',
-        'blocks/page/j-templates.html',
-        'blocks/page/h-templates.html',
-        'blocks/page/p-templates.html',
-        'blocks/page/py-templates.html'
+        'blocks/page/h-projects.tpl',
+        'blocks/page/j-projects.tpl',
+        'blocks/page/p-projects.tpl',
+        'blocks/page/py-projects.tpl',
+        'blocks/page/j-templates.tpl',
+        'blocks/page/h-templates.tpl',
+        'blocks/page/p-templates.tpl',
+        'blocks/page/py-templates.tpl'
 
 
 
@@ -275,357 +272,193 @@ $(function() {
 });
 
 
-$(function(){
-    $('#snp-pre').click(function(){
-       $.preload([
-       'blocks/snippets/snp-html.html',
-       'blocks/snippets/snp-php.html',
-       'blocks/snippets/snp-js.html',
-       'blocks/snippets/snp-python.html']
-            )}
-        );
-    });
 
 $(function(){
     $('.sidebar-widgets').mouseover(function(){
        $.preload([
-       'blocks/page/timeline.html']
+       'blocks/page/timeline.tpl']
             )}
         );
     });
 
+//routes
+            $(function(){
+                $('indx').title = 'index';
+                $('#indx').click(function(){
+			        $('#pagecontainer').load('blocks/page/index.tpl')}
+					);
 
-            jQuery(function(){
-                document.getElementById('indx').title = 'index';
-                jQuery('#indx').click(function(){
-			        jQuery('#pagecontainer').load('blocks/page/index.html')}
+			       $('#h-p,#h-t,#h-s').prop('title', 'NODEJS');
+				$('#h-p').click(function(){
+					$('#pagecontainer').load('blocks/page/h-projects.tpl #hp01')}
 					);
-				});
-			jQuery(function(){
-			       $('#h-p,#h-t,#h-s').prop('title', 'html');
-				jQuery('#h-p').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-projects.html #hp01')}
-					);
-				});
-            jQuery(function(){
 
-				jQuery('#h-p2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-projects.html #hp02')}
-					);
-				});
-            jQuery(function(){
 
-                jQuery('#h-p3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-projects.html #hp03')}
+				$('#h-p2').click(function(){
+					$('#pagecontainer').load('blocks/page/h-projects.tpl #hp02')}
 					);
-				});
-			jQuery(function(){
 
-				jQuery('#h-t').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-templates.html #ht01')}
-					);
-				});
-            jQuery(function(){
 
-				jQuery('#h-t2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-templates.html #ht02')}
+                $('#h-p3').click(function(){
+					$('#pagecontainer').load('blocks/page/h-projects.tpl #hp03')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#h-t3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-templates.html #ht03')}
-					);
-				});
-			jQuery(function(){
 
-				jQuery('#h-s').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-sites.html #hs01')}
+				$('#h-t').click(function(){
+					$('#pagecontainer').load('blocks/page/h-templates.tpl #ht01')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#h-s2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-sites.html #hs02')}
-					);
-				});
-            jQuery(function(){
 
-				jQuery('#h-s3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/h-sites.html #hs03')}
+				$('#h-t2').click(function(){
+					$('#pagecontainer').load('blocks/page/h-templates.tpl #ht02')}
 					);
-				});
-			jQuery(function(){
+
+
+				$('#h-t3').click(function(){
+					$('#pagecontainer').load('blocks/page/h-templates.tpl #ht03')}
+					);
+			});
+
+
+
+			$(function(){
                 $('#p-p,#p-t,#p-s').prop('title', 'php');
-				jQuery('#p-p').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-projects.html #pp01')}
+				$('#p-p').click(function(){
+					$('#pagecontainer').load('blocks/page/p-projects.tpl #pp01')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#p-p2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-projects.html #pp02')}
+				$('#p-p2').click(function(){
+					$('#pagecontainer').load('blocks/page/p-projects.tpl #pp02')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#p-p3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-projects.html #pp03')}
-					);
-				});
-			jQuery(function(){
 
-				jQuery('#p-t').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-templates.html #pt01')}
+				$('#p-p3').click(function(){
+					$('#pagecontainer').load('blocks/page/p-projects.tpl #pp03')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#p-t2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-templates.html #pt02')}
-					);
-				});
-            jQuery(function(){
 
-				jQuery('#p-t3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-templates.html #pt03')}
+				$('#p-t').click(function(){
+					$('#pagecontainer').load('blocks/page/p-templates.tpl #pt01')}
 					);
-				});
-			jQuery(function(){
 
-				jQuery('#p-s').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-sites.html #ps01')}
-					);
-				});
-            jQuery(function(){
 
-				jQuery('#p-s2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-sites.html #ps02')}
+				$('#p-t2').click(function(){
+					$('#pagecontainer').load('blocks/page/p-templates.tpl #pt02')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#p-s3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/p-sites.html #ps03')}
+
+				$('#p-t3').click(function(){
+					$('#pagecontainer').load('blocks/page/p-templates.tpl #pt03')}
 					);
-				});
-			jQuery(function(){
+
                 $('#j-p,#j-t,#j-s').prop('title', 'javascript');
-				jQuery('#j-p').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-projects.html #jp01')}
+				$('#j-p').click(function(){
+					$('#pagecontainer').load('blocks/page/j-projects.tpl #jp01')}
 					);
-				});
-            jQuery(function(){
+			});
+				
+            $(function(){
 
-				jQuery('#j-p2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-projects.html #jp02')}
+				$('#j-p2').click(function(){
+					$('#pagecontainer').load('blocks/page/j-projects.tpl #jp02')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#j-p3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-projects.html #jp03')}
+				$('#j-p3').click(function(){
+					$('#pagecontainer').load('blocks/page/j-projects.tpl #jp03')}
 					);
-				});
-			jQuery(function(){
 
-				jQuery('#j-t').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-templates.html #jt01')}
+				$('#j-t').click(function(){
+					$('#pagecontainer').load('blocks/page/j-templates.tpl #jt01')}
 					);
-				});
-            jQuery(function(){
 
-				jQuery('#j-t2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-templates.html #jt02')}
+				$('#j-t2').click(function(){
+					$('#pagecontainer').load('blocks/page/j-templates.tpl #jt02')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#j-t3').click(function(){
+					
+				$('#j-t3').click(function(){
 
-					jQuery('#pagecontainer').load('blocks/page/j-templates.html #jt03')}
+					$('#pagecontainer').load('blocks/page/j-templates.tpl #jt03')}
 					);
-				});
-			jQuery(function(){
-				jQuery('#j-s').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-sites.html #js01')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#j-s2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-sites.html #js02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#j-s3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/j-sites.html #js03')}
-					);
-				});
-			jQuery(function(){
+			});
+				
+			$(function(){
                 $('#py-p,#py-t,#py-s').prop('title', 'python');
-				jQuery('#py-p').click(function(){
+				$('#py-p').click(function(){
 
-					jQuery('#pagecontainer').load('blocks/page/py-projects.html #pyp01')}
+					$('#pagecontainer').load('blocks/page/py-projects.tpl #pyp01')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#py-p2').click(function(){
 
-					jQuery('#pagecontainer').load('blocks/page/py-projects.html #pyp02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#py-p3').click(function(){
+				$('#py-p2').click(function(){
 
-					jQuery('#pagecontainer').load('blocks/page/py-projects.html #pyp03')}
+					$('#pagecontainer').load('blocks/page/py-projects.tpl #pyp02')}
 					);
-				});
-			jQuery(function(){
-				jQuery('#py-t').click(function(){
 
-					jQuery('#pagecontainer').load('blocks/page/py-templates.html #pyt01')}
+				$('#py-p3').click(function(){
+
+					$('#pagecontainer').load('blocks/page/py-projects.tpl #pyp03')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#py-t2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/py-templates.html #pyt02')}
+
+				$('#py-t').click(function(){
+
+					$('#pagecontainer').load('blocks/page/py-templates.tpl #pyt01')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#py-t3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/py-templates.html #pyt03')}
+
+				$('#py-t2').click(function(){
+					$('#pagecontainer').load('blocks/page/py-templates.tpl #pyt02')}
 					);
-				});
-			jQuery(function(){
-				jQuery('#py-s').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/py-sites.html #pys01')}
+
+				$('#py-t3').click(function(){
+					$('#pagecontainer').load('blocks/page/py-templates.tpl #pyt03')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#py-s2').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/py-sites.html #pys02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#py-s3').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/py-sites.html #pys03')}
-					);
-				});
-            jQuery(function(){
-                $('#sn-h,#sn-p,#sn-py,#sn-j').prop('title', 'snippets');
-				jQuery('#sn-h').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-html.html #snh01')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-h2').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-html.html #snh02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-h3').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-html.html #snh03')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-py').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-python.html #snpy01')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-py2').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-python.html #snpy02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-py3').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-python.html #snpy03')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-p').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-php.html #snp01')}
-					);
-				})
-            jQuery(function(){
-				jQuery('#sn-p2').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-php.html #snp02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-p3').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-php.html #snp03')}
-					);
-				});
-             jQuery(function(){
-				jQuery('#sn-j').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-js.html #snj01')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-j2').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-js.html #snj02')}
-					);
-				});
-            jQuery(function(){
-				jQuery('#sn-j3').click(function(){
-					jQuery('#pagecontainer').load('blocks/snippets/snp-js.html #snj03')}
-					);
-				});
-             jQuery(function(){
+			});
+				
+             $(function(){
             //    $('#blg').prop('title', 'blog');
-				jQuery('#blg').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg01')}
+				$('#blg').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg01')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg2').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg02')}
+
+				$('#blg2').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg02')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg3').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg03')}
+
+				$('#blg3').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg03')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg4').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg04')}
+
+				$('#blg4').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg04')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg5').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg05')}
+
+				$('#blg5').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg05')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg6').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg06')}
+
+				$('#blg6').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg06')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg7').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg07')}
+
+				$('#blg7').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg07')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg8').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg08')}
+
+				$('#blg8').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg08')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg9').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg09')}
+
+				$('#blg9').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg09')}
 					);
-				});
-            jQuery(function(){
-				jQuery('#blg10').click(function(){
-					jQuery('#pagecontainer').load('blocks/blog/index.html  #blg10')}
+
+				$('#blg10').click(function(){
+					$('#pagecontainer').load('blocks/blog/index.tpl  #blg10')}
 					);
-				});
-             jQuery(function(){
+			});
+			
+            $(function(){
                 $('#tml').prop('title', 'timeline');
-				jQuery('#tml').click(function(){
-					jQuery('#pagecontainer').load('blocks/page/timeline.html')}
+				$('#tml').click(function(){
+					$('#pagecontainer').load('blocks/page/timeline.tpl')}
 					);
 				});
 
