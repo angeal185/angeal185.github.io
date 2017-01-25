@@ -156,7 +156,6 @@ $(function() {
 		'views/page/python-templates.tpl',
         	'views/page/php-projects.tpl',
         	'views/page/php-templates.tpl',
-		'static/js/template.json',
 		'views/page/timeline.tpl',
 		'static/images/nodejs.png',
 		'static/images/python.png',
