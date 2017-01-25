@@ -1,0 +1,407 @@
+﻿var slideTopData = {};
+var slideTop =
+{"<>":"div","id":"slidetop","class":"ani flash","data-ani-duration":"6s","data-ani-delay":"6s","html":[
+    {"<>":"div","class":"container","style":"display: none","html":[
+        {"<>":"div","class":"row","html":[
+            {"<>":"div","id":"topA","class":"col-md-4","html":[
+                {"<>":"p","html":"..."},
+                {"<>":"br","html":""},
+                {"<>":"p","html":"SITE IS UNDER CONSTRUCTION"}
+              ]},
+            {"<>":"div","id":"topB","class":"col-md-4","html":[
+                {"<>":"ul","id":"follow","class":"list-unstyled","html":""}
+              ]},
+            {"<>":"div","id":"topC","class":"col-md-4","html":[
+                {"<>":"ul","class":"list-unstyled","html":[
+                    {"<>":"li","html":[
+                        {"<>":"b","html":"Address:"},
+                        {"<>":"p","html":"Melbourne, Australia"}
+                      ]},
+                    {"<>":"li","html":[
+                        {"<>":"b","html":"Email:"},
+                        {"<>":"br","html":""},
+                        {"<>":"a","id":"mt","html":""}
+                      ]}
+                  ]}
+              ]}
+          ]}
+      ]},
+    {"<>":"a","class":"slidetop-toggle","html":""}
+  ]};
+
+var sidebarData = {};
+var sidebar =
+{"<>":"div","class":"sidebar","html":[
+    {"<>":"div","class":"logopanel","html":[
+        {"<>":"h1","style":"text-align:center","html":"GITHUB"}
+      ]},
+    {"<>":"div","class":"sidebar-inner","html":[
+        {"<>":"div","class":"sidebar-top small-img clearfix","style":"display: block","html":[
+            {"<>":"div","class":"user-image","html":[
+                {"<>":"img","id":"imgh","html":""}
+              ]},
+            {"<>":"div","class":"user-details","html":[
+                {"<>":"h4","html":"ANGEAL"},
+                {"<>":"div","id":"usr","class":"user-login","html":""}
+              ]}
+          ]},
+        {"<>":"div","class":"menu-title","html":[
+            {"<>":"span","html":"Navigation"},
+            {"<>":"div","class":"pull-right menu-settings","html":[
+                {"<>":"a","id":"hide-top-sidebar","title":"hide","class":"hide-top-sidebar","html":[
+                    {"<>":"i","class":"fa fa-cog","html":""}
+                  ]}
+              ]}
+          ]},
+        {"<>":"ul","id":"menu","class":"nav nav-sidebar","html":[
+            {"<>":"li","class":"tm nav-parent","html":[
+                {"<>":"a","id":"indx","html":[
+                    {"<>":"i","class":"fa fa-tachometer c-primary","html":""},
+                    {"<>":"span","html":"Index"}
+                  ]}
+              ]}
+          ]},
+        {"<>":"div","class":"sidebar-widgets","style":"margin-bottom: 60px","html":[
+            {"<>":"p","html":"Folders"},
+            {"<>":"ul","class":"data","html":[
+                {"<>":"li","html":[
+                    {"<>":"a","id":"blg","html":""}
+                  ]},
+                {"<>":"li","html":[
+                    {"<>":"a","id":"tml","html":""}
+                  ]}
+              ]},
+            {"<>":"code","id":"ip","html":""}
+          ]},
+        {"<>":"div","class":"sidebar-footer clearfix","html":[
+            {"<>":"a","id":"ctm","html":[
+                {"<>":"i","class":"fa fa-envelope-o","html":""}
+              ]},
+            {"<>":"a","id":"fsc","html":[
+                {"<>":"i","class":"fa fa-arrows-alt","html":""}
+              ]}
+          ]}
+      ]}
+  ]};
+
+var mainContentData = {};
+var mainContent =
+{"<>":"div","class":"main-content","html":[
+    {"<>":"div","class":"topbar","html":[
+        {"<>":"div","class":"header-left","style":"display: block","html":[
+            {"<>":"div","class":"topnav","html":[
+                {"<>":"a","class":"menutoggle","data-toggle":"sidebar-collapsed","html":[
+                    {"<>":"span","class":"menu__handle","html":[
+                        {"<>":"span","html":"Menu"}
+                      ]}
+                  ]}
+              ]},
+            {"<>":"ul","id":"headerLeft","class":"header-menu nav navbar-nav","html":""}
+          ]},
+        {"<>":"div","class":"topnav","html":[
+            {"<>":"div","class":"header-right","html":[
+                {"<>":"ul","id":"headerRight","class":"header-menu nav navbar-nav","html":""}
+              ]}
+          ]}
+      ]},
+    {"<>":"div","id":"pagecontainer","html":""},
+    {"<>":"div","id":"footer","class":"copyright col-md-12","html":""},
+    {"<>":"div","class":"loader-overlay","html":[
+        {"<>":"div","id":"spinner","class":"spinner","html":""}
+      ]},
+    {"<>":"a","class":"scrollup","html":[
+        {"<>":"i","class":"fa fa-angle-up","html":""}
+      ]}
+  ]};
+
+  
+  
+var followData = [
+{"title":" My Website","onclick":"wbs()","class":"octicon octicon-flame"},
+{"title":" My Github","onclick":"gth()","class":"fa fa-github"},
+{"title":" My Gitlab","onclick":"gtl()","class":"fa fa-gitlab"},
+{"title":" My Codepen","onclick":"cdp()","class":"fa fa-codepen"},
+{"title":" My Jsfiddle","onclick":"jsf()","class":"fa fa-jsfiddle"}
+];
+
+var follow = 
+{"<>":"li","html":[
+    {"<>":"a","onclick":"${onclick}","class":"${class}","html":"${title}"}
+  ]}
+
+var menuData = [
+{"title":"NODEJS","idProj":"h-p","idTemp":"h-t"},
+{"title":"JAVASCRIPT","idProj":"j-p","idTemp":"j-t"},
+{"title":"PYTHON","idProj":"py-p","idTemp":"py-t"},
+{"title":"PHP","idProj":"p-p","idTemp":"p-t"}
+];
+
+var menu = 
+{"<>":"li","class":"tm nav-parent","html":[
+    {"<>":"a","html":[
+        {"<>":"i","class":"fa fa-code c-fourth","html":""},
+        {"<>":"span","html":"${title}"},
+        {"<>":"span","class":"fa arrow","html":""}
+      ]},
+    {"<>":"ul","class":"children collapse","html":[
+        {"<>":"li","html":[
+            {"<>":"a","id":"${idProj}","html":"Projects"}
+          ]},
+        {"<>":"li","html":[
+            {"<>":"a","id":"${idTemp}","html":"Templates"}
+          ]}
+      ]}
+  ]};
+
+  
+var headerMainLeftData = [
+{"onclick":"wbs()","id":"wbs1","time":"5s"},
+{"onclick":"wbsp()","id":"wbs2","time":"6s"},
+{"onclick":"wbscv()","id":"wbs3","time":"7s"},
+{"onclick":"wbsct()","id":"wbs4","time":"8s"}
+];
+
+var headerMainRightData = [
+{"onclick":"cdp()","id":"cdpt","time":"8s"},
+{"onclick":"jsf()","id":"jsft","time":"7s"},
+{"onclick":"gtl()","id":"gtlt","time":"6s"},
+{"onclick":"lnd()","id":"lndt","time":"5s"}
+];  
+
+var headerMain = 
+{"<>":"li","html":[
+    {"<>":"a","onclick":"${onclick}","html":[
+        {"<>":"i","id":"${id}","data-ani-delay":"${time}","html":""}
+      ]}
+  ]}; 
+
+var loaderData = [
+{"class":"bounce1"},
+{"class":"bounce2"},
+{"class":"bounce3"}
+];  
+  
+var loader = 
+{"<>":"div","class":"${class}","html":""};
+
+var indexHeader = [
+{"title":"DASHBOARD","sub":""}
+];
+  
+var nodejsTemp = [
+{"title":"NODEJS","sub":"TEMPLATES"}
+];
+
+var nodejsProj = [
+{"title":"NODEJS","sub":"PROJECTS"}
+];
+
+var javascriptTemp = [
+{"title":"JAVASCRIPT","sub":"TEMPLATES"}
+];
+
+var javascriptProj = [
+{"title":"JAVASCRIPT","sub":"PROJECTS"}
+];
+
+var pythonTemp = [
+{"title":"PYTHON","sub":"TEMPLATES"}
+];
+
+var pythonProj = [
+{"title":"PYTHON","sub":"PROJECTS"}
+];
+
+var phpTemp = [
+{"title":"PHP","sub":"TEMPLATES"}
+];
+
+var phpProj = [
+{"title":"PHP","sub":"PROJECTS"}
+];
+
+var timelineHeader = [
+{"title":"TIMELINE","sub":""}
+];
+
+
+
+var header =
+{"<>":"div","class":"row","html":[
+    {"<>":"div","class":"col-md-12","html":[
+        {"<>":"div","class":"header","html":[
+            {"<>":"h2","class":"c-primary","html":"${title}:${sub}"},
+            {"<>":"div","class":"breadcrumb-wrapper","html":[
+                {"<>":"ol","class":"breadcrumb","html":[
+                    {"<>":"li","class":"c-third","html":"${title}"}
+                  ]}
+              ]},
+            {"<>":"p","style":"display: block","html":"${title} ${sub} LIST"}
+          ]}
+      ]}
+  ]};
+
+
+
+
+var nodejsProjects = [
+{"name":"Nodejs","img":"static/images/nodejs.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":"express","img":"static/images/nodejs.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"sails","img":"static/images/nodejs.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"derby","img":"static/images/nodejs.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"angular","img":"static/images/nodejs.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"mean","img":"static/images/nodejs.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var nodejsTemplates = [
+{"name":"Template1","img":"static/images/nodejs.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":"Template2","img":"static/images/nodejs.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template3","img":"static/images/nodejs.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template4","img":"static/images/nodejs.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template5","img":"static/images/nodejs.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template6","img":"static/images/nodejs.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var javascriptProjects = [
+{"name":" javascript","img":"static/images/angular.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var javascriptTemplates = [
+{"name":" javascript","img":"static/images/jquery.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var phpProjects = [
+{"name":" PHP","img":"static/images/php.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":" PHP","img":"static/images/php.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var phpTemplates = [
+{"name":" PHP","img":"static/images/php.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":" PHP","img":"static/images/php.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var pythonProjects = [
+{"name":"python","img":"static/images/python.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":"python","img":"static/images/python.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var pythonTemplates = [
+{"name":"python","img":"static/images/python.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":"python","img":"static/images/python.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var template =
+{"<>":"div","class":"row","html":[
+    {"<>":"div","class":"col-md-6","html":[
+        {"<>":"div","class":"fileinput fileinput-new","data-provides":"fileinput","html":[
+			{"<>":"div","class":"text","html":[
+				{"<>":"img","class":"img-demo","src":"${img}","html":"${name}"}
+				]}
+          ]}
+      ]},
+    {"<>":"div","class":"col-md-6","html":[
+        {"<>":"div","class":"panel","html":[
+            {"<>":"div","class":"panel-content","html":[
+                {"<>":"h1","class":"","html":"${title}"},
+                {"<>":"p","class":"m-t-40","html":"${sub}"}
+              ]},
+            {"<>":"div","class":"panel-footer clearfix","html":[
+                {"<>":"div","class":"pull-right","html":[
+					{"<>":"a","href":"${hrefA}","target":"_blank","html":[
+						{"<>":"button","type":"button","class":"btn btn-white m-r-10","formaction":"${hrefA}","html":"${btnA}"}
+						]},
+					{"<>":"a","href":"${hrefB}","target":"_blank","html":[
+						{"<>":"button","type":"button","class":"btn btn-success","html":"${btnB}"}
+						]}
+                  ]}
+              ]}
+          ]}
+      ]}
+  ]};
+ 
+
+var timelineData = [
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	},
+	{
+		"title":"title 1",
+		"date":"00/00/0000",
+		"content":"timeline data here."
+	}
+];
+
+
+var timeline =
+{"<>":"li","class":"event","data-date":"${date}","html":[
+    {"<>":"h3","html":"${title}"},
+    {"<>":"p","html":"${content}"}
+  ]};

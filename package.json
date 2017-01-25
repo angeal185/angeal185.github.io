@@ -1,0 +1,25 @@
+{
+  "name": "angeal185.github.io-master",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeal185/angeal185.github.io.git"
+  },
+  "keywords": [
+    "jquery"
+  ],
+  "author": "ben eaves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angeal185/angeal185.github.io/issues"
+  },
+  "homepage": "https://github.com/angeal185/angeal185.github.io#readme",
+  "devDependencies": {
+    "node-static": "^0.7.9"
+  }
+}

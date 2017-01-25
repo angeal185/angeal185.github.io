@@ -1,0 +1,25 @@
+﻿var pythonTemp = [
+{"title":"PYTHON","sub":"TEMPLATES"}
+];
+
+var pythonProj = [
+{"title":"PYTHON","sub":"PROJECTS"}
+];
+
+var pythonProjects = [
+{"name":"Nodejs","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":"express","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"sails","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"derby","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"angular","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"mean","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];
+
+var pythonTemplates = [
+{"name":"Template1","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
+{"name":"Template2","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template3","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template4","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template5","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
+{"name":"Template6","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+];

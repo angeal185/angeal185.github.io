@@ -1,0 +1,14 @@
+﻿var header =
+{"<>":"div","class":"row","html":[
+    {"<>":"div","class":"col-md-12","html":[
+        {"<>":"div","class":"header","html":[
+            {"<>":"h2","class":"c-primary","html":"${title}:${sub}"},
+            {"<>":"div","class":"breadcrumb-wrapper","html":[
+                {"<>":"ol","class":"breadcrumb","html":[
+                    {"<>":"li","class":"c-third","html":"${title}"}
+                  ]}
+              ]},
+            {"<>":"p","style":"display: block","html":"${title} ${sub} LIST"}
+          ]}
+      ]}
+  ]};

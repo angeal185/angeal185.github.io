@@ -1,0 +1,26 @@
+﻿var Template =
+{"<>":"div","class":"row","html":[
+    {"<>":"div","class":"col-md-6","html":[
+        {"<>":"div","class":"fileinput fileinput-new","data-provides":"fileinput","html":[
+            {"<>":"div","class":"text","html":"${name}"}
+          ]}
+      ]},
+    {"<>":"div","class":"col-md-6","html":[
+        {"<>":"div","class":"panel","html":[
+            {"<>":"div","class":"panel-content","html":[
+                {"<>":"h1","class":"","html":"${title}"},
+                {"<>":"p","class":"m-t-40","html":"${sub}"}
+              ]},
+            {"<>":"div","class":"panel-footer clearfix","html":[
+                {"<>":"div","class":"pull-right","html":[
+					{"<>":"a","href":"${hrefA}","target":"_blank","html":[
+						{"<>":"button","type":"button","class":"btn btn-white m-r-10","formaction":"${hrefA}","html":"${btnA}"}
+						]},
+					{"<>":"a","href":"${hrefB}","target":"_blank","html":[
+						{"<>":"button","type":"button","class":"btn btn-success","html":"${btnB}"}
+						]}
+                  ]}
+              ]}
+          ]}
+      ]}
+  ]};
