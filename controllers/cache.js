@@ -146,6 +146,7 @@
 
 $(function() {
 
+
     $.preload([
         'views/page/nodejs-projects.tpl',
         'views/page/nodejs-projects.tpl',
@@ -157,7 +158,11 @@ $(function() {
         'views/page/php-templates.tpl',
 		'static/js/template.json',
 		'views/page/timeline.tpl',
-		'static/images/nodejs.png'
+		'static/images/nodejs.png',
+		'static/images/python.png',
+		'static/images/jquery.png',
+		'static/images/php.png',
+		'static/images/angular.png'
      ]);
 
 });
