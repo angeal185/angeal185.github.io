@@ -65,7 +65,7 @@ $("#gth2").attr({
         "class" : "toggle",
         "title" : "back to github"
     });
-$.get('http://ipinfo.io', function (res) {
+$.get('https://ipinfo.io', function (res) {
         $('#ip').html( 'Your IP: ' +res.ip);
     },"jsonp");
 $("#fsc,#ctm,#gth2").addClass("pull-left");
