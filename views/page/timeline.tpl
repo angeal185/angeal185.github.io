@@ -1,1 +1,0 @@
-<div class="page-content"><div id="timeline" class="row"></div><div id="content"><ul id="timelineData" class="timeline"></ul></div></div>
