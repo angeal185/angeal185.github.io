@@ -520,17 +520,17 @@ var resume =
 var workData = [
 	{
 		"date":" CURRENT - 2013",
-		"title":"UNIVERSITY LECTURER - COMPUTER SCIENCE",
+		"title":"University Lecturer - computer science",
 		"location":"Xingtai University China"
 	},
 	{
 		"date":" CURRENT - 2006",
-		"title":"FREELANCE WEB DEVELOPMENT AND DESIGN",
+		"title":"Freelance Web Development",
 		"location":""
 	},
 	{
 		"date":" 2010 - 2009",
-		"title":"COMPUTER SCIENCE INTERNSHIP",
+		"title":"Computer Science Internship",
 		"location":"Munich University of Applied Sciences Germany"
 	},
 ];
@@ -561,9 +561,9 @@ var eduData = [
 
 var edu =
 {"<>":"div","class":"block","html":[
-    {"<>":"h3","html":"2012- 2010"},
-    {"<>":"h2","class":" ani  fadeIn c-primary","html":"Master of Computer Science"},
-    {"<>":"p","html":"University of Newcastle, Sydney, Australia"},
+    {"<>":"h3","html":"${date}"},
+    {"<>":"h2","class":" ani  fadeIn c-primary","html":"${title}"},
+    {"<>":"p","html":"${location}"},
 	{"<>":"br","html":""},
 	{"<>":"br","html":""}
   ]};
