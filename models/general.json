@@ -106,9 +106,6 @@ var mainContent =
       ]},
     {"<>":"div","id":"pagecontainer","html":""},
     {"<>":"div","id":"footer","class":"copyright col-md-12","html":""},
-    {"<>":"div","class":"loader-overlay","html":[
-        {"<>":"div","id":"spinner","class":"spinner","html":""}
-      ]},
     {"<>":"a","class":"scrollup","html":[
         {"<>":"i","class":"fa fa-angle-up","html":""}
       ]}
@@ -117,23 +114,27 @@ var mainContent =
   
   
 var followData = [
-{"title":" My Website","onclick":"wbs()","class":"octicon octicon-flame"},
-{"title":" My Github","onclick":"gth()","class":"fa fa-github"},
-{"title":" My Gitlab","onclick":"gtl()","class":"fa fa-gitlab"},
-{"title":" My Codepen","onclick":"cdp()","class":"fa fa-codepen"},
-{"title":" My Jsfiddle","onclick":"jsf()","class":"fa fa-jsfiddle"}
+{"title":" My Website","href":"#","class":"fa fa-flame"},
+{"title":" My Github","href":"https://github.com/angeal185/","class":"fa fa-github"},
+{"title":" My Codepen","href":"http://codepen.io/angeal185/","class":"fa fa-codepen"},
+{"title":" My linkedin","href":"https://au.linkedin.com/in/ben-eaves-996991125","class":"fa fa-linkedin"},
 ];
 
 var follow = 
 {"<>":"li","html":[
-    {"<>":"a","onclick":"${onclick}","class":"${class}","html":"${title}"}
-  ]}
+    {"<>":"a","href":"${href}","target":"_blank","html":[
+		{"<>":"i","class":"${class}","html":[
+			{"<>":"span","html":"${title}"}
+			]}
+		]}
+  ]};
 
 var menuData = [
-{"title":"NODEJS","idProj":"h-p","idTemp":"h-t"},
-{"title":"JAVASCRIPT","idProj":"j-p","idTemp":"j-t"},
-{"title":"PYTHON","idProj":"py-p","idTemp":"py-t"},
-{"title":"PHP","idProj":"p-p","idTemp":"p-t"}
+{"title":"PROFILE","idProj":"skills","idTemp":"resume","item1":"Skills","item2":"Resume"},
+{"title":"NODEJS","idProj":"h-p","idTemp":"h-t","item1":"Projects","item2":"Templates"},
+{"title":"JAVASCRIPT","idProj":"j-p","idTemp":"j-t","item1":"Projects","item2":"Templates"},
+{"title":"PYTHON","idProj":"py-p","idTemp":"py-t","item1":"Projects","item2":"Templates"},
+{"title":"PHP","idProj":"p-p","idTemp":"p-t","item1":"Projects","item2":"Templates"}
 ];
 
 var menu = 
@@ -145,44 +146,27 @@ var menu =
       ]},
     {"<>":"ul","class":"children collapse","html":[
         {"<>":"li","html":[
-            {"<>":"a","id":"${idProj}","html":"Projects"}
+            {"<>":"a","id":"${idProj}","html":"${item1}"}
           ]},
         {"<>":"li","html":[
-            {"<>":"a","id":"${idTemp}","html":"Templates"}
+            {"<>":"a","id":"${idTemp}","html":"${item2}"}
           ]}
       ]}
   ]};
 
   
-var headerMainLeftData = [
-{"onclick":"wbs()","id":"wbs1","time":"2s"},
-{"onclick":"wbsp()","id":"wbs2","time":"3s"},
-{"onclick":"wbscv()","id":"wbs3","time":"4s"},
-{"onclick":"wbsct()","id":"wbs4","time":"5s"}
-];
-
 var headerMainRightData = [
-{"onclick":"cdp()","id":"cdpt","time":"5s"},
-{"onclick":"jsf()","id":"jsft","time":"4s"},
-{"onclick":"gtl()","id":"gtlt","time":"3s"},
-{"onclick":"lnd()","id":"lndt","time":"2s"}
+{"href":"#","id":"wbs1","time":"7s"},
+{"href":"http://codepen.io/angeal185/","id":"cdpt","time":"6s"},
+{"href":"https://au.linkedin.com/in/ben-eaves-996991125","id":"lndt","time":"5s"}
 ];  
 
 var headerMain = 
 {"<>":"li","html":[
-    {"<>":"a","onclick":"${onclick}","html":[
+    {"<>":"a","href":"${href}","target":"_blank","html":[
         {"<>":"i","id":"${id}","data-ani-delay":"${time}","html":""}
       ]}
   ]}; 
-
-var loaderData = [
-{"class":"bounce1"},
-{"class":"bounce2"},
-{"class":"bounce3"}
-];  
-  
-var loader = 
-{"<>":"div","class":"${class}","html":""};
 
 var indexHeader = [
 {"title":"DASHBOARD","sub":""}

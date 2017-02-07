@@ -6,23 +6,28 @@ var wrap = ("<div id='wrapper'></div>"),
 	blg = ("<i class='fa fa-file-word-o c-primary'></i>My Blog"),
     tml = ("<i class='fa fa-clock-o c-second'></i>My Timeline"),
 	usr = ("<button class='btn btn-xs btn-rounded' type='button'><i class='online'></i> Online</button>"),
-	headerRight = ("<li id='user-header'><a onclick='gth()'><img id='imgi'>Admin</a></li>"),
+	headerRight = ("<li id='user-header'><a href='https://github.com/angeal185/' target = '_blank'><img id='imgi'>Admin</a></li>"),
 	footer = ("<p class='pull-right sm-pull-reset' style='margin:10px 80px'>Copyright <span class='copyright'>&copy;</span> 2016 Ben eaves. All rights reserved.</p>"),
 	svg1 = ("<div id='svg'></div>");
 
 //init templates
+
 $('body').prepend(wrap);
 $('#wrapper').jsonRender(slideTopData,slideTop);
 $('#wrapper').jsonRender(sidebarData,sidebar);
 $('#wrapper').jsonRender(mainContentData,mainContent);
 $('#follow').jsonRender(followData,follow);
 $('#menu').jsonRender(menuData,menu);
-$('#headerLeft').jsonRender(headerMainLeftData,headerMain);
 $('#headerRight').jsonRender(headerMainRightData,headerMain);
-$('#spinner').jsonRender(loaderData,loader);
+
+$('#imgi').prop('title', 'My github');
+$('#cdpt').addClass("fa-codepen").prop('title', 'My codepen');
+$('#lndt').addClass("fa-linkedin").prop('title', 'My linkedin');
+$('#wbs1').addClass("fa-bolt").prop('title', 'My website');
 
 //snippets
-$("body").prepend(canvas1),	
+
+$("body").prepend(canvas1),
 $("#topA").prepend(topA),
 $("#topB").prepend(topB),
 $("#topC").prepend(topC),
@@ -35,13 +40,12 @@ $(".main-content").after(svg1),
 $( "#svg" ).load( "views/page/svg.tpl" );
 
 //globals
-$("a").attr("href", "javascript:void(0)");
+
 $("#mt,#ctm").attr("href", href="mailto:beneaves01@hotmail.com");
 $("#mt").html("beneaves01@hotmail.com");
 $('#ctm').attr('title','contact me');
-$("#cdpt,#jsft,#gtlt,#lndt,#flkrt,#fsc,#ctm,#gth2 ").addClass("fa");
-$("#wbs1,#wbs2,#wbs3,#wbs4,#cdpt,#jsft,#gtlt,#lndt").addClass("ani fadeIn");
-$("#wbs1,#wbs2,#wbs3,#wbs4 ").addClass("octicon");
+$("#cdpt,#wbs1,#jsft,#gtlt,#lndt,#flkrt,#fsc,#ctm,#gth2 ").addClass("fa");
+$("#wbs1,#cdpt,#lndt").addClass("ani fadeIn");
 $('#fsc').css('float','right');
 $("#imgh").attr({
         "src" : "static/images/avatars/github-512.png",

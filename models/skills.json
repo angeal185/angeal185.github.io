@@ -1,0 +1,163 @@
+﻿var skillsTemplateData = [
+	{"title":"CODE SKILLS","idLeft":"codeLeft","idRight":"codeRight","subtitle":"A list of the code that i am most familiar with"},
+	{"title":"FRAMEWORKS","idLeft":"skillsLeft","idRight":"skillsRight","subtitle":"A list of the frameworks that i am most familiar with"},
+	{"title":"DB SKILLS","idLeft":"dbLeft","idRight":"dbRight","subtitle":"A list of the db types that i am most familiar with"},
+	{"title":"CMS SKILLS","idLeft":"CMSLeft","idRight":"CMSRight","subtitle":"CMS development and design"},
+ ];
+
+var skillsTemplate = 
+[
+  {"<>":"h2","class":"skills-title c-primary","html":"${title}"},
+  {"<>":"h3","class":"skills-title","html":"${subtitle}"},
+  {"<>":"div","class":"row","html":[
+      {"<>":"div","class":"col-md-6","html":[
+          {"<>":"ul","id":"${idLeft}","class":"skillsBar","html":""}
+        ]},
+      {"<>":"div","class":"col-md-6","html":[
+          {"<>":"ul","id":"${idRight}","class":"skillsBar","html":""},
+		  {"<>":"br","html":""}
+        ]}
+    ]}
+];
+
+
+
+
+var codeLeftData = [
+	{"title":"JAVASCRIPT","percent":"95"},
+	{"title":"NODEJS","percent":"95"},
+	{"title":"CSS","percent":"100"},
+	{"title":"STYLUS","percent":"100"},
+	{"title":"XML","percent":"70"},
+	{"title":"PHP","percent":"50"},
+	{"title":"BASH","percent":"80"},
+	{"title":"PUG","percent":"70"},
+	{"title":"DUST","percent":"70"},
+	{"title":"HANDLEBARS","percent":"70"},
+	{"title":"MUSTACHE","percent":"70"},
+	{"title":"MONGODB","percent":"90"},
+	{"title":"COUCHDB","percent":"80"},
+	{"title":"MYSQL","percent":"65"}
+	
+ ];
+
+var codeRightData = [
+	{"title":"HTML","percent":"100"},
+	{"title":"PYTHON","percent":"90"},
+	{"title":"JSON","percent":"90"},
+	{"title":"SCSS","percent":"80"},
+	{"title":"LESS","percent":"90"},
+	{"title":"CMD","percent":"80"},
+	{"title":"NUNJUCKS","percent":"100"},
+	{"title":"JINJA","percent":"100"},
+	{"title":"DJANGO-TPL","percent":"90"},
+	{"title":"TWIG","percent":"90"},
+	{"title":"EJS","percent":"80"},
+	{"title":"SQLITE","percent":"80"},
+	{"title":"NoSQL embedded database","percent":"80"},
+	{"title":"reasondb","percent":"60"}
+ ];
+
+var skillsLeftData = [
+	{"title":"JQUERY","percent":"100"},
+	{"title":"ANGULAR.JS","percent":"100"},
+	{"title":"SOCKET.IO","percent":"90"},
+	{"title":"SAILS.JS","percent":"90"},
+	{"title":"TOTAL.JS","percent":"90"},
+	{"title":"HAPI.JS","percent":"80"},
+	{"title":"KOA.JS","percent":"75"},
+	{"title":"ADONIS.JS","percent":"85"},
+	{"title":"THREE.JS","percent":"70"},
+	{"title":"GREENSHOCK","percent":"70"},
+	{"title":"TWEEN.JS","percent":"70"},
+	{"title":"DJANGO","percent":"80"},
+	{"title":"WEB2PY","percent":"80"},
+	{"title":"JQUERYMOBILE","percent":"90"},
+	{"title":"CATBERRY","percent":"70"},
+	{"title":"WE.JS","percent":"70"},
+	{"title":"CODEIGNITER","percent":"55"},
+	{"title":"SEMANTIC","percent":"90"},
+	{"title":"UIKIT","percent":"90"},
+	{"title":"MATERIALIZE","percent":"90"}
+ ];
+
+var skillsRightData = [
+	{"title":"MEAN.IO","percent":"95"},
+	{"title":"EXPRESS.JS","percent":"95"},
+	{"title":"MEAN.JS","percent":"95"},
+	{"title":"EMBER.JS","percent":"90"},
+	{"title":"METEOR","percent":"80"},
+	{"title":"DERBY.JS","percent":"80"},
+	{"title":"IONIC","percent":"95"},
+	{"title":"CORDOVA","percent":"90"},
+	{"title":"FLASK","percent":"100"},
+	{"title":"JQUERYUI","percent":"90"},
+	{"title":"REACTIVE.JS","percent":"80"},
+	{"title":"POLYMER","percent":"70"},
+	{"title":"BACKBONE","percent":"65"},
+	{"title":"KEYSTONE","percent":"90"},
+	{"title":"MITHRIL","percent":"70"},
+	{"title":"SYMFONY","percent":"55"},
+	{"title":"LARAVEL","percent":"50"},
+	{"title":"BOOTSTRAP","percent":"100"},
+	{"title":"FOUNDATION","percent":"85"},
+	{"title":"SKELETON","percent":"70"}
+	
+ ];
+
+var dbLeftData = [
+	{"title":"MONGODB","percent":"90"},
+	{"title":"COUCHDB","percent":"80"},
+	{"title":"MYSQL","percent":"65"},
+	{"title":"REDIS","percent":"70"},	
+ ];
+
+var dbRightData = [
+
+	{"title":"SQLITE","percent":"80"},
+	{"title":"NoSQL embedded database","percent":"80"},
+	{"title":"reasondb","percent":"60"},
+	{"title":"postgresql","percent":"60"}
+ ];
+
+
+var CMSLeftData = [
+	{"title":"CODY","percent":"90"},
+	{"title":"TARACOT","percent":"80"},
+	{"title":"KEYSTONE CMS","percent":"90"},
+	{"title":"PENCILBLUE","percent":"80"},
+	{"title":"DJANGO CMS","percent":"95"},
+	{"title":"OCTOBER CMS","percent":"80"},
+	{"title":"PHPBB","percent":"80"},
+	{"title":"GRAV","percent":"95"},
+	{"title":"WAGTAIL","percent":"70"},
+	{"title":"GHOST","percent":"90"},
+	{"title":"OXWALL","percent":"60"},
+	{"title":"MAGENTO","percent":"65"},
+	
+ ];
+
+var CMSRightData = [
+	{"title":"APOSTROPHE","percent":"90"},
+	{"title":"ULBORA","percent":"80"},
+	{"title":"NODEBB","percent":"85"},
+	{"title":"MEZZANINE","percent":"90"},
+	{"title":"WORDPRESS","percent":"80"},
+	{"title":"DRUPAL","percent":"70"},
+	{"title":"JOOMLA","percent":"65"},
+	{"title":"BOLT","percent":"80"},
+	{"title":"MODX","percent":"80"},
+	{"title":"MOODLE","percent":"85"},
+	{"title":"PYRO","percent":"65"},
+	{"title":"OPENCART","percent":"65"},
+ ];
+ 
+var skills = 
+{"<>":"li","class":"ani fadeIn","html":[
+    {"<>":"h4","html":"${title}"},
+    {"<>":"div","class":"bar_container","html":[
+        {"<>":"span","class":"bar","data-bar":"{}","html":[
+            {"<>":"span","class":"pct","html":"${percent}%"}
+          ]}
+      ]}
+  ]};

@@ -61,16 +61,7 @@ var sidebar =
                   ]}
               ]}
           ]},
-        {"<>":"div","class":"sidebar-widgets","style":"margin-bottom: 60px","html":[
-            {"<>":"p","html":"Folders"},
-            {"<>":"ul","class":"data","html":[
-                {"<>":"li","html":[
-                    {"<>":"a","id":"blg","html":""}
-                  ]},
-                {"<>":"li","html":[
-                    {"<>":"a","id":"tml","html":""}
-                  ]}
-              ]},
+        {"<>":"div","html":[
             {"<>":"code","id":"ip","html":""}
           ]},
         {"<>":"div","class":"sidebar-footer clearfix","html":[
@@ -106,9 +97,6 @@ var mainContent =
       ]},
     {"<>":"div","id":"pagecontainer","html":""},
     {"<>":"div","id":"footer","class":"copyright col-md-12","html":""},
-    {"<>":"div","class":"loader-overlay","html":[
-        {"<>":"div","id":"spinner","class":"spinner","html":""}
-      ]},
     {"<>":"a","class":"scrollup","html":[
         {"<>":"i","class":"fa fa-angle-up","html":""}
       ]}
@@ -117,23 +105,27 @@ var mainContent =
   
   
 var followData = [
-{"title":" My Website","onclick":"wbs()","class":"octicon octicon-flame"},
-{"title":" My Github","onclick":"gth()","class":"fa fa-github"},
-{"title":" My Gitlab","onclick":"gtl()","class":"fa fa-gitlab"},
-{"title":" My Codepen","onclick":"cdp()","class":"fa fa-codepen"},
-{"title":" My Jsfiddle","onclick":"jsf()","class":"fa fa-jsfiddle"}
+{"title":" My Website","href":"#","class":"fa fa-bolt"},
+{"title":" My Github","href":"https://github.com/angeal185/","class":"fa fa-github"},
+{"title":" My Codepen","href":"http://codepen.io/angeal185/","class":"fa fa-codepen"},
+{"title":" My linkedin","href":"https://au.linkedin.com/in/ben-eaves-996991125","class":"fa fa-linkedin"},
 ];
 
 var follow = 
 {"<>":"li","html":[
-    {"<>":"a","onclick":"${onclick}","class":"${class}","html":"${title}"}
-  ]}
+    {"<>":"a","href":"${href}","target":"_blank","html":[
+		{"<>":"i","class":"${class}","html":[
+			{"<>":"span","html":"${title}"}
+			]}
+		]}
+  ]};
 
 var menuData = [
-{"title":"NODEJS","idProj":"h-p","idTemp":"h-t"},
-{"title":"JAVASCRIPT","idProj":"j-p","idTemp":"j-t"},
-{"title":"PYTHON","idProj":"py-p","idTemp":"py-t"},
-{"title":"PHP","idProj":"p-p","idTemp":"p-t"}
+{"title":"PROFILE","idProj":"skills","idTemp":"resume","item1":"Skills","item2":"Resume"},
+{"title":"NODEJS","idProj":"h-p","idTemp":"h-t","item1":"Projects","item2":"Templates"},
+{"title":"JAVASCRIPT","idProj":"j-p","idTemp":"j-t","item1":"Projects","item2":"Templates"},
+{"title":"PYTHON","idProj":"py-p","idTemp":"py-t","item1":"Projects","item2":"Templates"},
+{"title":"PHP","idProj":"p-p","idTemp":"p-t","item1":"Projects","item2":"Templates"}
 ];
 
 var menu = 
@@ -145,44 +137,27 @@ var menu =
       ]},
     {"<>":"ul","class":"children collapse","html":[
         {"<>":"li","html":[
-            {"<>":"a","id":"${idProj}","html":"Projects"}
+            {"<>":"a","id":"${idProj}","html":"${item1}"}
           ]},
         {"<>":"li","html":[
-            {"<>":"a","id":"${idTemp}","html":"Templates"}
+            {"<>":"a","id":"${idTemp}","html":"${item2}"}
           ]}
       ]}
   ]};
 
-  
-var headerMainLeftData = [
-{"onclick":"wbs()","id":"wbs1","time":"5s"},
-{"onclick":"wbsp()","id":"wbs2","time":"6s"},
-{"onclick":"wbscv()","id":"wbs3","time":"7s"},
-{"onclick":"wbsct()","id":"wbs4","time":"8s"}
-];
 
 var headerMainRightData = [
-{"onclick":"cdp()","id":"cdpt","time":"8s"},
-{"onclick":"jsf()","id":"jsft","time":"7s"},
-{"onclick":"gtl()","id":"gtlt","time":"6s"},
-{"onclick":"lnd()","id":"lndt","time":"5s"}
+{"href":"#","id":"wbs1","time":"7s"},
+{"href":"http://codepen.io/angeal185/","id":"cdpt","time":"6s"},
+{"href":"https://au.linkedin.com/in/ben-eaves-996991125","id":"lndt","time":"5s"}
 ];  
 
 var headerMain = 
 {"<>":"li","html":[
-    {"<>":"a","onclick":"${onclick}","html":[
+    {"<>":"a","href":"${href}","target":"_blank","html":[
         {"<>":"i","id":"${id}","data-ani-delay":"${time}","html":""}
       ]}
   ]}; 
-
-var loaderData = [
-{"class":"bounce1"},
-{"class":"bounce2"},
-{"class":"bounce3"}
-];  
-  
-var loader = 
-{"<>":"div","class":"${class}","html":""};
 
 var indexHeader = [
 {"title":"DASHBOARD","sub":""}
@@ -224,7 +199,13 @@ var timelineHeader = [
 {"title":"TIMELINE","sub":""}
 ];
 
+var skillsProj = [
+{"title":"PROFILE","sub":"SKILLS"}
+];
 
+var resumeProj = [
+{"title":"PROFILE","sub":"RESUME"}
+];
 
 var header =
 {"<>":"div","class":"row","html":[
@@ -245,75 +226,75 @@ var header =
 
 
 var nodejsProjects = [
-{"name":"Nodejs","img":"static/images/nodejs.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":"express","img":"static/images/nodejs.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"sails","img":"static/images/nodejs.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"derby","img":"static/images/nodejs.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"angular","img":"static/images/nodejs.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"mean","img":"static/images/nodejs.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":"Nodejs","img":"static/images/nodejs.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":"express","img":"static/images/nodejs.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"sails","img":"static/images/nodejs.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"derby","img":"static/images/nodejs.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"angular","img":"static/images/nodejs.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"mean","img":"static/images/nodejs.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var nodejsTemplates = [
-{"name":"Template1","img":"static/images/nodejs.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":"Template2","img":"static/images/nodejs.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"Template3","img":"static/images/nodejs.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"Template4","img":"static/images/nodejs.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"Template5","img":"static/images/nodejs.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"Template6","img":"static/images/nodejs.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":"Template1","img":"static/images/nodejs.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":"Template2","img":"static/images/nodejs.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"Template3","img":"static/images/nodejs.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"Template4","img":"static/images/nodejs.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"Template5","img":"static/images/nodejs.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"Template6","img":"static/images/nodejs.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var javascriptProjects = [
-{"name":" javascript","img":"static/images/angular.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":" javascript","img":"static/images/angular.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/angular.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/angular.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/angular.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/angular.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":" javascript","img":"static/images/angular.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/angular.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var javascriptTemplates = [
-{"name":" javascript","img":"static/images/jquery.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":" javascript","img":"static/images/jquery.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/jquery.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/jquery.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/jquery.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" javascript","img":"static/images/jquery.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":" javascript","img":"static/images/jquery.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" javascript","img":"static/images/jquery.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var phpProjects = [
-{"name":" PHP","img":"static/images/php.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":" PHP","img":"static/images/php.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":" PHP","img":"static/images/php.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":" PHP","img":"static/images/php.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var phpTemplates = [
-{"name":" PHP","img":"static/images/php.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":" PHP","img":"static/images/php.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":" PHP","img":"static/images/php.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":" PHP","img":"static/images/php.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":" PHP","img":"static/images/php.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":" PHP","img":"static/images/php.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var pythonProjects = [
-{"name":"python","img":"static/images/python.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":"python","img":"static/images/python.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":"python","img":"static/images/python.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":"python","img":"static/images/python.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var pythonTemplates = [
-{"name":"python","img":"static/images/python.png","title":"title 1","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"http://bing.com","hrefB":"http://codepen.io"},
-{"name":"python","img":"static/images/python.png","title":"title 2","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 3","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 4","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 5","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"},
-{"name":"python","img":"static/images/python.png","title":"title 6","sub":"description","btnA":"Code","btnB":"Demo","hrefA":"#","hrefB":"#"}
+{"name":"python","img":"static/images/python.png","title":"title 1","sub":"description","btnA":"Code","hrefA":"http://bing.com"},
+{"name":"python","img":"static/images/python.png","title":"title 2","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 3","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 4","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 5","sub":"description","btnA":"Code","hrefA":"#"},
+{"name":"python","img":"static/images/python.png","title":"title 6","sub":"description","btnA":"Code","hrefA":"#"}
 ];
 
 var template =
@@ -335,9 +316,6 @@ var template =
                 {"<>":"div","class":"pull-right","html":[
 					{"<>":"a","href":"${hrefA}","target":"_blank","html":[
 						{"<>":"button","type":"button","class":"btn btn-white m-r-10","formaction":"${hrefA}","html":"${btnA}"}
-						]},
-					{"<>":"a","href":"${hrefB}","target":"_blank","html":[
-						{"<>":"button","type":"button","class":"btn btn-success","html":"${btnB}"}
 						]}
                   ]}
               ]}
@@ -346,62 +324,246 @@ var template =
   ]};
  
 
-var timelineData = [
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	},
-	{
-		"title":"title 1",
-		"date":"00/00/0000",
-		"content":"timeline data here."
-	}
+
+
+  
+var skillsTemplateData = [
+	{"title":"CODE SKILLS","idLeft":"codeLeft","idRight":"codeRight","subtitle":"A list of the code that i am most familiar with"},
+	{"title":"FRAMEWORKS","idLeft":"skillsLeft","idRight":"skillsRight","subtitle":"A list of the frameworks that i am most familiar with"},
+	{"title":"DB SKILLS","idLeft":"dbLeft","idRight":"dbRight","subtitle":"A list of the db types that i am most familiar with"},
+	{"title":"CMS SKILLS","idLeft":"CMSLeft","idRight":"CMSRight","subtitle":"CMS development and design"},
+ ];
+
+var skillsTemplate = 
+[
+  {"<>":"h2","class":"skills-title c-primary  ani fadeIn","html":"${title}"},
+  {"<>":"h3","class":"skills-title","html":"${subtitle}"},
+  {"<>":"div","class":"row","html":[
+      {"<>":"div","class":"col-md-6","html":[
+          {"<>":"ul","id":"${idLeft}","class":"skillsBar","html":""}
+        ]},
+      {"<>":"div","class":"col-md-6","html":[
+          {"<>":"ul","id":"${idRight}","class":"skillsBar","html":""},
+		  {"<>":"br","html":""}
+        ]}
+    ]}
 ];
 
 
-var timeline =
-{"<>":"li","class":"event","data-date":"${date}","html":[
-    {"<>":"h3","html":"${title}"},
-    {"<>":"p","html":"${content}"}
+
+var codeLeftData = [
+	{"title":"JAVASCRIPT","percent":"95"},
+	{"title":"NODEJS","percent":"95"},
+	{"title":"CSS","percent":"100"},
+	{"title":"STYLUS","percent":"100"},
+	{"title":"XML","percent":"70"},
+	{"title":"PHP","percent":"50"},
+	{"title":"BASH","percent":"80"},
+	{"title":"PUG","percent":"70"},
+	{"title":"DUST","percent":"70"},
+	{"title":"HANDLEBARS","percent":"70"},
+	{"title":"MUSTACHE","percent":"70"}
+	
+ ];
+
+var codeRightData = [
+	{"title":"HTML","percent":"100"},
+	{"title":"PYTHON","percent":"90"},
+	{"title":"JSON","percent":"90"},
+	{"title":"SCSS","percent":"80"},
+	{"title":"LESS","percent":"90"},
+	{"title":"CMD","percent":"80"},
+	{"title":"NUNJUCKS","percent":"100"},
+	{"title":"JINJA","percent":"100"},
+	{"title":"DJANGO-TPL","percent":"90"},
+	{"title":"TWIG","percent":"90"},
+	{"title":"EJS","percent":"80"}
+ ];
+
+var skillsLeftData = [
+	{"title":"JQUERY","percent":"100"},
+	{"title":"ANGULAR.JS","percent":"100"},
+	{"title":"SOCKET.IO","percent":"90"},
+	{"title":"SAILS.JS","percent":"90"},
+	{"title":"TOTAL.JS","percent":"90"},
+	{"title":"HAPI.JS","percent":"80"},
+	{"title":"KOA.JS","percent":"75"},
+	{"title":"ADONIS.JS","percent":"85"},
+	{"title":"THREE.JS","percent":"70"},
+	{"title":"GREENSHOCK","percent":"70"},
+	{"title":"TWEEN.JS","percent":"70"},
+	{"title":"DJANGO","percent":"80"},
+	{"title":"WEB2PY","percent":"80"},
+	{"title":"JQUERYMOBILE","percent":"90"},
+	{"title":"CATBERRY","percent":"70"},
+	{"title":"WE.JS","percent":"70"},
+	{"title":"CODEIGNITER","percent":"55"},
+	{"title":"SEMANTIC","percent":"90"},
+	{"title":"UIKIT","percent":"90"},
+	{"title":"MATERIALIZE","percent":"90"}
+ ];
+
+var skillsRightData = [
+	{"title":"MEAN.IO","percent":"95"},
+	{"title":"EXPRESS.JS","percent":"95"},
+	{"title":"MEAN.JS","percent":"95"},
+	{"title":"EMBER.JS","percent":"90"},
+	{"title":"METEOR","percent":"80"},
+	{"title":"DERBY.JS","percent":"80"},
+	{"title":"IONIC","percent":"95"},
+	{"title":"CORDOVA","percent":"90"},
+	{"title":"FLASK","percent":"100"},
+	{"title":"JQUERYUI","percent":"90"},
+	{"title":"REACTIVE.JS","percent":"80"},
+	{"title":"POLYMER","percent":"70"},
+	{"title":"BACKBONE","percent":"65"},
+	{"title":"KEYSTONE","percent":"90"},
+	{"title":"MITHRIL","percent":"70"},
+	{"title":"SYMFONY","percent":"55"},
+	{"title":"LARAVEL","percent":"50"},
+	{"title":"BOOTSTRAP","percent":"100"},
+	{"title":"FOUNDATION","percent":"85"},
+	{"title":"SKELETON","percent":"70"}
+	
+ ];
+
+var dbLeftData = [
+	{"title":"MONGODB","percent":"90"},
+	{"title":"COUCHDB","percent":"80"},
+	{"title":"MYSQL","percent":"65"},
+	{"title":"REDIS","percent":"70"},	
+ ];
+
+var dbRightData = [
+
+	{"title":"SQLITE","percent":"80"},
+	{"title":"NOSQL EMBEDDED DB","percent":"80"},
+	{"title":"REASONDB","percent":"60"},
+	{"title":"POSTGRESQL","percent":"60"}
+ ];
+
+
+var CMSLeftData = [
+	{"title":"CODY","percent":"90"},
+	{"title":"TARACOT","percent":"80"},
+	{"title":"KEYSTONE CMS","percent":"90"},
+	{"title":"PENCILBLUE","percent":"80"},
+	{"title":"DJANGO CMS","percent":"95"},
+	{"title":"OCTOBER CMS","percent":"80"},
+	{"title":"PHPBB","percent":"80"},
+	{"title":"GRAV","percent":"95"},
+	{"title":"WAGTAIL","percent":"70"},
+	{"title":"GHOST","percent":"90"},
+	{"title":"OXWALL","percent":"60"},
+	{"title":"MAGENTO","percent":"65"},
+	
+ ];
+
+var CMSRightData = [
+	{"title":"APOSTROPHE","percent":"90"},
+	{"title":"ULBORA","percent":"80"},
+	{"title":"NODEBB","percent":"85"},
+	{"title":"MEZZANINE","percent":"90"},
+	{"title":"WORDPRESS","percent":"80"},
+	{"title":"DRUPAL","percent":"70"},
+	{"title":"JOOMLA","percent":"65"},
+	{"title":"BOLT","percent":"80"},
+	{"title":"MODX","percent":"80"},
+	{"title":"MOODLE","percent":"85"},
+	{"title":"PYRO","percent":"65"},
+	{"title":"OPENCART","percent":"65"},
+ ];
+ 
+var skills = 
+{"<>":"li","class":"ani fadeIn","html":[
+    {"<>":"h4","html":"${title}"},
+    {"<>":"div","class":"bar_container","html":[
+        {"<>":"span","class":"bar","data-bar":"{}","html":[
+            {"<>":"span","class":"pct","html":"${percent}%"}
+          ]}
+      ]}
+  ]};
+  
+var resumeData = [
+	{
+		"title":"Employment History",
+		"title2":"Academic Achievements",
+	}
+];
+
+var resume =
+{"<>":"div","class":"row","style":"padding:50px","html":[
+    {"<>":"div","class":"col-md-12 col-sm-12","style":"height:40px;","html":""},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","class":"text-center ani fadeIn","html":[
+            {"<>":"h2","class":"c-primary","html":"Ben Eaves"},
+            {"<>":"br","html":""},
+            {"<>":"h2","html":"${title}"}
+          ]},
+        {"<>":"hr","html":""}
+      ]},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","id":"work","html":""}
+      ]},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","class":"text-center","html":[
+            {"<>":"h2","html":"${title2}"}
+          ]},
+        {"<>":"hr","html":""}
+      ]},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","id":"edu","html":""}
+      ]}
+  ]}
+
+
+var workData = [
+	{
+		"date":" CURRENT - 2013",
+		"title":"University Lecturer - computer science",
+		"location":"Xingtai University China"
+	},
+	{
+		"date":" CURRENT - 2006",
+		"title":"FREELANCE WEB DEVELOPMENT AND DESIGN",
+		"location":""
+	},
+	{
+		"date":" 2010 - 2009",
+		"title":"COMPUTER SCIENCE INTERNSHIP",
+		"location":"Munich University of Applied Sciences Germany"
+	},
+];
+
+var work =
+[
+  {"<>":"div","class":"block","html":[
+      {"<>":"h3","html":"${date}"},
+      {"<>":"h2","class":"ani fadeIn c-primary","html":"${title}"},
+      {"<>":"p","html":"${location}"}
+    ]},
+  {"<>":"br","html":""},
+  {"<>":"br","html":""}
+];
+
+var eduData = [
+	{
+		"date":" 2012 - 2010",
+		"title":"Master of Computer Science",
+		"location":"University of Newcastle, Sydney, Australia"
+	},
+	{
+		"date":" 2008 - 2005",
+		"title":"Bachelor's Degree in Computer Science",
+		"location":"University of Newcastle, Sydney, Australia"
+	}
+];
+
+var edu =
+{"<>":"div","class":"block","html":[
+    {"<>":"h3","html":"2012- 2010"},
+    {"<>":"h2","class":" ani  fadeIn c-primary","html":"Master of Computer Science"},
+    {"<>":"p","html":"University of Newcastle, Sydney, Australia"},
+	{"<>":"br","html":""},
+	{"<>":"br","html":""}
   ]};

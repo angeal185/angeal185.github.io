@@ -1,0 +1,87 @@
+﻿var resumeHeader = [
+{"title":"TIMELINE","sub":""}
+];
+
+var resumeData = [
+	{
+		"title":"Employment History",
+		"title2":"Academic Achievements",
+	}
+];
+
+var resume =
+{"<>":"div","class":"row","style":"padding:50px","html":[
+    {"<>":"div","class":"col-md-12 col-sm-12","style":"height:40px;","html":""},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","class":"text-center ani fadeIn","html":[
+            {"<>":"h2","class":"c-primary","html":"Ben Eaves"},
+            {"<>":"br","html":""},
+            {"<>":"h2","html":"${title}"}
+          ]},
+        {"<>":"hr","html":""}
+      ]},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","id":"work","html":""}
+      ]},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","class":"text-center","html":[
+            {"<>":"h2","html":"${title2}"}
+          ]},
+        {"<>":"hr","html":""}
+      ]},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","id":"edu","html":""}
+      ]}
+  ]}
+
+
+var workData = [
+	{
+		"date":" CURRENT - 2013",
+		"title":"University Lecturer - computer science",
+		"location":"Xingtai University China"
+	},
+	{
+		"date":" CURRENT - 2006",
+		"title":"FREELANCE WEB DEVELOPMENT AND DESIGN",
+		"location":""
+	},
+	{
+		"date":" 2010 - 2009",
+		"title":"COMPUTER SCIENCE INTERNSHIP",
+		"location":"Munich University of Applied Sciences Germany"
+	},
+];
+
+var work =
+[
+  {"<>":"div","class":"block","html":[
+      {"<>":"h3","html":"${date}"},
+      {"<>":"h2","class":"ani fadeIn c-primary","html":"${title}"},
+      {"<>":"p","html":"${location}"}
+    ]},
+  {"<>":"br","html":""},
+  {"<>":"br","html":""}
+];
+
+var eduData = [
+	{
+		"date":" 2012 - 2010",
+		"title":"Master of Computer Science",
+		"location":"University of Newcastle, Sydney, Australia"
+	},
+	{
+		"date":" 2008 - 2005",
+		"title":"Bachelor's Degree in Computer Science",
+		"location":"University of Newcastle, Sydney, Australia"
+	}
+];
+
+var edu =
+{"<>":"div","class":"block","html":[
+    {"<>":"h3","html":"2012- 2010"},
+    {"<>":"h2","class":" ani  fadeIn c-primary","html":"Master of Computer Science"},
+    {"<>":"p","html":"University of Newcastle, Sydney, Australia"},
+	{"<>":"br","html":""},
+	{"<>":"br","html":""}
+  ]};
