@@ -56,9 +56,11 @@ $(function(){
 	$('#j-t').click(function(){
 		$('#pagecontainer').load('views/page/javascript-codepen.tpl', function() {
 		$('#jt01').jsonRender(javascriptTemp,header),
-		$('#jt01').jsonRender(javascriptTemplates,template),
+		$('#jt01').jsonRender(codePenTplData,codePenTpl),
+		
 		$(document).prop('title', 'JS:Codepen'),
 		$('.img-demo').css('width','300px'),
+		$('#codePen').jsonRender(codePenData,codePen),
 		toastr.success('JS:Codepen');
 		});
 	});
