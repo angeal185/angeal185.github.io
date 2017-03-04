@@ -55,8 +55,11 @@ void main(void) {
 <script src="static/js/cnv.min.js"></script>
 <script src="controllers/cache.min.js"></script>
 <script>
-$("#loader").delay( 2000 ).fadeOut( 1500 );
+$(window).load(function() {
+$("#loader").delay( 2000 ).fadeOut( 1500 ),
 new ANI().init();
+toastr.success('DASHBOARD');
+});
 </script>
 </body>
 

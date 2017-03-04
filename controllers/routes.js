@@ -4,7 +4,7 @@ $(function() {
 		$('#dash').jsonRender(indexHeader,header),
 		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
-			toastr.success('DASHBOARD');
+			toastr.success('LOADING...');
 		});
 	});
 
@@ -58,6 +58,7 @@ $(function(){
 		$('#jt01').jsonRender(javascriptTemp,header),
 		$('#jt01').jsonRender(javascriptTemplates,template),
 		$(document).prop('title', 'JS:Codepen'),
+		$('.img-demo').css('width','300px'),
 		toastr.success('JS:Codepen');
 		});
 	});

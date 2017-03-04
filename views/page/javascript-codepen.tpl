@@ -1,1 +1,2 @@
-<div class="page-content" id="jt01"></div>
+<div class="page-content" id="jt01">
+</div>

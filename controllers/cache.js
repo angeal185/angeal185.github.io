@@ -46,6 +46,7 @@
 		$.preload([
 			"views/page/nodejs-projects.tpl",
 			"views/page/javascript-projects.tpl",
+			"views/page/javascript-codepen.tpl",
 			"views/page/python-projects.tpl",
 			"views/page/php-projects.tpl",
 			"views/page/resume.tpl",
@@ -53,6 +54,7 @@
 			"static/images/nodejs.png",
 			"static/images/python.png",
 			"static/images/jquery.png",
+			"static/images/codepen-logo.svg",
 			"static/images/php.png",
 			"static/images/angular.png"
 		]);

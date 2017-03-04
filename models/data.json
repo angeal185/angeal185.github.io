@@ -430,7 +430,7 @@ var javascriptProjects = [{
 
 var javascriptTemplates = [{
     "name": "",
-    "img": "static/images/codepen.png",
+    "img": "static/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
