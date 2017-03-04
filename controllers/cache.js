@@ -1,167 +1,60 @@
-﻿//cache / preload
-(function($){
-    $.preload = (function(sources, part, callback){
-        // Plugin cache
-        var cache = [];
-        var caching = function(image){
-            for (var i = 0; i < cache.length; i++) {
-                if (cache[i].src === image.src) {
-                    return cache[i];
-                }
-            }
-            cache.push(image);
-            return image;
-        };
-        var exec = function(sources, callback, last){
-
-            if (typeof callback === 'function') {
-                callback.call(sources, last);
-            }
-
-        };
-        return function(sources, part, callback){
-            if (typeof sources === 'undefined') {
-                return;
-            }
-            if (typeof sources === 'string') {
-                sources = [sources];
-            }
-            if (arguments.length === 2 && typeof part === 'function') {
-                callback = part;
-                part = 0;
-            }
-            // Split to pieces
-            var total = sources.length,
-                next;
-            if (part > 0 && part < total) {
-                next = sources.slice(part, total);
-                sources = sources.slice(0, part);
-
-                total = sources.length;
-            }
-            // If sources array is empty
-            if (!total) {
-                exec(sources, callback, true);
-                return;
-            }
-            // Image loading callback
-            var preload = arguments.callee,
-                count = 0;
-            var loaded = function(){
-                count++;
-                if (count !== total) {
-                    return;
-                }
-                exec(sources, callback, !next);
-                preload(next, part, callback);
-            };
-            // Loop sources to preload
-            var image;
-            for (var i = 0; i < sources.length; i++) {
-                image = new Image();
-                image.src = sources[i];
-                image = caching(image);
-                if (image.complete) {
-                    loaded();
-                } else {
-                    $(image).on('load error', loaded);
-                }
-            }
-        };
-    })();
-    // Get URLs from DOM elements
-    var getSources = function(items, options){
-
-        var sources = [],
-            reg = new RegExp('url\\([\'"]?([^"\'\)]*)[\'"]?\\)', 'i'),
-            $this, imageList, image, url, i;
-
-        if (options.recursive) {
-            items = items.find('*').add(items);
-        }
-        items.each(function(){
-            $this = $(this);
-            imageList = $this.css('background-image') + ',' + $this.css('border-image-source');
-            imageList = imageList.split(',');
-            for (i = 0; i < imageList.length; i++) {
-
-                image = imageList[i];
-
-                if (image.indexOf('about:blank') !== -1 ||
-                    image.indexOf('data:image') !== -1) {
-                    continue;
-                }
-
-                url = reg.exec(image);
-
-                if (url) {
-                    sources.push(url[1]);
-                }
-
-            }
-
-            if (this.nodeName === 'IMG') {
-                sources.push(this.src);
-            }
-
-        });
-
-        return sources;
-
-    };
-
-    $.fn.preload = function(){
-
-        var options, callback;
-
-        // Make arguments flexible
-        if (arguments.length === 1) {
-            if (typeof arguments[0] === 'object') {
-                options = arguments[0];
-            } else {
-                callback = arguments[0];
-            }
-        } else if (arguments.length > 1) {
-            options = arguments[0];
-            callback = arguments[1];
-        }
-        // Extend default options
-        options = $.extend({
-            recursive: true,
-            part: 0
-        }, options);
-
-        var items = this,
-            sources = getSources(items, options);
-
-        $.preload(sources, options.part, function(last){
-
-            if (last && typeof callback === 'function') {
-                callback.call(items.get());
-            }
-        });
-        return this;
-    };
-})(jQuery);
-
-$(function() {
-
-
-    $.preload([
-        'views/page/nodejs-projects.tpl',
-        'views/page/nodejs-projects.tpl',
-        'views/page/javascript-projects.tpl',
-		'views/page/javascript-templates.tpl',
-		'views/page/python-projects.tpl',
-		'views/page/python-templates.tpl',
-        	'views/page/php-projects.tpl',
-        	'views/page/php-templates.tpl',
-		'views/page/timeline.tpl',
-		'static/images/nodejs.png',
-		'static/images/python.png',
-		'static/images/jquery.png',
-		'static/images/php.png',
-		'static/images/angular.png'
-     ]);
-
+﻿$(window).load(function() {
+	 $(function(e) {
+		e.preload = function(t, n, a) {
+			var r = [],
+				s = function(e) {
+					for (var t = 0; t < r.length; t++)
+						if (r[t].src === e.src) return r[t];
+					return r.push(e), e;
+				},
+				p = function(e, t, n) {
+					"function" == typeof t && t.call(e, n);
+				};
+			return function(t, n, a) {
+				if ("undefined" != typeof t) {
+					"string" == typeof t && (t = [t]), 2 === arguments.length && "function" == typeof n && (a = n, n = 0);
+					var r, i = t.length;
+					if (n > 0 && i > n && (r = t.slice(n, i), t = t.slice(0, n), i = t.length), !i) return void p(t, a, !0);
+					for (var o, c = arguments.callee, g = 0, u = function() {
+							g++, g === i && (p(t, a, !r), c(r, n, a));
+						}, l = 0; l < t.length; l++) o = new Image(), o.src = t[l], o = s(o), o.complete ? u() : e(o).on("load error", u);
+				}
+			};
+		}();
+		var t = function(t, n) {
+			var a, r, s, p, i, o = [],
+				c = new RegExp("url\\(['\"]?([^\"')]*)['\"]?\\)", "i");
+			return n.recursive && (t = t.find("*").add(t)), t.each(function() {
+				for (a = e(this), r = a.css("background-image") + "," + a.css("border-image-source"), r = r.split(","), i = 0; i < r.length; i++) s = r[i], -1 === s.indexOf("about:blank") && -1 === s.indexOf("data:image") && (p = c.exec(s), p && o.push(p[1]));
+				"IMG" === this.nodeName && o.push(this.src);
+			}), o;
+		};
+		e.fn.preload = function() {
+			var n, a;
+			1 === arguments.length ? "object" == typeof arguments[0] ? n = arguments[0] : a = arguments[0] : arguments.length > 1 && (n = arguments[0], a = arguments[1]), n = e.extend({
+				recursive: !0,
+				part: 0
+			}, n);
+			var r = this,
+				s = t(r, n);
+			return e.preload(s, n.part, function(e) {
+				e && "function" == typeof a && a.call(r.get());
+			}), this;
+		};
+	}), 
+	$(function() {
+		$.preload([
+			"views/page/nodejs-projects.tpl",
+			"views/page/javascript-projects.tpl",
+			"views/page/python-projects.tpl",
+			"views/page/php-projects.tpl",
+			"views/page/resume.tpl",
+			"views/page/skills.tpl",
+			"static/images/nodejs.png",
+			"static/images/python.png",
+			"static/images/jquery.png",
+			"static/images/php.png",
+			"static/images/angular.png"
+		]);
+	});
 });

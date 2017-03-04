@@ -31,34 +31,12 @@ $(function(){
 });
 
 $(function(){
-	$('#h-t').click(function(){
-		$('#pagecontainer').load('views/page/nodejs-templates.tpl', function() {
-			$('#ht01').jsonRender(nodejsTemp,header),
-			$('#ht01').jsonRender(nodejsTemplates,template),
-			$(document).prop('title', 'NodeJS:Templates'),
-			toastr.success('NodeJS:Templates');
-		});
-	});
-});
-
-$(function(){
 	$('#p-p').click(function(){
 		$('#pagecontainer').load('views/page/php-projects.tpl', function() {
 		$('#pp01').jsonRender(phpProj,header),
 		$('#pp01').jsonRender(phpProjects,template),
 		$(document).prop('title', 'PHP:Projects'),
 		toastr.success('PHP:Projects');
-		});
-	});
-});
-
-$(function(){
-	$('#p-t').click(function(){
-		$('#pagecontainer').load('views/page/php-templates.tpl', function() {
-		$('#pt01').jsonRender(phpTemp,header),
-		$('#pt01').jsonRender(phpTemplates,template),
-		$(document).prop('title', 'PHP:Templates'),
-		toastr.success('PHP:Templates');
 		});
 	});
 });
@@ -76,11 +54,11 @@ $(function(){
 
 $(function(){
 	$('#j-t').click(function(){
-		$('#pagecontainer').load('views/page/javascript-templates.tpl', function() {
+		$('#pagecontainer').load('views/page/javascript-codepen.tpl', function() {
 		$('#jt01').jsonRender(javascriptTemp,header),
 		$('#jt01').jsonRender(javascriptTemplates,template),
-		$(document).prop('title', 'JS:Templates'),
-		toastr.success('JS:Templates');
+		$(document).prop('title', 'JS:Codepen'),
+		toastr.success('JS:Codepen');
 		});
 	});
 });
@@ -92,17 +70,6 @@ $(function(){
 		$('#pyp01').jsonRender(pythonProjects,template),
 		$(document).prop('title', 'Python:Projects'),
 		toastr.success('Python:Projects');
-		});
-	});
-});
-
-$(function(){
-	$('#py-t').click(function(){
-		$('#pagecontainer').load('views/page/python-templates.tpl', function() {
-		$('#pyt01').jsonRender(pythonTemp,header),
-		$('#pyt01').jsonRender(pythonTemplates,template),
-		$(document).prop('title', 'Python:Templates'),
-		toastr.success('Python:Templates');
 		});
 	});
 });
@@ -137,17 +104,6 @@ $(function(){
 		$('#edu').jsonRender(eduData,edu),
 		$(document).prop('title', 'Profile:Resume'),
 		toastr.success('Profile:Resume');
-		});
-	});
-});
-
-$(function(){
-	$('#tml').click(function(){
-		$('#pagecontainer').load('views/page/timeline.tpl', function() {
-		$('#timeline').jsonRender(timelineHeader,header),
-		$('#timelineData').jsonRender(timelineData,timeline),
-		$(document).prop('title', 'Timeline'),
-		toastr.success('Timeline');
 		});
 	});
 });

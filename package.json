@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/angeal185/angeal185.github.io#readme",
   "devDependencies": {
-    "node-static": "^0.7.9"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1",
+    "node-static": "^0.7.9",
+	"gulp-stylus": "^2.6.0"
+    "nodemon": "^1.11.0"
   }
 }

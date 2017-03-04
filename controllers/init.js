@@ -20,10 +20,10 @@ $('#follow').jsonRender(followData,follow);
 $('#menu').jsonRender(menuData,menu);
 $('#headerRight').jsonRender(headerMainRightData,headerMain);
 
-$('#imgi').prop('title', 'My github');
-$('#cdpt').addClass("fa-codepen").prop('title', 'My codepen');
-$('#lndt').addClass("fa-linkedin").prop('title', 'My linkedin');
-$('#wbs1').addClass("fa-bolt").prop('title', 'My website');
+$('#imgi').prop('data-tip', 'My github');
+$('#cdpt').addClass("fa-codepen").prop('data-tip', 'My codepen');
+$('#lndt').addClass("fa-linkedin").prop('data-tip', 'My linkedin');
+$('#wbs1').addClass("fa-bolt").prop('data-tip', 'My website');
 
 //snippets
 
@@ -51,6 +51,9 @@ $("#imgh").attr({
         "src" : "static/images/avatars/github-512.png",
         "class" : "img-responsive img-circle"
     });
+$("#user-header > a").attr({
+        "data-tip" : "My github",
+    });
 $("#imgi").attr({
         "src" : "static/images/avatars/github.png",
         "class" : "img-responsive img-circle"
@@ -66,10 +69,10 @@ $("#ctm").attr({
         });
 $("#gth2").attr({
         "src" : "static/images/avatars/github.png",
-        "class" : "toggle",
-        "title" : "back to github"
+        "class" : "toggle"
     });
 $.get('https://ipinfo.io', function (res) {
         $('#ip').html( 'Your IP: ' +res.ip);
     },"jsonp");
 $("#fsc,#ctm,#gth2").addClass("pull-left");
+

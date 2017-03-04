@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "watch": [
+    "index.html",
+    "nodemon.json",
+    "static/",
+	"views/",
+	"models/",
+	"controllers/"
+  ],
+  "ext": "js, json, html, css, tpl, styl"
+}
