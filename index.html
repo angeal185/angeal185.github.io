@@ -15,7 +15,7 @@
     <script src="models/data.json"></script>
 	<script src="models/template.json"></script>
 </head>
-<body style="cursor:crosshair" class="sidebar-condensed theme-sdtl fixed-topbar">
+<body style="cursor:crosshair;" class="sidebar-condensed theme-sdtl fixed-topbar">
 <script id="sf" type="x-shader/x-fragment">
 precision highp float;
 uniform float time;
@@ -56,6 +56,7 @@ void main(void) {
 <script src="controllers/cache.min.js"></script>
 <script>
 $(window).load(function() {
+$("#wrapper").css('display','inherit'),
 $("#loader").delay( 2000 ).fadeOut( 1500 ),
 new ANI().init();
 toastr.success('DASHBOARD');

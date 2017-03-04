@@ -16,6 +16,9 @@ body p strong {
   top: 0;
   position: fixed;
 }
+#wrapper {
+  display: none;
+}
 #toast-container *,
 * {
   -moz-box-sizing: border-box;
@@ -39,7 +42,7 @@ a:hover {
 }
 body {
   margin: 0;
-  background-color: #181a1d;
+  background-color: #000;
   color: #5b5b5b;
   line-height: 1.42857143;
   -webkit-font-smoothing: antialiased;
