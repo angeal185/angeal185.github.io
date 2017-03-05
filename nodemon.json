@@ -13,5 +13,5 @@
 	"models/",
 	"controllers/"
   ],
-  "ext": "js, json, html, css, tpl, styl"
+  "ext": "js, json, html, css, tpl"
 }

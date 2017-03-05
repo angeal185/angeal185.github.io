@@ -1,10 +1,12 @@
-﻿//routes
+﻿
+
 $(function() {
 		$('#pagecontainer').load('views/page/index.tpl', function() {
 		$('#dash').jsonRender(indexHeader,header),
 		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
-			toastr.success('LOADING...');
+		toastr.success('LOADING...');
+		$("#console").focus();
 		});
 	});
 
@@ -14,7 +16,8 @@ $(function(){
 		$('#dash').jsonRender(indexHeader,header),
 		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
-			toastr.success('DASHBOARD');
+		toastr.success('DASHBOARD');
+		$("#console").focus();
 		});
 	});
 });
