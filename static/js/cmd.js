@@ -23,7 +23,6 @@ listener.sequence_combo("p h p enter", function() {
 listener.sequence_combo("h o m e enter", function() {
 		$('#pagecontainer').load('views/page/index.tpl', function() {
 		$('#dash').jsonRender(indexHeader,header),
-		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
 		toastr.success('DASHBOARD');
 		$("#pagecontainer").append(consl);
