@@ -11,10 +11,6 @@ listener.sequence_combo("h e l p enter", function() {
   console.log('<br><br>Available commands:<br><br>Type "skills" to navigate to my skills list.<br><br>Type "resume" to navigate to my resume.<br><br>Type "nodejs" to navigate to my nodejs portfolio.<br><br>Type "javascript" to navigate to my javascript portfolio.<br><br>Type "codepen" to navigate to my codepen portfolio.<br><br>Type "python" to navigate to my python portfolio.<br><br>Type "php" to navigate to my php portfolio.<br><br>Type "home" to navigate back to the dashboard.<br><br>Type "kill" to destroy this website.<br><br>');
 });
 
-listener.sequence_combo("p i k a c h u enter", function() {
-  $('#console').css('color','orange');
-});
-
 listener.sequence_combo("p h p enter", function() {
   $('#pagecontainer').load('views/page/php-projects.tpl', function() {
 		$('#pp01').jsonRender(phpProj,header),
@@ -30,7 +26,7 @@ listener.sequence_combo("h o m e enter", function() {
 		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
 		toastr.success('DASHBOARD');
-		$("#console").focus();
+		$("#pagecontainer").append(consl);
 		});
 	});
 

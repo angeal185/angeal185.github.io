@@ -1,12 +1,11 @@
-﻿
+﻿var consl = "<div id='console' contenteditable='true'><h1>Ben Eaves</h1><h2>Full-Stack web developer</h2><br>welcome to my world...<br><br>Type 'info' for instructions.<br><br>Type 'help' to see a full list of commands.<br>&nbsp;<br>>&nbsp;</div></div><div class='row' style='height:10vh'></div>";
 
 $(function() {
 		$('#pagecontainer').load('views/page/index.tpl', function() {
 		$('#dash').jsonRender(indexHeader,header),
-		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
 		toastr.success('LOADING...');
-		$("#console").focus();
+		$("#pagecontainer").append(consl);
 		});
 	});
 
@@ -14,10 +13,10 @@ $(function(){
 	$('#indx').click(function(){
 		$('#pagecontainer').load('views/page/index.tpl', function() {
 		$('#dash').jsonRender(indexHeader,header),
-		$('#dash .row').css('height','1200px'),
 		$(document).prop('title', 'Dashboard'),
 		toastr.success('DASHBOARD');
-		$("#console").focus();
+		$("#pagecontainer").append(consl);
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -29,6 +28,7 @@ $(function(){
 			$('#hp01').jsonRender(nodejsProjects,template),
 			$(document).prop('title', 'NodeJS:Projects'),
 			toastr.success('NodeJS:Projects');
+			$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -40,6 +40,7 @@ $(function(){
 		$('#pp01').jsonRender(phpProjects,template),
 		$(document).prop('title', 'PHP:Projects'),
 		toastr.success('PHP:Projects');
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -51,6 +52,7 @@ $(function(){
 		$('#jp01').jsonRender(javascriptProjects,template),
 		$(document).prop('title', 'JS:Projects'),
 		toastr.success('JS:Projects');
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -65,6 +67,7 @@ $(function(){
 		$('.img-demo').css('width','300px'),
 		$('#codePen').jsonRender(codePenData,codePen),
 		toastr.success('JS:Codepen');
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -76,6 +79,7 @@ $(function(){
 		$('#pyp01').jsonRender(pythonProjects,template),
 		$(document).prop('title', 'Python:Projects'),
 		toastr.success('Python:Projects');
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -96,7 +100,7 @@ $(function(){
 		$(document).prop('title', 'Profile:Skills'),
 		toastr.success('Profile:Skills'),
 		$.get("static/js/skills.js");
-		
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });
@@ -110,6 +114,7 @@ $(function(){
 		$('#edu').jsonRender(eduData,edu),
 		$(document).prop('title', 'Profile:Resume'),
 		toastr.success('Profile:Resume');
+		$('html,body').animate({scrollTop:0},200);
 		});
 	});
 });

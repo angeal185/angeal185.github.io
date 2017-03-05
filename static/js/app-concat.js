@@ -174,6 +174,9 @@ $(".nav-sidebar > li").hover(function() {
     jQuery(t).is(":hidden") ? (jQuery(t).slideToggle(200), jQuery("i.fa", this).removeClass("fa-plus-square").addClass("fa-minus-square")) : (jQuery(t).slideToggle(200), jQuery("i.fa", this).removeClass("fa-minus-square").addClass("fa-plus-square"));
 });
 
+
+
+
 var toolTips = {
   
   timeout: null,
@@ -206,3 +209,10 @@ var toolTips = {
 };
 
 toolTips.init();
+
+$(window).load(function() {
+$("#wrapper").css('display','inherit'),
+new ANI().init(),
+$("#loader").delay( 3000 ).fadeOut( 1500 ),
+toastr.success('DASHBOARD');
+});
