@@ -1,3 +1,6 @@
 # angeal185.github.io
 
-My website. built with jquery.
+My personal dynamic flat-file portfolio website built entirely using jquery and json.
+
+###DEMO
+https://angeal185.github.io
