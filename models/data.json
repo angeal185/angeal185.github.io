@@ -112,6 +112,13 @@ var resumeProj = [{
 var nodejsProjects = [{
     "name": "Nodejs",
     "img": "static/images/nodejs.png",
+    "title": "nodejs-chat-room-app",
+    "sub": "nodejs chat app created with express, nunjucks, socket.io and materialize",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/nodejs-chat-room-app"
+},{
+    "name": "Nodejs",
+    "img": "static/images/nodejs.png",
     "title": "nodejs-nunjucks-express-project",
     "sub": "nodejs portfolio type webapp with express nunjucks mongodb stylus and keystone admin",
     "btnA": "Code",
