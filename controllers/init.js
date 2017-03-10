@@ -7,8 +7,9 @@ var wrap = ("<div id='wrapper'></div>"),
     tml = ("<i class='fa fa-clock-o c-second'></i>My Timeline"),
 	usr = ("<button class='btn btn-xs btn-rounded' type='button'><i class='online'></i> Online</button>"),
 	headerRight = ("<li id='user-header'><a href='https://github.com/angeal185/' target = '_blank'><img id='imgi'>Admin</a></li>"),
-	footer = ("<p class='pull-right sm-pull-reset' style='margin:10px 80px'>Copyright <span class='copyright'>&copy;</span> 2016 Ben eaves. All rights reserved.</p>"),
-	svg1 = ("<div id='svg'></div>");
+	footer = ("<p class='sm-pull-reset' style='margin:10px 80px'>2017 Ben eaves. All rights reserved.</p>"),
+	svg1 = ("<div id='svg'></div>"),
+	IP = "<code id='ip'></code>";
 
 //init templates
 
@@ -38,7 +39,7 @@ $("#headerRight").append(headerRight),
 $("#footer").prepend(footer),
 $(".main-content").after(svg1),
 $( "#svg" ).load( "views/page/svg.tpl" );
-
+$("#footer").append(IP);
 //globals
 
 $("#mt,#ctm").attr("href", href="mailto:beneaves01@hotmail.com");

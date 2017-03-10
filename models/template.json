@@ -59,9 +59,7 @@ var sidebar =
                   ]}
               ]}
           ]},
-        {"<>":"div","html":[
-            {"<>":"code","id":"ip","html":""}
-          ]},
+        {"<>":"div","html":""},
         {"<>":"div","class":"sidebar-footer clearfix","html":[
             {"<>":"a","id":"ctm","html":[
                 {"<>":"i","class":"fa fa-envelope-o","html":""}

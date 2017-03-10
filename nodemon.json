@@ -5,6 +5,9 @@
     "node_modules/**/node_modules"
   ],
   "verbose": true,
+  "execMap": {
+    "js": "node server.js"
+  },
   "watch": [
     "index.html",
     "nodemon.json",
