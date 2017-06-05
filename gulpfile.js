@@ -18,8 +18,7 @@ var gulp = require('gulp'),
 	notify 		= require("gulp-notify"),				// Notify msg on completion of tasks
 	//git 		= require("gulp-git"),
 	rename 		= require("gulp-rename"),
-	chalk 		= require("chalk"),
-	requireDir("./gulp-tasks", {recurse: true});
+	chalk 		= require("chalk");
 	
 gulp.task('joinModels', function(){
     return gulp.src(['models/data.js','models/template.js','models/codepen.js'])

@@ -429,6 +429,13 @@ var javascriptProjects = [{
 }, {
     "name": " javascript",
     "img": "static/images/jquery.png",
+    "title": "simple-jquery-json-search",
+    "sub": "simple json search via getJSON",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/simple-jquery-json-search"
+}, {
+    "name": " javascript",
+    "img": "static/images/jquery.png",
     "title": "angularjs-bootstrap-starter-website",
     "sub": "angularjs starter webapp",
     "btnA": "Code",
@@ -554,6 +561,13 @@ var pythonProjects = [{
 }, {
     "name": "python",
     "img": "static/images/python.png",
+    "title": "gulp-grunt-gui-task-runner",
+    "sub": "simple gui for running gulp or grunt tasks",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/gulp-grunt-gui-task-runner"
+}, {
+    "name": "python",
+    "img": "static/images/python.png",
     "title": "python-website-created-with-flask-and-jinja",
     "sub": "python website created with flask and jinja",
     "btnA": "Code",
@@ -626,10 +640,13 @@ var codeLeftData = [{
         "percent": "70"
     }, {
         "title": "HANDLEBARS",
-        "percent": "70"
+        "percent": "95"
     }, {
         "title": "MUSTACHE",
         "percent": "70"
+    }, {
+        "title": "COFFEESCRIPT",
+        "percent": "90"
     }
 
 ];
@@ -648,7 +665,7 @@ var codeRightData = [{
     "percent": "80"
 }, {
     "title": "LESS",
-    "percent": "90"
+    "percent": "80"
 }, {
     "title": "CMD",
     "percent": "80"
@@ -667,6 +684,9 @@ var codeRightData = [{
 }, {
     "title": "EJS",
     "percent": "80"
+}, {
+    "title": "BABEL",
+    "percent": "70"
 }];
 
 var skillsLeftData = [{
@@ -856,14 +876,14 @@ var CMSLeftData = [{
         "percent": "70"
     }, {
         "title": "GHOST",
-        "percent": "90"
+        "percent": "100"
     }, {
         "title": "OXWALL",
         "percent": "60"
     }, {
         "title": "MAGENTO",
         "percent": "65"
-    },
+    }
 
 ];
 
@@ -903,7 +923,7 @@ var CMSRightData = [{
 }, {
     "title": "OPENCART",
     "percent": "65"
-}, ];
+}];
 
 var resumeData = [{
     "title": "Employment History",
