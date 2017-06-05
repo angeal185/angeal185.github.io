@@ -12,7 +12,6 @@
     <link href="static/css/styles.css" rel="stylesheet">
     <script src="static/js/jquery.js"></script>
 </head>
-<body style="cursor:crosshair;" class="sidebar-condensed theme-sdtl fixed-topbar;">
 <script id="sf" type="x-shader/x-fragment">
 precision highp float;
 uniform float time;
@@ -42,19 +41,11 @@ void main(void) {
   gl_Position = vPosition;
   }
 </script>
-<canvas id='loader'></canvas>
+<body class="sidebar-condensed theme-sdtl fixed-topbar;">
+<canvas id="loader"></canvas>
 <script src="static/js/loader.min.js"></script>
 <script src="controllers/jsonRender.min.js"></script>
-<script src="models/concat.json"></script>
-<script src="models/codepen.min.json"></script>
-<script src="controllers/init.min.js"></script>
-<script src="static/js/cmd.min.js"></script>
-<script src="controllers/routes.min.js"></script>
-<script src="static/js/animate.js"></script>
-<script src="static/js/toastr.min.js"></script>
-<script src="static/js/app-concat.min.js"></script>
-<script src="static/js/cnv.min.js"></script>
-<script src="controllers/cache.min.js"></script>
-<script src="static/js/scroll.js"></script>
+<script src="models/concat.js"></script>
+<script src="static/js/app.js"></script>
 </body>
 </html>

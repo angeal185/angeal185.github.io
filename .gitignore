@@ -6,3 +6,8 @@ bower_components
 
 # stylus
 .styl
+
+# css
+/static/css/styles.css
+
+/server.cmd
