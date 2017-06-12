@@ -197,6 +197,13 @@ var nodejsProjects = [{
 
 var javascriptProjects = [{
     "name": " javascript",
+    "img": "static/images/jquery.png",
+    "title": "dynamic-ajax-site-generator",
+    "sub": "dynamic ajax powered website generator using nunjucks, gulp, jquery and materialize",
+    "btnA": "Code",
+    "hrefA": "https://angeal185.github.io/dynamic-ajax-site-generator"
+},{
+    "name": " javascript",
     "img": "static/images/angular.png",
     "title": "angeal185.github.io",
     "sub": "This website",
