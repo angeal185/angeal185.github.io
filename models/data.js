@@ -37,7 +37,7 @@ var menuData = [{
     "idProj": "j-p",
     "idTemp": "j-t",
     "item1": "Projects",
-    "item2": "Codepen"
+	"item2": "Codepen-list"
 }, {
     "title": "PYTHON",
     "idProj": "py-p",

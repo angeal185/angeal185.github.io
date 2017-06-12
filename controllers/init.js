@@ -9,6 +9,7 @@ var wrap = ("<div id='wrapper'></div>"),
 	headerRight = ("<li id='user-header'><a href='https://github.com/angeal185/' target = '_blank'><img id='imgi'>Admin</a></li>"),
 	footer = ("<p class='sm-pull-reset' style='margin:10px 80px'>2017 Ben eaves. All rights reserved.</p>"),
 	svg1 = ("<div id='svg'></div>"),
+	cdpLnk = ("<li class='cdpLnk'><a href='https://angeal185.github.io/dynamic-ajax-site-generator/' target = '_blank'>Codepen-Full</a></li>"),
 	IP = "<code id='ip'></code>";
 
 //init templates
@@ -36,6 +37,8 @@ $("#blg").prepend(blg),
 $("#tml").prepend(tml),
 $("#usr").prepend(usr),
 $("#headerRight").append(headerRight),
+$("li:has(#j-p)").after(cdpLnk),
+$(".cdpLnk").eq(1).remove(),
 $("#footer").prepend(footer),
 $(".main-content").after(svg1),
 $( "#svg" ).load( "views/page/svg.tpl" );

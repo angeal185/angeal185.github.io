@@ -30,7 +30,7 @@ gulp.task('joinModels', function(){
 
 gulp.task('joinJs', function(){
     return gulp.src([
-			"controllers/init.min.js",
+			"controllers/init.js",
 			"static/js/cmd.min.js",
 			"controllers/routes.js",
 			"static/js/animate.js",
