@@ -147,6 +147,13 @@ var nodejsProjects = [{
 }, {
     "name": "Nodejs",
     "img": "static/images/nodejs.png",
+    "title": "nodejs-encrypted-chat",
+    "sub": "nodejs encrypted chat app using nunjucks, socket.io, require.js, jquery and materialize",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/nodejs-encrypted-chat"
+}, {
+    "name": "Nodejs",
+    "img": "static/images/nodejs.png",
     "title": "mean-stack-portfolio-blog-app",
     "sub": "mean-stack portfolio/blog website and cms using mongodb angularjs ejs bootstrap passport and disqus api",
     "btnA": "Code",
