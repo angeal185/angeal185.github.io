@@ -738,8 +738,11 @@ var skillsLeftData = [{
     "title": "THREE.JS",
     "percent": "70"
 }, {
-    "title": "GREENSHOCK",
+    "title": "GREENSOCK",
     "percent": "70"
+},{
+    "title": "KNOCKOUT.js",
+    "percent": "75"
 }, {
     "title": "TWEEN.JS",
     "percent": "70"
@@ -807,6 +810,9 @@ var skillsRightData = [{
         "percent": "80"
     }, {
         "title": "POLYMER",
+        "percent": "70"
+    },{
+        "title": "VUE.JS",
         "percent": "70"
     }, {
         "title": "BACKBONE",
