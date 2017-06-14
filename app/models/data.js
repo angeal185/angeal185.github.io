@@ -629,7 +629,12 @@ var skillsTemplateData = [{
     "idLeft": "CMSLeft",
     "idRight": "CMSRight",
     "subtitle": "CMS development and design"
-}, ];
+},{
+    "title": "OS SKILLS",
+    "idLeft": "OSLeft",
+    "idRight": "OSRight",
+    "subtitle": "A list of the OS types that i am most familiar with"
+} ];
 
 
 var codeLeftData = [{
