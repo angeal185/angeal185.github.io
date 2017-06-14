@@ -1000,63 +1000,45 @@ var OSRightData = [
 ];
 
 var otherLeftData = [{
-		"title": "GULP",
-		"percent": "100"
+		"title": "GULP"
 	}, {
-		"title": "NPM",
-		"percent": "100"
+		"title": "NPM"
 	}, {
-		"title": "COMPOSER",
-		"percent": "60"
+		"title": "COMPOSER"
 	}, {
-		"title": "SEO",
-		"percent": "90"
+		"title": "SEO"
 	}, {
-        "title": "AWS",
-        "percent": "50"
+        "title": "AWS"
     },{
-        "title": "DOCKER",
-        "percent": "50"
+        "title": "DOCKER"
     },{
-        "title": "DIGITALOCEAN",
-        "percent": "60"
+        "title": "DIGITALOCEAN"
     },{
-        "title": "AZURE",
-        "percent": "40"
+        "title": "AZURE"
     },{
-        "title": "BITBUCKET",
-        "percent": "70"
+        "title": "BITBUCKET"
     }];
 
 var otherRightData = [
 
     {
-        "title": "GRUNT",
-        "percent": "90"
+        "title": "GRUNT"
     }, {
-        "title": "BOWER",
-        "percent": "100"
+        "title": "BOWER"
     }, {
-        "title": "WEBPACK",
-        "percent": "70"
+        "title": "WEBPACK"
     }, {
-        "title": "RESTFUL API",
-        "percent": "90"
+        "title": "RESTFUL API"
     },{
-        "title": "HEROKU",
-        "percent": "80"
+        "title": "HEROKU"
     },{
-        "title": "BITNAMI",
-        "percent": "60"
+        "title": "BITNAMI"
     },{
-        "title": "FIREBASE",
-        "percent": "60"
+        "title": "FIREBASE"
     },{
-        "title": "GITHUB",
-        "percent": "100"
+        "title": "GITHUB"
     },{
-        "title": "GITLAB",
-        "percent": "90"
+        "title": "GITLAB"
     }
 ];
 
