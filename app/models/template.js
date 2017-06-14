@@ -243,7 +243,7 @@ var edu =
 
 var codePenTpl = [
 {"<>":"div","class":"row text","style":"width: 100%;margin:50px 0;","html":[
-    {"<>":"img","class":"img-demo","src":"static/images/codepen-logo.svg","html":""}
+    {"<>":"img","class":"img-demo","src":"app/images/codepen-logo.svg","html":""}
   ]},
 {"<>":"div","class":"container panel list-view pen-grid","style":"padding:60px","html":[
     {"<>":"div","class":"pens-in-list-view-wrap","html":[

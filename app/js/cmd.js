@@ -12,7 +12,7 @@ listener.sequence_combo("h e l p enter", function() {
 });
 
 listener.sequence_combo("p h p enter", function() {
-  $('#pagecontainer').load('views/page/php-projects.tpl', function() {
+  $('#pagecontainer').load('app/views//php-projects.tpl', function() {
 		$('#pp01').jsonRender(phpProj,header),
 		$('#pp01').jsonRender(phpProjects,template),
 		$(document).prop('title', 'PHP:Projects'),
@@ -21,7 +21,7 @@ listener.sequence_combo("p h p enter", function() {
 });
 
 listener.sequence_combo("h o m e enter", function() {
-		$('#pagecontainer').load('views/page/index.tpl', function() {
+		$('#pagecontainer').load('app/views//index.tpl', function() {
 		$('#dash').jsonRender(indexHeader,header),
 		$(document).prop('title', 'Dashboard'),
 		toastr.success('DASHBOARD');
@@ -30,7 +30,7 @@ listener.sequence_combo("h o m e enter", function() {
 	});
 
 listener.sequence_combo("n o d e j s enter", function() {
-		$('#pagecontainer').load('views/page/nodejs-projects.tpl', function() {
+		$('#pagecontainer').load('app/views//nodejs-projects.tpl', function() {
 			$('#hp01').jsonRender(nodejsProj,header),
 			$('#hp01').jsonRender(nodejsProjects,template),
 			$(document).prop('title', 'NodeJS:Projects'),
@@ -39,7 +39,7 @@ listener.sequence_combo("n o d e j s enter", function() {
 	});
 
 listener.sequence_combo("j a v a s c r i p t enter", function() {
-		$('#pagecontainer').load('views/page/javascript-projects.tpl', function() {
+		$('#pagecontainer').load('app/views//javascript-projects.tpl', function() {
 		$('#jp01').jsonRender(javascriptProj,header),
 		$('#jp01').jsonRender(javascriptProjects,template),
 		$(document).prop('title', 'JS:Projects'),
@@ -48,7 +48,7 @@ listener.sequence_combo("j a v a s c r i p t enter", function() {
 	});
 
 listener.sequence_combo("c o d e p e n enter", function() {
-		$('#pagecontainer').load('views/page/javascript-codepen.tpl', function() {
+		$('#pagecontainer').load('app/views//javascript-codepen.tpl', function() {
 		$('#jt01').jsonRender(javascriptTemp,header),
 		$('#jt01').jsonRender(codePenTplData,codePenTpl),
 		$(document).prop('title', 'JS:Codepen'),
@@ -59,7 +59,7 @@ listener.sequence_combo("c o d e p e n enter", function() {
 	});
 	
 listener.sequence_combo("p y t h o n enter", function() {
-		$('#pagecontainer').load('views/page/python-projects.tpl', function() {
+		$('#pagecontainer').load('app/views//python-projects.tpl', function() {
 		$('#pyp01').jsonRender(pythonProj,header),
 		$('#pyp01').jsonRender(pythonProjects,template),
 		$(document).prop('title', 'Python:Projects'),
@@ -69,7 +69,7 @@ listener.sequence_combo("p y t h o n enter", function() {
 
 
 listener.sequence_combo("s k i l l s enter", function() {
-		$('#pagecontainer').load('views/page/skills.tpl', function() {
+		$('#pagecontainer').load('app/views//skills.tpl', function() {
 		$('#skills01').jsonRender(skillsProj,header),
 		$('#skills01').jsonRender(skillsTemplateData,skillsTemplate),
 		$('#codeLeft').jsonRender(codeLeftData,skills),
@@ -82,13 +82,13 @@ listener.sequence_combo("s k i l l s enter", function() {
 		$('#CMSRight').jsonRender(CMSRightData,skills),
 		$(document).prop('title', 'Profile:Skills'),
 		toastr.success('Profile:Skills'),
-		$.get("static/js/skills.js");
+		$.get("app/js/skills.js");
 		
 		});
 	});
 
 listener.sequence_combo("r e s u m e enter", function() {
-		$('#pagecontainer').load('views/page/resume.tpl', function() {
+		$('#pagecontainer').load('app/views//resume.tpl', function() {
 		$('#resume01').jsonRender(resumeProj,header),
 		$('#resume01').jsonRender(resumeData,resume),
 		$('#work').jsonRender(workData,work),

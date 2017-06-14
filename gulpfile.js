@@ -3,54 +3,54 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
 	stylus = require('gulp-stylus');
 	requireDir  = require("require-dir"),
-	coffee 		= require("gulp-coffee"),				// Compile coffee into js
-	stylus 		= require("gulp-stylus"), 				// Compile Stylus into CSS
-	concatCss 	= require("gulp-concat-css"), 			// Concat CSS into single file
-	minifyCSS 	= require("gulp-minify-css"), 			// Minify the CSS
-	htmlmin 	= require("gulp-htmlmin"); 				// Minify .hbs files
-	concat 		= require("gulp-concat"), 				// Join all JS files together to save space
-	uglify 		= require("gulp-uglify"), 				// Minify JavaScript
-	imagemin 	= require("gulp-imagemin"), 			// Minify images
-	jshint 		= require("gulp-jshint"), 				// Debug JS files
+	coffee 		= require("gulp-coffee"),				
+	stylus 		= require("gulp-stylus"),
+	concatCss 	= require("gulp-concat-css"), 			
+	minifyCSS 	= require("gulp-minify-css"), 			
+	htmlmin 	= require("gulp-htmlmin"); 				
+	concat 		= require("gulp-concat"), 			
+	uglify 		= require("gulp-uglify"), 			
+	imagemin 	= require("gulp-imagemin"), 			
+	jshint 		= require("gulp-jshint"), 				
 	jsonlint 	= require("gulp-jsonlint"),
 	gutil 		= require("gulp-util"),
-	stylish 	= require("jshint-stylish"), 			// More stylish debugging
-	notify 		= require("gulp-notify"),				// Notify msg on completion of tasks
+	stylish 	= require("jshint-stylish"), 		
+	notify 		= require("gulp-notify"),		
 	//git 		= require("gulp-git"),
 	rename 		= require("gulp-rename"),
 	chalk 		= require("chalk");
 	
 gulp.task('joinModels', function(){
-    return gulp.src(['models/data.js','models/template.js','models/codepen.js'])
+    return gulp.src(['app/models/data.js','app/models/template.js','app/models/codepen.js'])
         .pipe(concat('concat.js'))
-        .pipe(gulp.dest('models'))
+        .pipe(gulp.dest('app/models'))
         .pipe(uglify())
-        .pipe(gulp.dest('models'));
+        .pipe(gulp.dest('app/models'));
 });
 
 gulp.task('joinJs', function(){
     return gulp.src([
-			"controllers/init.js",
-			"static/js/cmd.min.js",
-			"controllers/routes.js",
-			"static/js/animate.js",
-			"static/js/toastr.min.js",
-			"static/js/app-concat.min.js",
-			"static/js/cnv.min.js",
-			"controllers/cache.min.js",
-			"static/js/scroll.js"
+			"app/js/init.js",
+			"app/js/cmd.min.js",
+			"app/js/routes.js",
+			"app/js/animate.js",
+			"app/js/toastr.min.js",
+			"app/js/app-concat.min.js",
+			"app/js/cnv.min.js",
+			"app/js/cache.min.js",
+			"app/js/scroll.js"
 			])
         .pipe(concat('app.js'))
-        .pipe(gulp.dest('static/js'))
+        .pipe(gulp.dest('app/js'))
         .pipe(uglify())
-        .pipe(gulp.dest('static/js'));
+        .pipe(gulp.dest('app/js'));
 });
 
 gulp.task("joinCss", function () {
-	gulp.src("static/css/styles.css")
+	gulp.src("app/css/styles.css")
 		.pipe(minifyCSS())
 		.pipe(rename({suffix: ".min",}))
-		.pipe(gulp.dest("static/css"))
+		.pipe(gulp.dest("app/css"))
 		.pipe(notify("Task ConcatCss complete."));
 });
 
@@ -60,11 +60,11 @@ gulp.task("joinCss", function () {
 
 
 gulp.task('stylus', function () {
-  return gulp.src('static/css/styles.styl')
+  return gulp.src('app/css/styles.styl')
     .pipe(stylus({
       compress: true
     }))
-    .pipe(gulp.dest('static/css/'));
+    .pipe(gulp.dest('app/css/'));
 });
 
 gulp.task('default', ['join', 'stylus'], function(){

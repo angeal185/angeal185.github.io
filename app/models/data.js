@@ -111,91 +111,91 @@ var resumeProj = [{
 
 var nodejsProjects = [{
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-chat-room-app",
     "sub": "nodejs chat app created with express, nunjucks, socket.io and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-chat-room-app"
 },{
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-nunjucks-express-project",
     "sub": "nodejs portfolio type webapp with express nunjucks mongodb stylus and keystone admin",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-nunjucks-express-project"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-blog-website",
     "sub": "node js blog created with total.js, jquery, bootstrap and stylus",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-blog-website-complete"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-website-express-mongodb-nunjucks-passport-oauth-stylus",
     "sub": "nodejs website built with express nunjucks mongodb stylus, using local and passport-oauth authentication",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-website-express-mongodb-nunjucks-passport-oauth-stylus"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "express-nunjucks-admin-template",
     "sub": "nodejs express admin-template with nunjucks stylus mongodb and passport",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/express-nunjucks-admin-template"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-encrypted-chat",
     "sub": "nodejs encrypted chat app using nunjucks, socket.io, require.js, jquery and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-encrypted-chat"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "mean-stack-portfolio-blog-app",
     "sub": "mean-stack portfolio/blog website and cms using mongodb angularjs ejs bootstrap passport and disqus api",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/mean-stack-portfolio-blog-app"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "express-nunjucks-agency-webapp",
     "sub": "nodejs agency type website created with express, nunjucks and jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/express-nunjucks-agency-webapp"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "agency-webapp-created-with-koa.js-nunjucks-jquery",
     "sub": "agency type webapp created using koa.js, nunjucks, jquery and bootstrap",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/agency-webapp-created-with-koa.js-nunjucks-jquery"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-material-design-flat-file-blog",
     "sub": "material-design blog created with hexo, ejs stylus and bootstrap",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-material-design-flat-file-blog"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "mean-stack-microblog-starter-app",
     "sub": "mean stack microblog starter",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/mean-stack-microblog-starter-app"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "jade-one-page-portfolio-template",
     "sub": "jade express stylus bootstrap jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jade-one-page-portfolio-template"
 }, {
     "name": "Nodejs",
-    "img": "static/images/nodejs.png",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-twig-ecommerce-webapp",
     "sub": "ecommerce webapp created using express, twig, uikit, jquery and stylus",
     "btnA": "Code",
@@ -204,252 +204,252 @@ var nodejsProjects = [{
 
 var javascriptProjects = [{
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "dynamic-ajax-site-generator",
     "sub": "dynamic ajax powered website generator using nunjucks, gulp, jquery and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/dynamic-ajax-site-generator"
 },{
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "angeal185.github.io",
     "sub": "This website",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angeal185.github.io"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "animated-agency-webapp-using-GSAP-threejs-json-jquery",
     "sub": "flat-file webapp created using GSAP, threejs, json and jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/animated-agency-webapp-using-GSAP-threejs-json-jquery"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "jquery-audio-player",
     "sub": "audio player created with jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jquery-audio-player"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "javascript-aes-encryption-decryption-app",
     "sub": "encryption webapp using javascript",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/javascript-aes-encryption-decryption-app"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "jquery-json-portfolio-webapp-with-audio",
     "sub": "flat-file portfolio webapp created with jquery and json",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jquery-json-portfolio-webapp-with-audio"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "json-coming-soon-template",
     "sub": "coming soon template written in json, using foundation and jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/json-coming-soon-template"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "json-portfolio-template",
     "sub": "Dynamic portfolio template written completely using json and jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/json-portfolio-template"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "js-canvas-animations",
     "sub": "my canvas animations",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/js-canvas-animations"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "jquery-kenburns-coming-soon-template",
     "sub": "webapp written in javascript",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jquery-kenburns-coming-soon-template"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "dynamic-jquery-material-design-webapp",
     "sub": "dynamic material design webapp",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/dynamic-jquery-material-design-webapp"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "jquery-one-page-dynamic-website",
     "sub": "one-page dynamic website template built using javascript",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jquery-one-page-dynamic-website"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "responsive-one-page-parallax-agency-template",
     "sub": "Responsive parallax webapp built with jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/responsive-one-page-parallax-agency-template"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "tempo.js-jquery-resume-webapp",
     "sub": "resume webapp created with tempo.js and jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/tempo.js-jquery-resume-webapp"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "Angularjs-materialize-mobile-template",
     "sub": "mobile app template created with angularjs and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/Angularjs-materialize-mobile-template"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "tempo.js-jquery-onepage-webapp",
     "sub": "onepage coming-soon webapp created with tempo.js and jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/tempo.js-jquery-onepage-webapp"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "json-compiler",
     "sub": "convert html to json",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/json-compiler"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "jquery-json-resume-webapp",
     "sub": "resume type webapp created using jquery, json and stylus",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jquery-json-resume-webapp"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "angular-ionic-booking-app",
     "sub": "mobile booking app created with angular and ionic",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angular-ionic-booking-app"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "angularjs-mobile-app-using-ionic",
     "sub": "Angular tutorial mobile app using angular and ionic",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angularjs-mobile-app-using-ionic"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "js-encryption-webapp",
     "sub": "simple aes javascript encryption application",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/js-encryption-webapp"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "ionic-cordova-app",
     "sub": "mobile app built with ionic",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/ionic-cordova-app"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "AngularJS-Ionic-tutorial-app",
     "sub": "ionic tutorial mobile app",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/AngularJS-Ionic-tutorial-app"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "angularjs-python-tutorial-mobile-app",
     "sub": "angularjs python tutorial mobile app built with ionic",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angularjs-python-tutorial-mobile-app"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "angularjs-xdk-mobile-quiz-app",
     "sub": "mobile ready quiz app created with angularjs and intel xdk",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angularjs-xdk-mobile-quiz-app"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "Color-Picker-App",
     "sub": "js Color Picker App",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/Color-Picker-App"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "jquery-dynamic-documentation-starter",
     "sub": "jquery one page dynamic documentation starter app",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jquery-dynamic-documentation-starter"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "jqueryMobile app",
     "sub": "jqueryMobile mobile template",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/jqueryMobile"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "materialize-angularjs-mobileApp",
     "sub": "materialize angularjs mobile app template",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/materialize-angularjs-mobileApp"
 }, {
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "xdk-ready-mobile-cheatsheet-app",
     "sub": "xdk cheat-sheet mobile app built with jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/xdk-ready-mobile-cheatsheet-app"
 },{
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "stylus-xdk-jquery-tutorial-app",
     "sub": "dynamic stylus tutorial mobile app built with jquery and xdk",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/stylus-xdk-jquery-tutorial-app"
 },{
     "name": " javascript",
-    "img": "static/images/angular.png",
+    "img": "app/images/angular.png",
     "title": "ruby-and-rails-tutorial-ionic-MobileApp",
     "sub": "ruby and ruby on rails angular mobile app built on ionic",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/ruby-and-rails-tutorial-ionic-MobileApp"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "Gradient-App",
     "sub": "JS Gradient APP",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/Gradient-App"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "angularjs-bootstrap-tutorial-mobileApp",
     "sub": "AngularJs bootstrap tutorial mobile app",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angularjs-bootstrap-tutorial-mobileApp"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "simple-jquery-json-search",
     "sub": "simple json search via getJSON",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/simple-jquery-json-search"
 }, {
     "name": " javascript",
-    "img": "static/images/jquery.png",
+    "img": "app/images/jquery.png",
     "title": "angularjs-bootstrap-starter-website",
     "sub": "angularjs starter webapp",
     "btnA": "Code",
@@ -458,77 +458,77 @@ var javascriptProjects = [{
 
 var javascriptTemplates = [{
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
     "hrefA": ""
 }, {
     "name": "",
-    "img": "static/images/codepen-logo.svg",
+    "img": "app/images/codepen-logo.svg",
     "title": "",
     "sub": "",
     "btnA": "Code",
@@ -537,21 +537,21 @@ var javascriptTemplates = [{
 
 var phpProjects = [{
     "name": " PHP",
-    "img": "static/images/php.png",
+    "img": "app/images/php.png",
     "title": "material-design-php-file-management-cms",
     "sub": "material-design flat-file file management cms created with php",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/material-design-php-file-management-cms"
 }, {
     "name": " PHP",
-    "img": "static/images/php.png",
+    "img": "app/images/php.png",
     "title": "laravel-media-hosting-webapp",
     "sub": "media hosting cms created with laravel",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/laravel-media-hosting-webapp"
 }, {
     "name": " PHP",
-    "img": "static/images/php.png",
+    "img": "app/images/php.png",
     "title": "php-media-share-app",
     "sub": "media share app created with php",
     "btnA": "Code",
@@ -560,42 +560,42 @@ var phpProjects = [{
 
 var pythonProjects = [{
     "name": "python",
-    "img": "static/images/python.png",
+    "img": "app/images/python.png",
     "title": "flask-jinja-greenshock-portfolio-webapp",
     "sub": "portfolio site created with flask, jinja and gsap",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/flask-jinja-greenshock-portfolio-webapp"
 }, {
     "name": "python",
-    "img": "static/images/python.png",
+    "img": "app/images/python.png",
     "title": "python-flask-material-design-cms",
     "sub": "python material design cms created with flask",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/python-flask-material-design-cms"
 }, {
     "name": "python",
-    "img": "static/images/python.png",
+    "img": "app/images/python.png",
     "title": "gulp-grunt-gui-task-runner",
     "sub": "simple gui for running gulp or grunt tasks",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/gulp-grunt-gui-task-runner"
 }, {
     "name": "python",
-    "img": "static/images/python.png",
+    "img": "app/images/python.png",
     "title": "python-website-created-with-flask-and-jinja",
     "sub": "python website created with flask and jinja",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/python-website-created-with-flask-and-jinja"
 }, {
     "name": "python",
-    "img": "static/images/python.png",
+    "img": "app/images/python.png",
     "title": "python-micro-twitter-clone",
     "sub": "python twitter clone built with web2py",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/python-micro-twitter-clone"
 }, {
     "name": "python",
-    "img": "static/images/python.png",
+    "img": "app/images/python.png",
     "title": "python-blog",
     "sub": "python blog created with web2py",
     "btnA": "Code",

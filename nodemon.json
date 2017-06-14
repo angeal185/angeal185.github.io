@@ -11,10 +11,10 @@
   "watch": [
     "index.html",
     "nodemon.json",
-    "static/",
+    "app/",
 	"views/",
 	"models/",
-	"controllers/"
+	"app/js/"
   ],
   "ext": "js, json, html, css, tpl"
 }
