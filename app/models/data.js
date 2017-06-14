@@ -952,6 +952,38 @@ var CMSRightData = [{
     "percent": "65"
 }];
 
+
+var OSLeftData = [{
+    "title": "UBUNTU",
+    "percent": "90"
+}, {
+    "title": "SUSE",
+    "percent": "80"
+}, {
+    "title": "FENDORA",
+    "percent": "70"
+}, {
+    "title": "KALI",
+    "percent": "80"
+}, ];
+
+var OSRightData = [
+
+    {
+        "title": "WINDOWS(ALL)",
+        "percent": "100"
+    }, {
+        "title": "OSX",
+        "percent": "50"
+    }, {
+        "title": "DEBIAN",
+        "percent": "70"
+    }, {
+        "title": "MINT",
+        "percent": "60"
+    }
+];
+
 var resumeData = [{
     "title": "Employment History",
     "title2": "Academic Achievements",

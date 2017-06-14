@@ -97,6 +97,8 @@ $(function(){
 		$('#dbRight').jsonRender(dbRightData,skills),
 		$('#CMSLeft').jsonRender(CMSLeftData,skills),
 		$('#CMSRight').jsonRender(CMSRightData,skills),
+		$('#OSLeft').jsonRender(OSLeftData,skills),
+		$('#OSRight').jsonRender(OSRightData,skills),
 		$(document).prop('title', 'Profile:Skills'),
 		toastr.success('Profile:Skills'),
 		$.get("app/js/skills.js");
