@@ -101,6 +101,8 @@ $(function(){
 		$('#OSRight').jsonRender(OSRightData,skills),
 		$('#otherLeft').jsonRender(otherLeftData,skills),
 		$('#otherRight').jsonRender(otherRightData,skills),
+		$('#APILeft').jsonRender(APILeftData,apiSkills),
+		$('#APIRight').jsonRender(APIRightData,apiSkills),
 		$(document).prop('title', 'Profile:Skills'),
 		toastr.success('Profile:Skills'),
 		$.get("app/js/skills.js");

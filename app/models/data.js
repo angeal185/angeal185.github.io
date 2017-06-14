@@ -639,6 +639,11 @@ var skillsTemplateData = [{
     "idLeft": "otherLeft",
     "idRight": "otherRight",
     "subtitle": "A list of other skills that i am most familiar with"
+},{
+    "title": "API SKILLS",
+    "idLeft": "APILeft",
+    "idRight": "APIRight",
+    "subtitle": "A list of API's that i am familiar with"
 } ];
 
 
@@ -853,18 +858,18 @@ var skillsRightData = [{
 ];
 
 var dbLeftData = [{
-    "title": "MONGODB",
-    "percent": "90"
-}, {
-    "title": "COUCHDB",
-    "percent": "80"
-}, {
-    "title": "MYSQL",
-    "percent": "65"
-}, {
-    "title": "REDIS",
-    "percent": "70"
-}, ];
+		"title": "MONGODB",
+		"percent": "90"
+	}, {
+		"title": "COUCHDB",
+		"percent": "80"
+	}, {
+		"title": "MYSQL",
+		"percent": "65"
+	}, {
+		"title": "REDIS",
+		"percent": "70"
+}];
 
 var dbRightData = [
 
@@ -925,57 +930,57 @@ var CMSLeftData = [{
 ];
 
 var CMSRightData = [{
-    "title": "APOSTROPHE",
-    "percent": "90"
-}, {
-    "title": "ULBORA",
-    "percent": "80"
-}, {
-    "title": "NODEBB",
-    "percent": "85"
-}, {
-    "title": "MEZZANINE",
-    "percent": "90"
-}, {
-    "title": "WORDPRESS",
-    "percent": "80"
-}, {
-    "title": "DRUPAL",
-    "percent": "70"
-}, {
-    "title": "JOOMLA",
-    "percent": "65"
-}, {
-    "title": "BOLT",
-    "percent": "80"
-}, {
-    "title": "MODX",
-    "percent": "80"
-}, {
-    "title": "MOODLE",
-    "percent": "85"
-}, {
-    "title": "PYRO",
-    "percent": "65"
-}, {
-    "title": "OPENCART",
-    "percent": "65"
+		"title": "APOSTROPHE",
+		"percent": "90"
+	}, {
+		"title": "ULBORA",
+		"percent": "80"
+	}, {
+		"title": "NODEBB",
+		"percent": "85"
+	}, {
+		"title": "MEZZANINE",
+		"percent": "90"
+	}, {
+		"title": "WORDPRESS",
+		"percent": "80"
+	}, {
+		"title": "DRUPAL",
+		"percent": "70"
+	}, {
+		"title": "JOOMLA",
+		"percent": "65"
+	}, {
+		"title": "BOLT",
+		"percent": "80"
+	}, {
+		"title": "MODX",
+		"percent": "80"
+	}, {
+		"title": "MOODLE",
+		"percent": "85"
+	}, {
+		"title": "PYRO",
+		"percent": "65"
+	}, {
+		"title": "OPENCART",
+		"percent": "65"
 }];
 
 
 var OSLeftData = [{
-    "title": "UBUNTU",
-    "percent": "90"
-}, {
-    "title": "SUSE",
-    "percent": "80"
-}, {
-    "title": "FENDORA",
-    "percent": "70"
-}, {
-    "title": "KALI",
-    "percent": "80"
-}, ];
+		"title": "UBUNTU",
+		"percent": "90"
+	}, {
+		"title": "SUSE",
+		"percent": "80"
+	}, {
+		"title": "FENDORA",
+		"percent": "70"
+	}, {
+		"title": "KALI",
+		"percent": "80"
+}];
 
 var OSRightData = [
 
@@ -1052,6 +1057,53 @@ var otherRightData = [
     },{
         "title": "GITLAB",
         "percent": "90"
+    }
+];
+
+var APILeftData = [{
+		"title": "FACEBOOK API"
+	}, {
+		"title": "TWITTER API"
+	}, {
+		"title": "GITHUB API"
+	}, {
+		"title": "PINTEREST API"
+	}, {
+        "title": "PAYPAL API"
+    }, {
+        "title": "SNIPCART API"
+    }, {
+        "title": "CODEPEN API"
+    }, {
+        "title": "DISQUS API"
+    }, {
+        "title": "UNSPLASH API"
+    }, {
+        "title": "OPENWEATHER API"
+    }];
+
+var APIRightData = [
+
+    {
+        "title": "LINKEDIN API"
+    }, {
+        "title": "GOOGLE API"
+    }, {
+        "title": "YOUTUBE API"
+    }, {
+        "title": "VIMEO API"
+    }, {
+        "title": "FLICKR API"
+    }, {
+        "title": "AMAZON API"
+    }, {
+        "title": "EBAY API"
+    }, {
+        "title": "INSTAGRAM API"
+    }, {
+        "title": "FIXER.IO API"
+    }, {
+        "title": "REDDIT API"
     }
 ];
 
