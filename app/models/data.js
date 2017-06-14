@@ -37,7 +37,7 @@ var menuData = [{
     "idProj": "j-p",
     "idTemp": "j-t",
     "item1": "Projects",
-	"item2": "Codepen-list"
+    "item2": "Codepen-list"
 }, {
     "title": "PYTHON",
     "idProj": "py-p",
@@ -116,7 +116,7 @@ var nodejsProjects = [{
     "sub": "nodejs chat app created with express, nunjucks, socket.io and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-chat-room-app"
-},{
+}, {
     "name": "Nodejs",
     "img": "app/images/nodejs.png",
     "title": "nodejs-nunjucks-express-project",
@@ -130,7 +130,7 @@ var nodejsProjects = [{
     "sub": "ghost middleware to minify compiled handlebars output",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/ghost-minify-output"
-},{
+}, {
     "name": "Nodejs",
     "img": "app/images/nodejs.png",
     "title": "nodejs-blog-website",
@@ -216,7 +216,7 @@ var javascriptProjects = [{
     "sub": "dynamic ajax powered website generator using nunjucks, gulp, jquery and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/dynamic-ajax-site-generator"
-},{
+}, {
     "name": " javascript",
     "img": "app/images/angular.png",
     "title": "angeal185.github.io",
@@ -419,14 +419,14 @@ var javascriptProjects = [{
     "sub": "xdk cheat-sheet mobile app built with jquery",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/xdk-ready-mobile-cheatsheet-app"
-},{
+}, {
     "name": " javascript",
     "img": "app/images/jquery.png",
     "title": "stylus-xdk-jquery-tutorial-app",
     "sub": "dynamic stylus tutorial mobile app built with jquery and xdk",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/stylus-xdk-jquery-tutorial-app"
-},{
+}, {
     "name": " javascript",
     "img": "app/images/angular.png",
     "title": "ruby-and-rails-tutorial-ionic-MobileApp",
@@ -629,22 +629,22 @@ var skillsTemplateData = [{
     "idLeft": "CMSLeft",
     "idRight": "CMSRight",
     "subtitle": "CMS development and design"
-},{
+}, {
     "title": "OS SKILLS",
     "idLeft": "OSLeft",
     "idRight": "OSRight",
     "subtitle": "A list of the OS types that i am most familiar with"
-},{
+}, {
     "title": "OTHER SKILLS",
     "idLeft": "otherLeft",
     "idRight": "otherRight",
     "subtitle": "A list of other skills that i am most familiar with"
-},{
+}, {
     "title": "API SKILLS",
     "idLeft": "APILeft",
     "idRight": "APIRight",
     "subtitle": "A list of API's that i am familiar with"
-} ];
+}];
 
 
 var codeLeftData = [{
@@ -755,7 +755,7 @@ var skillsLeftData = [{
 }, {
     "title": "GREENSOCK",
     "percent": "70"
-},{
+}, {
     "title": "KNOCKOUT.js",
     "percent": "75"
 }, {
@@ -826,7 +826,7 @@ var skillsRightData = [{
     }, {
         "title": "POLYMER",
         "percent": "70"
-    },{
+    }, {
         "title": "VUE.JS",
         "percent": "70"
     }, {
@@ -858,17 +858,17 @@ var skillsRightData = [{
 ];
 
 var dbLeftData = [{
-		"title": "MONGODB",
-		"percent": "90"
-	}, {
-		"title": "COUCHDB",
-		"percent": "80"
-	}, {
-		"title": "MYSQL",
-		"percent": "65"
-	}, {
-		"title": "REDIS",
-		"percent": "70"
+    "title": "MONGODB",
+    "percent": "90"
+}, {
+    "title": "COUCHDB",
+    "percent": "80"
+}, {
+    "title": "MYSQL",
+    "percent": "65"
+}, {
+    "title": "REDIS",
+    "percent": "70"
 }];
 
 var dbRightData = [
@@ -890,204 +890,217 @@ var dbRightData = [
 
 
 var CMSLeftData = [{
-        "title": "CODY",
-        "percent": "90"
-    }, {
-        "title": "TARACOT",
-        "percent": "80"
-    }, {
-        "title": "KEYSTONE CMS",
-        "percent": "90"
-    }, {
-        "title": "PENCILBLUE",
-        "percent": "80"
-    }, {
-        "title": "DJANGO CMS",
-        "percent": "95"
-    }, {
-        "title": "OCTOBER CMS",
-        "percent": "80"
-    }, {
-        "title": "PHPBB",
-        "percent": "80"
-    }, {
-        "title": "GRAV",
-        "percent": "95"
-    }, {
-        "title": "WAGTAIL",
-        "percent": "70"
-    }, {
-        "title": "GHOST",
-        "percent": "100"
-    }, {
-        "title": "OXWALL",
-        "percent": "60"
-    }, {
-        "title": "MAGENTO",
-        "percent": "65"
-    }
-
-];
+    "title": "CODY",
+    "percent": "90"
+}, {
+    "title": "TARACOT",
+    "percent": "80"
+}, {
+    "title": "KEYSTONE CMS",
+    "percent": "90"
+}, {
+    "title": "PENCILBLUE",
+    "percent": "80"
+}, {
+    "title": "DJANGO CMS",
+    "percent": "95"
+}, {
+    "title": "OCTOBER CMS",
+    "percent": "80"
+}, {
+    "title": "PHPBB",
+    "percent": "80"
+}, {
+    "title": "GRAV",
+    "percent": "95"
+}, {
+    "title": "WAGTAIL",
+    "percent": "70"
+}, {
+    "title": "GHOST",
+    "percent": "100"
+}, {
+    "title": "OXWALL",
+    "percent": "60"
+}, {
+    "title": "MAGENTO",
+    "percent": "65"
+}];
 
 var CMSRightData = [{
-		"title": "APOSTROPHE",
-		"percent": "90"
-	}, {
-		"title": "ULBORA",
-		"percent": "80"
-	}, {
-		"title": "NODEBB",
-		"percent": "85"
-	}, {
-		"title": "MEZZANINE",
-		"percent": "90"
-	}, {
-		"title": "WORDPRESS",
-		"percent": "80"
-	}, {
-		"title": "DRUPAL",
-		"percent": "70"
-	}, {
-		"title": "JOOMLA",
-		"percent": "65"
-	}, {
-		"title": "BOLT",
-		"percent": "80"
-	}, {
-		"title": "MODX",
-		"percent": "80"
-	}, {
-		"title": "MOODLE",
-		"percent": "85"
-	}, {
-		"title": "PYRO",
-		"percent": "65"
-	}, {
-		"title": "OPENCART",
-		"percent": "65"
+    "title": "APOSTROPHE",
+    "percent": "90"
+}, {
+    "title": "ULBORA",
+    "percent": "80"
+}, {
+    "title": "NODEBB",
+    "percent": "85"
+}, {
+    "title": "MEZZANINE",
+    "percent": "90"
+}, {
+    "title": "WORDPRESS",
+    "percent": "80"
+}, {
+    "title": "DRUPAL",
+    "percent": "70"
+}, {
+    "title": "JOOMLA",
+    "percent": "65"
+}, {
+    "title": "BOLT",
+    "percent": "80"
+}, {
+    "title": "MODX",
+    "percent": "80"
+}, {
+    "title": "MOODLE",
+    "percent": "85"
+}, {
+    "title": "PYRO",
+    "percent": "65"
+}, {
+    "title": "OPENCART",
+    "percent": "65"
 }];
 
 
 var OSLeftData = [{
-		"title": "UBUNTU",
-		"percent": "90"
-	}, {
-		"title": "SUSE",
-		"percent": "80"
-	}, {
-		"title": "FENDORA",
-		"percent": "70"
-	}, {
-		"title": "KALI",
-		"percent": "80"
+    "title": "UBUNTU",
+    "percent": "90"
+}, {
+    "title": "SUSE",
+    "percent": "80"
+}, {
+    "title": "FENDORA",
+    "percent": "70"
+}, {
+    "title": "KALI",
+    "percent": "80"
 }];
 
-var OSRightData = [
-
-    {
-        "title": "WINDOWS(ALL)",
-        "percent": "100"
-    }, {
-        "title": "OSX",
-        "percent": "50"
-    }, {
-        "title": "DEBIAN",
-        "percent": "70"
-    }, {
-        "title": "MINT",
-        "percent": "60"
-    }
-];
+var OSRightData = [{
+    "title": "WINDOWS(ALL)",
+    "percent": "100"
+}, {
+    "title": "OSX",
+    "percent": "50"
+}, {
+    "title": "DEBIAN",
+    "percent": "70"
+}, {
+    "title": "MINT",
+    "percent": "60"
+}];
 
 var otherLeftData = [{
-		"title": "GULP"
-	}, {
-		"title": "NPM"
-	}, {
-		"title": "COMPOSER"
-	}, {
-		"title": "SEO"
-	}, {
-        "title": "AWS"
-    },{
-        "title": "DOCKER"
-    },{
-        "title": "DIGITALOCEAN"
-    },{
-        "title": "AZURE"
-    },{
-        "title": "BITBUCKET"
-    }];
+    "title": "GULP"
+}, {
+    "title": "NPM"
+}, {
+    "title": "COMPOSER"
+}, {
+    "title": "SEO"
+}, {
+    "title": "AWS"
+}, {
+    "title": "DOCKER"
+}, {
+    "title": "DIGITALOCEAN"
+}, {
+    "title": "AZURE"
+}, {
+    "title": "BITBUCKET"
+}, {
+    "title": "SOAP"
+}, {
+    "title": "WAMP STACk"
+}, {
+    "title": "LAMP STACK"
+}, {
+    "title": "DEVOPS"
+}];
 
-var otherRightData = [
-
-    {
-        "title": "GRUNT"
-    }, {
-        "title": "BOWER"
-    }, {
-        "title": "WEBPACK"
-    }, {
-        "title": "RESTFUL API"
-    },{
-        "title": "HEROKU"
-    },{
-        "title": "BITNAMI"
-    },{
-        "title": "FIREBASE"
-    },{
-        "title": "GITHUB"
-    },{
-        "title": "GITLAB"
-    }
-];
+var otherRightData = [{
+    "title": "GRUNT"
+}, {
+    "title": "BOWER"
+}, {
+    "title": "WEBPACK"
+}, {
+    "title": "REST"
+}, {
+    "title": "HEROKU"
+}, {
+    "title": "BITNAMI"
+}, {
+    "title": "FIREBASE"
+}, {
+    "title": "GITHUB"
+}, {
+    "title": "GITLAB"
+}, {
+    "title": "STORMPATH"
+}, {
+    "title": "OKTA"
+}, {
+    "title": "MVC/MVVM/MVP"
+}, {
+    "title": "YEOMAN"
+}];
 
 var APILeftData = [{
-		"title": "FACEBOOK API"
-	}, {
-		"title": "TWITTER API"
-	}, {
-		"title": "GITHUB API"
-	}, {
-		"title": "PINTEREST API"
-	}, {
-        "title": "PAYPAL API"
-    }, {
-        "title": "SNIPCART API"
-    }, {
-        "title": "CODEPEN API"
-    }, {
-        "title": "DISQUS API"
-    }, {
-        "title": "UNSPLASH API"
-    }, {
-        "title": "OPENWEATHER API"
-    }];
+    "title": "FACEBOOK API"
+}, {
+    "title": "TWITTER API"
+}, {
+    "title": "GITHUB API"
+}, {
+    "title": "PINTEREST API"
+}, {
+    "title": "PAYPAL API"
+}, {
+    "title": "SNIPCART API"
+}, {
+    "title": "CODEPEN API"
+}, {
+    "title": "DISQUS API"
+}, {
+    "title": "UNSPLASH API"
+}, {
+    "title": "OPENWEATHER API"
+}, {
+    "title": "TAWK.TO API"
+}, {
+    "title": "HACKERNEWS API"
+}];
 
-var APIRightData = [
-
-    {
-        "title": "LINKEDIN API"
-    }, {
-        "title": "GOOGLE API"
-    }, {
-        "title": "YOUTUBE API"
-    }, {
-        "title": "VIMEO API"
-    }, {
-        "title": "FLICKR API"
-    }, {
-        "title": "AMAZON API"
-    }, {
-        "title": "EBAY API"
-    }, {
-        "title": "INSTAGRAM API"
-    }, {
-        "title": "FIXER.IO API"
-    }, {
-        "title": "REDDIT API"
-    }
-];
+var APIRightData = [{
+    "title": "LINKEDIN API"
+}, {
+    "title": "GOOGLE API"
+}, {
+    "title": "YOUTUBE API"
+}, {
+    "title": "VIMEO API"
+}, {
+    "title": "FLICKR API"
+}, {
+    "title": "AMAZON API"
+}, {
+    "title": "EBAY API"
+}, {
+    "title": "INSTAGRAM API"
+}, {
+    "title": "FIXER.IO API"
+}, {
+    "title": "REDDIT API"
+}, {
+    "title": "LIVEFYRE API"
+}, {
+    "title": "DISCOURSE API"
+}];
 
 var resumeData = [{
     "title": "Employment History",
