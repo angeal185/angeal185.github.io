@@ -126,6 +126,13 @@ var nodejsProjects = [{
 }, {
     "name": "Nodejs",
     "img": "app/images/nodejs.png",
+    "title": "ghost-minify-output",
+    "sub": "ghost middleware to minify compiled handlebars output",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ghost-minify-output"
+},{
+    "name": "Nodejs",
+    "img": "app/images/nodejs.png",
     "title": "nodejs-blog-website",
     "sub": "node js blog created with total.js, jquery, bootstrap and stylus",
     "btnA": "Code",
