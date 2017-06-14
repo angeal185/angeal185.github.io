@@ -634,6 +634,11 @@ var skillsTemplateData = [{
     "idLeft": "OSLeft",
     "idRight": "OSRight",
     "subtitle": "A list of the OS types that i am most familiar with"
+},{
+    "title": "OTHER SKILLS",
+    "idLeft": "otherLeft",
+    "idRight": "otherRight",
+    "subtitle": "A list of other skills that i am most familiar with"
 } ];
 
 
