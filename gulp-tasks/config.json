@@ -1,0 +1,19 @@
+﻿{
+	"name":"portfolio",
+	"joinJs" : [
+		"app/js/init.js",
+		"app/js/cmd.js",
+		"app/js/routes.js",
+		"app/js/animate.js",
+		"app/js/toastr.min.js",
+		"app/js/app-concat.min.js",
+		"app/js/cnv.min.js",
+		"app/js/cache.min.js",
+		"app/js/scroll.js"
+    ],
+	"joinModels" : [
+		"app/models/data.js",
+		"app/models/template.js",
+		"app/models/codepen.js"
+    ]
+}

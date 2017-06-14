@@ -200,7 +200,7 @@ var apiSkills =
 {"<>":"li","class":"ani fadeIn animated","html":[
     {"<>":"h4","html":"${title}"},
     {"<>":"hr","html":""}
-  ]}
+  ]};
   
 var resume =
 {"<>":"div","class":"row panel","style":"padding: 100px;margin-top: 200px;","html":[
@@ -225,7 +225,7 @@ var resume =
     {"<>":"div","class":"container","html":[
         {"<>":"div","id":"edu","html":""}
       ]}
-  ]}
+  ]};
 
 var work =
 [

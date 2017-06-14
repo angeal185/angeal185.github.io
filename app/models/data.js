@@ -1020,7 +1020,10 @@ var otherLeftData = [{
     "title": "LAMP STACK"
 }, {
     "title": "DEVOPS"
+}, {
+    "title": "TRAVIS CI"
 }];
+
 
 var otherRightData = [{
     "title": "GRUNT"
@@ -1048,6 +1051,8 @@ var otherRightData = [{
     "title": "MVC/MVVM/MVP"
 }, {
     "title": "YEOMAN"
+}, {
+    "title": "SLACK"
 }];
 
 var APILeftData = [{

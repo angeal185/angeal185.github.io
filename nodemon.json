@@ -6,13 +6,12 @@
   ],
   "verbose": true,
   "execMap": {
-    "js": "node server.js"
+    "js": "node"
   },
   "watch": [
-    "index.html",
-    "nodemon.json",
-    "app/views/",
-	"app/models/",
+    "app/",
+	"views/",
+	"models/",
 	"app/js/"
   ],
   "ext": "js, json, html, css, tpl"
