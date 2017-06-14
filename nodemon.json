@@ -11,9 +11,8 @@
   "watch": [
     "index.html",
     "nodemon.json",
-    "app/",
-	"views/",
-	"models/",
+    "app/views/",
+	"app/models/",
 	"app/js/"
   ],
   "ext": "js, json, html, css, tpl"
