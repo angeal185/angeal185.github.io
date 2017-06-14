@@ -82,6 +82,8 @@ listener.sequence_combo("s k i l l s enter", function() {
 		$('#CMSRight').jsonRender(CMSRightData,skills),
 		$('#OSLeft').jsonRender(OSLeftData,skills),
 		$('#OSRight').jsonRender(OSRightData,skills),
+		$('#otherLeft').jsonRender(OSLeftData,skills),
+		$('#otherRight').jsonRender(OSRightData,skills),
 		$(document).prop('title', 'Profile:Skills'),
 		toastr.success('Profile:Skills'),
 		$.get("app/js/skills.js");

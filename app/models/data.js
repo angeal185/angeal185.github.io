@@ -989,6 +989,67 @@ var OSRightData = [
     }
 ];
 
+var otherLeftData = [{
+		"title": "GULP",
+		"percent": "100"
+	}, {
+		"title": "NPM",
+		"percent": "100"
+	}, {
+		"title": "COMPOSER",
+		"percent": "60"
+	}, {
+		"title": "SEO",
+		"percent": "90"
+	}, {
+        "title": "AWS",
+        "percent": "50"
+    },{
+        "title": "DOCKER",
+        "percent": "50"
+    },{
+        "title": "DIGITALOCEAN",
+        "percent": "60"
+    },{
+        "title": "AZURE",
+        "percent": "40"
+    },{
+        "title": "BITBUCKET",
+        "percent": "70"
+    }];
+
+var otherRightData = [
+
+    {
+        "title": "GRUNT",
+        "percent": "90"
+    }, {
+        "title": "BOWER",
+        "percent": "100"
+    }, {
+        "title": "WEBPACK",
+        "percent": "70"
+    }, {
+        "title": "RESTFUL API",
+        "percent": "90"
+    },{
+        "title": "HEROKU",
+        "percent": "80"
+    },{
+        "title": "BITNAMI",
+        "percent": "60"
+    },{
+        "title": "FIREBASE",
+        "percent": "60"
+    },{
+        "title": "GITHUB",
+        "percent": "100"
+    },{
+        "title": "GITLAB",
+        "percent": "90"
+    }
+];
+
 var resumeData = [{
     "title": "Employment History",
     "title2": "Academic Achievements",
