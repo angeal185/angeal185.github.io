@@ -1110,15 +1110,18 @@ var resumeData = [{
 var workData = [{
     "date": " CURRENT - 2013",
     "title": "University Lecturer - computer science",
-    "location": "Xingtai University China"
+    "location": "Xingtai University China",
+	"about":""
 }, {
     "date": " CURRENT - 2006",
     "title": "Freelance Web Development",
-    "location": ""
+    "location": "",
+	"about":""
 }, {
     "date": " 2010 - 2009",
     "title": "Computer Science Internship",
-    "location": "Munich University of Applied Sciences Germany"
+    "location": "Munich University of Applied Sciences Germany",
+	"about":"<s>DevOps</s>"
 }, ];
 
 var eduData = [{

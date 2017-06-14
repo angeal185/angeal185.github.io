@@ -232,7 +232,9 @@ var work =
   {"<>":"div","class":"block","html":[
       {"<>":"h3","html":"${date}"},
       {"<>":"h2","class":"ani fadeIn c-primary","html":"${title}"},
-      {"<>":"p","html":"${location}"}
+      {"<>":"p","html":"${location}"},
+	  {"<>":"H3","html":"Responsibilities"},
+	  {"<>":"div","html":"${about}"},
     ]},
   {"<>":"br","html":""},
   {"<>":"br","html":""}
