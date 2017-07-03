@@ -207,9 +207,100 @@ var nodejsProjects = [{
     "sub": "ecommerce webapp created using express, twig, uikit, jquery and stylus",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-twig-ecommerce-webapp"
+}, {
+    "name": "Nodejs",
+    "img": "app/images/nodejs.png",
+    "title": "ghost-handlebars-helpers",
+    "sub": "My custom ghost handlebars.js helpers",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ghost-handlebars-helpers"
+}, {
+    "name": "Nodejs",
+    "img": "app/images/nodejs.png",
+    "title": "ghost-minify-output",
+    "sub": "ghost middleware to minify compiled handlebars output and to disable beautify",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ghost-minify-output"
 }];
 
 var javascriptProjects = [{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "cdnjs-api-live-search-app",
+    "sub": "cdnjs live search app using the cdnjs API and created with jquery, and materialize",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/cdnjs-api-live-search-app"
+}, {
+    "name": " javascript",
+    "img": "app/images/angular.png",
+    "title": "ipinfo-api-search-app",
+    "sub": "Search app created with the ipinfo API using jquery and materialize",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ipinfo-api-search-app"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "Angular-api-wiki-search-app",
+    "sub": "Angular search app using the wikipedia API",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/Angular-api-wiki-search-app"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "ebay-api-search-app",
+    "sub": "ebay API search app created with jquery and materialize",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ebay-api-search-app"
+}, {
+    "name": " javascript",
+    "img": "app/images/angular.png",
+    "title": "ionic-gliphy-api-search-app",
+    "sub": "gliphy api search angular mobile app created with ionic, coffeescript and stylus",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ionic-gliphy-api-search-app"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "cordova-ebay-api-search-mobile-app",
+    "sub": "ebay api search mobile-app created using cordova",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/cordova-ebay-api-search-mobile-app"
+}, {
+    "name": " javascript",
+    "img": "app/images/angular.png",
+    "title": "jquery-json-audio-player",
+    "sub": "audio player with json list",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/jquery-json-audio-player"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "angular-github-api-user-app",
+    "sub": "github user app using github api, angularjs, gulp and stylus",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/angular-github-api-user-app"
+}, {
+    "name": " javascript",
+    "img": "app/images/angular.png",
+    "title": "cordova-text-ncryption-mobile-app",
+    "sub": "cordova-text-ncryption-mobile-app",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/cordova-text-ncryption-mobile-app"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "xdk-solitaire-touchpad-app",
+    "sub": "xdk JS solitaire touchpad mobile app",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/xdk-solitaire-touchpad-app"
+}, {
+    "name": " javascript",
+    "img": "app/images/angular.png",
+    "title": "ionic-angular-openweather-api-app",
+    "sub": "Ionic OpenWeather API mobile app",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/ionic-angular-openweather-api-app"
+},{
     "name": " javascript",
     "img": "app/images/jquery.png",
     "title": "dynamic-ajax-site-generator",
@@ -442,7 +533,7 @@ var javascriptProjects = [{
     "hrefA": "https://github.com/angeal185/Gradient-App"
 }, {
     "name": " javascript",
-    "img": "app/images/jquery.png",
+    "img": "app/images/angular.png",
     "title": "angularjs-bootstrap-tutorial-mobileApp",
     "sub": "AngularJs bootstrap tutorial mobile app",
     "btnA": "Code",
@@ -456,11 +547,18 @@ var javascriptProjects = [{
     "hrefA": "https://github.com/angeal185/simple-jquery-json-search"
 }, {
     "name": " javascript",
-    "img": "app/images/jquery.png",
+    "img": "app/images/angular.png",
     "title": "angularjs-bootstrap-starter-website",
     "sub": "angularjs starter webapp",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/angularjs-bootstrap-starter-website"
+}, {
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "angular-survey-app-template",
+    "sub": "angularjs survey app template with gulp, stylus and bootstrap",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/angular-survey-app-template"
 }];
 
 var javascriptTemplates = [{
@@ -568,10 +666,10 @@ var phpProjects = [{
 var pythonProjects = [{
     "name": "python",
     "img": "app/images/python.png",
-    "title": "flask-jinja-greenshock-portfolio-webapp",
+    "title": "flask-jinja-greensock-portfolio-webapp",
     "sub": "portfolio site created with flask, jinja and gsap",
     "btnA": "Code",
-    "hrefA": "https://github.com/angeal185/flask-jinja-greenshock-portfolio-webapp"
+    "hrefA": "https://github.com/angeal185/flask-jinja-greensock-portfolio-webapp"
 }, {
     "name": "python",
     "img": "app/images/python.png",
