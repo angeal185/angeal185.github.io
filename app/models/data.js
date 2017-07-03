@@ -214,13 +214,6 @@ var nodejsProjects = [{
     "sub": "My custom ghost handlebars.js helpers",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/ghost-handlebars-helpers"
-}, {
-    "name": "Nodejs",
-    "img": "app/images/nodejs.png",
-    "title": "ghost-minify-output",
-    "sub": "ghost middleware to minify compiled handlebars output and to disable beautify",
-    "btnA": "Code",
-    "hrefA": "https://github.com/angeal185/ghost-minify-output"
 }];
 
 var javascriptProjects = [{
