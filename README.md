@@ -2,5 +2,5 @@
 
 My personal dynamic flat-file portfolio website built entirely using jquery and json.
 
-###DEMO
+### DEMO
 https://angeal185.github.io
