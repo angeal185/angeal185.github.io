@@ -41,7 +41,7 @@
 				e && "function" == typeof a && a.call(r.get());
 			}), this;
 		};
-	}), 
+	}),
 	$(function() {
 		$.preload([
 			"app/views//nodejs-projects.tpl",
@@ -56,7 +56,8 @@
 			"app/images/jquery.png",
 			"app/images/codepen-logo.svg",
 			"app/images/php.png",
-			"app/images/angular.png"
+			"app/images/angular.png",
+			"app/images/stylus.png"
 		]);
 	});
 });

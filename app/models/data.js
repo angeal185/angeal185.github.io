@@ -48,6 +48,10 @@ var menuData = [{
     "title": "PHP",
     "idProj": "p-p",
     "item1": "Projects",
+}, {
+    "title": "CSS",
+    "idProj": "c-s",
+    "item1": "Stylus",
 }];
 
 var headerMainRightData = [{
@@ -94,6 +98,11 @@ var phpProj = [{
     "sub": "PROJECTS"
 }];
 
+var stylusProj = [{
+    "title": "STYLUS",
+    "sub": "PROJECTS"
+}];
+
 var timelineHeader = [{
     "title": "TIMELINE",
     "sub": ""
@@ -110,6 +119,20 @@ var resumeProj = [{
 }];
 
 var nodejsProjects = [{
+    "name": "Nodejs",
+    "img": "app/images/nodejs.png",
+    "title": "nodejs-json-API-headless-CMS",
+    "sub": "nodejs headless cms for generating angular apps",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/nodejs-json-API-headless-CMS"
+},{
+    "name": "Nodejs",
+    "img": "app/images/nodejs.png",
+    "title": "nodejs-task-runner-cms",
+    "sub": "nodejs cms for creating, storing and running command line tasks",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/nodejs-task-runner-cms"
+},{
     "name": "Nodejs",
     "img": "app/images/nodejs.png",
     "title": "nodejs-chat-room-app",
@@ -145,6 +168,13 @@ var nodejsProjects = [{
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/nodejs-website-express-mongodb-nunjucks-passport-oauth-stylus"
 }, {
+    "name": "Nodejs",
+    "img": "app/images/nodejs.png",
+    "title": "nunjucks-template-generator-module",
+    "sub": "nodejs module for generating nunjucks templates",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/nunjucks-template-generator-module"
+},{
     "name": "Nodejs",
     "img": "app/images/nodejs.png",
     "title": "express-nunjucks-admin-template",
@@ -223,6 +253,13 @@ var javascriptProjects = [{
     "sub": "cdnjs live search app using the cdnjs API and created with jquery, and materialize",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/cdnjs-api-live-search-app"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "json-template-generator-gui",
+    "sub": "javascript gui for generating json templates",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/json-template-generator-gui"
 }, {
     "name": " javascript",
     "img": "app/images/angular.png",
@@ -237,6 +274,13 @@ var javascriptProjects = [{
     "sub": "Angular search app using the wikipedia API",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/Angular-api-wiki-search-app"
+},{
+    "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "javascript-timestamp-generator-app",
+    "sub": "offline timestamp generator written in coffeescript ",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/javascript-timestamp-generator-app"
 },{
     "name": " javascript",
     "img": "app/images/jquery.png",
@@ -634,26 +678,63 @@ var javascriptTemplates = [{
 }];
 
 var phpProjects = [{
-    "name": " PHP",
+    "name": "",
     "img": "app/images/php.png",
     "title": "material-design-php-file-management-cms",
     "sub": "material-design flat-file file management cms created with php",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/material-design-php-file-management-cms"
 }, {
-    "name": " PHP",
+    "name": "",
     "img": "app/images/php.png",
     "title": "laravel-media-hosting-webapp",
     "sub": "media hosting cms created with laravel",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/laravel-media-hosting-webapp"
 }, {
-    "name": " PHP",
+    "name": "",
     "img": "app/images/php.png",
     "title": "php-media-share-app",
     "sub": "media share app created with php",
     "btnA": "Code",
     "hrefA": "https://github.com/angeal185/php-media-share-app"
+}];
+
+var stylusProjects = [{
+    "name": "",
+    "img": "app/images/stylus.png",
+    "title": "stylus-font-awesome",
+    "sub": "stylus port of font-awesome",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/stylus-font-awesome"
+}, {
+    "name": "",
+    "img": "app/images/stylus.png",
+    "title": "bootstrap-4-stylus",
+    "sub": "stylus port of bootstrap 4",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/bootstrap-4-stylus"
+}, {
+    "name": "",
+    "img": "app/images/stylus.png",
+    "title": "stylus-animate",
+    "sub": "stylus port of animate.css",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/stylus-animate"
+}, {
+    "name": "",
+    "img": "app/images/stylus.png",
+    "title": "materialize-stylus",
+    "sub": "stylus port of materialize",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/materialize-stylus"
+}, {
+    "name": "",
+    "img": "app/images/stylus.png",
+    "title": "semantic-ui-stylus",
+    "sub": "stylus port of semanticUI",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/semantic-ui-stylus"
 }];
 
 var pythonProjects = [{
