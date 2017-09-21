@@ -1,4 +1,3 @@
-var slideTopData = {};
 var sidebarData = {};
 var mainContentData = {};
 

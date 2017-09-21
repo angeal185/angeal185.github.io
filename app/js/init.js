@@ -1,10 +1,5 @@
 var wrap = ("<div id='wrapper'></div>"),
 	canvas1 = ("<canvas id='canvas'></canvas>"),
-	topA = ("<h6><i class='fa fa-info-circle'></i> ABOUT THIS SITE</h6>"),
-	topB = ("<h6><i class='fa fa-code'></i>FOLLOW MY WORK</h6>"),
-	topC = ("<h6><i class='fa fa-envelope-o'></i> CONTACT INFO</h6>"),
-	blg = ("<i class='fa fa-file-word-o c-primary'></i>My Blog"),
-    tml = ("<i class='fa fa-clock-o c-second'></i>My Timeline"),
 	usr = ("<button class='btn btn-xs btn-rounded' type='button'><i class='online'></i> Online</button>"),
 	headerRight = ("<li id='user-header'><a href='https://github.com/angeal185/' target = '_blank'><img id='imgi'>Admin</a></li>"),
 	footer = ("<p class='sm-pull-reset' style='margin:10px 80px'>2017 Ben eaves. All rights reserved.</p>"),
@@ -15,7 +10,6 @@ var wrap = ("<div id='wrapper'></div>"),
 //init templates
 
 $('body').prepend(wrap);
-$('#wrapper').jsonRender(slideTopData,slideTop);
 $('#wrapper').jsonRender(sidebarData,sidebar);
 $('#wrapper').jsonRender(mainContentData,mainContent);
 $('#follow').jsonRender(followData,follow);
@@ -30,25 +24,17 @@ $('#wbs1').addClass("fa-bolt").prop('data-tip', 'My website');
 //snippets
 
 $("body").prepend(canvas1),
-$("#topA").prepend(topA),
-$("#topB").prepend(topB),
-$("#topC").prepend(topC),
-$("#blg").prepend(blg),
-$("#tml").prepend(tml),
 $("#usr").prepend(usr),
 $("#headerRight").append(headerRight),
 $("li:has(#j-p)").after(cdpLnk),
 $(".cdpLnk").eq(1).remove(),
 $("#footer").prepend(footer),
 $(".main-content").after(svg1),
-$( "#svg" ).load( "app/views//svg.tpl" );
+$( "#svg" ).load( "app/views/svg.tpl" );
 $("#footer").append(IP);
 //globals
 
-$("#mt,#ctm").attr("href", href="mailto:beneaves01@hotmail.com");
-$("#mt").html("beneaves01@hotmail.com");
-$('#ctm').attr('title','contact me');
-$("#cdpt,#wbs1,#jsft,#gtlt,#lndt,#flkrt,#fsc,#ctm,#gth2 ").addClass("fa");
+$("#wbs1,#cdpt,#lndt,#fsc,#gth2 ").addClass("fa");
 $("#wbs1,#cdpt,#lndt").addClass("ani fadeIn");
 $('#fsc').css('float','right');
 $("#imgh").attr({
@@ -67,10 +53,6 @@ $("#fsc").attr({
         "class" : "toggle_fullscreen",
         "title" : "fullscreen",
     });
-$("#ctm").attr({
-        "title" : "contact me",
-        "class" : "toggle"
-        });
 $("#gth2").attr({
         "src" : "app/images/avatars/github.png",
         "class" : "toggle"
@@ -78,5 +60,4 @@ $("#gth2").attr({
 $.get('https://ipinfo.io', function (res) {
         $('#ip').html( 'Your IP: ' +res.ip);
     },"jsonp");
-$("#fsc,#ctm,#gth2").addClass("pull-left");
-
+$("#fsc,#gth2").addClass("pull-left");

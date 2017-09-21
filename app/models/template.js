@@ -1,34 +1,4 @@
-﻿var slideTop =
-{"<>":"div","id":"slidetop","class":"ani flash","data-ani-duration":"6s","data-ani-delay":"6s","html":[
-    {"<>":"div","class":"container","style":"display: none","html":[
-        {"<>":"div","class":"row","html":[
-            {"<>":"div","id":"topA","class":"col-md-4","html":[
-                {"<>":"p","html":"..."},
-                {"<>":"br","html":""},
-                {"<>":"p","html":"SITE IS UNDER CONSTRUCTION"}
-              ]},
-            {"<>":"div","id":"topB","class":"col-md-4","html":[
-                {"<>":"ul","id":"follow","class":"list-unstyled","html":""}
-              ]},
-            {"<>":"div","id":"topC","class":"col-md-4","html":[
-                {"<>":"ul","class":"list-unstyled","html":[
-                    {"<>":"li","html":[
-                        {"<>":"b","html":"Address:"},
-                        {"<>":"p","html":"Melbourne, Australia"}
-                      ]},
-                    {"<>":"li","html":[
-                        {"<>":"b","html":"Email:"},
-                        {"<>":"br","html":""},
-                        {"<>":"a","id":"mt","html":""}
-                      ]}
-                  ]}
-              ]}
-          ]}
-      ]},
-    {"<>":"a","class":"slidetop-toggle","html":""}
-  ]};
-
-var sidebar =
+﻿var sidebar =
 {"<>":"div","class":"sidebar","html":[
     {"<>":"div","class":"logopanel","html":[
         {"<>":"h1","style":"text-align:center","html":"GITHUB"}
@@ -97,7 +67,7 @@ var mainContent =
       ]}
   ]};
 
-var follow = 
+var follow =
 {"<>":"li","html":[
     {"<>":"a","href":"${href}","target":"_blank","html":[
 		{"<>":"i","class":"${class}","html":[
@@ -106,7 +76,7 @@ var follow =
 		]}
   ]};
 
-var menu = 
+var menu =
 {"<>":"li","class":"tm nav-parent","html":[
     {"<>":"a","html":[
         {"<>":"i","class":"fa fa-code c-fourth","html":""},
@@ -123,12 +93,12 @@ var menu =
       ]}
   ]};
 
-var headerMain = 
+var headerMain =
 {"<>":"li","html":[
     {"<>":"a","href":"${href}","target":"_blank","html":[
         {"<>":"i","id":"${id}","data-ani-delay":"${time}","html":""}
       ]}
-  ]}; 
+  ]};
 
 var header =
 {"<>":"div","class":"row","html":[
@@ -170,8 +140,8 @@ var template =
           ]}
       ]}
   ]};
- 
-var skillsTemplate = 
+
+var skillsTemplate =
 [
   {"<>":"h2","class":"skills-title c-primary  ani fadeIn","html":"${title}"},
   {"<>":"h3","class":"skills-title","html":"${subtitle}"},
@@ -186,7 +156,7 @@ var skillsTemplate =
     ]}
 ];
 
-var skills = 
+var skills =
 {"<>":"li","class":"ani fadeIn","html":[
     {"<>":"h4","html":"${title}"},
     {"<>":"div","class":"bar_container","html":[
@@ -196,12 +166,12 @@ var skills =
       ]}
   ]};
 
-var apiSkills =   
+var apiSkills =
 {"<>":"li","class":"ani fadeIn animated","html":[
     {"<>":"h4","html":"${title}"},
     {"<>":"hr","html":""}
   ]};
-  
+
 var resume =
 {"<>":"div","class":"row panel","style":"padding: 100px;margin-top: 200px;","html":[
     {"<>":"div","class":"col-md-12 col-sm-12","style":"height:40px;","html":""},
@@ -268,7 +238,7 @@ var codePenTpl = [
       ]}
   ]}
 ];
-  
+
 var codePen =
 {"<>":"tr","class":"pen-in-list-view","html":[
     {"<>":"td","class":"title","html":[
