@@ -161,7 +161,7 @@ sidebar =
                 'class': 'hide-top-sidebar'
                 'html': [ {
                   '<>': 'i'
-                  'class': 'fa fa-cog'
+                  'class': 'icon-cog'
                   'html': ''
                 } ]
               } ]
@@ -181,7 +181,7 @@ sidebar =
               'html': [
                 {
                   '<>': 'i'
-                  'class': 'fa fa-tachometer c-primary'
+                  'class': 'icon-tachometer c-primary'
                   'html': ''
                 }
                 {
@@ -205,7 +205,7 @@ sidebar =
               'id': 'ctm'
               'html': [ {
                 '<>': 'i'
-                'class': 'fa fa-envelope-o'
+                'class': 'icon-envelope-o'
                 'html': ''
               } ]
             }
@@ -214,7 +214,7 @@ sidebar =
               'id': 'fsc'
               'html': [ {
                 '<>': 'i'
-                'class': 'fa fa-arrows-alt'
+                'class': 'icon-arrows-alt'
                 'html': ''
               } ]
             }
@@ -293,7 +293,7 @@ mainContent =
       'class': 'scrollup'
       'html': [ {
         '<>': 'i'
-        'class': 'fa fa-angle-up'
+        'class': 'icon-angle-up'
         'html': ''
       } ]
     }
@@ -322,7 +322,7 @@ menu =
       'html': [
         {
           '<>': 'i'
-          'class': 'fa fa-code c-fourth'
+          'class': 'icon-code c-fourth'
           'html': ''
         }
         {
@@ -331,7 +331,7 @@ menu =
         }
         {
           '<>': 'span'
-          'class': 'fa arrow'
+          'class': 'arrow'
           'html': ''
         }
       ]

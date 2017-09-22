@@ -8,21 +8,18 @@ var wrap = ("<div id='wrapper'></div>"),
 	IP = "<code id='ip'></code>";
 
 //init templates
-
 $('body').prepend(wrap);
 $('#wrapper').jsonRender(sidebarData,sidebar);
 $('#wrapper').jsonRender(mainContentData,mainContent);
-$('#follow').jsonRender(followData,follow);
 $('#menu').jsonRender(menuData,menu);
 $('#headerRight').jsonRender(headerMainRightData,headerMain);
 
 $('#imgi').prop('data-tip', 'My github');
-$('#cdpt').addClass("fa-codepen").prop('data-tip', 'My codepen');
-$('#lndt').addClass("fa-linkedin").prop('data-tip', 'My linkedin');
-$('#wbs1').addClass("fa-bolt").prop('data-tip', 'My website');
+$('#cdpt').addClass("icon-codepen").prop('data-tip', 'My codepen');
+$('#lndt').addClass("icon-linkedin").prop('data-tip', 'My linkedin');
+$('#wbs1').addClass("icon-bolt").prop('data-tip', 'My website');
 
 //snippets
-
 $("body").prepend(canvas1),
 $("#usr").prepend(usr),
 $("#headerRight").append(headerRight),
@@ -32,11 +29,9 @@ $("#footer").prepend(footer),
 $(".main-content").after(svg1),
 $( "#svg" ).load( "app/views/svg.tpl" );
 $("#footer").append(IP);
-//globals
 
-$("#wbs1,#cdpt,#lndt,#fsc,#gth2 ").addClass("fa");
+//globals
 $("#wbs1,#cdpt,#lndt").addClass("ani fadeIn");
-$('#fsc').css('float','right');
 $("#imgh").attr({
         "src" : "app/images/avatars/github-512.png",
         "class" : "img-responsive img-circle"

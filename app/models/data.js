@@ -1,24 +1,6 @@
 var sidebarData = {};
 var mainContentData = {};
 
-var followData = [{
-    "title": " My Website",
-    "href": "#",
-    "class": "fa fa-bolt"
-}, {
-    "title": " My Github",
-    "href": "https://github.com/angeal185/",
-    "class": "fa fa-github"
-}, {
-    "title": " My Codepen",
-    "href": "http://codepen.io/angeal185/",
-    "class": "fa fa-codepen"
-}, {
-    "title": " My linkedin",
-    "href": "https://au.linkedin.com/in/ben-eaves-996991125",
-    "class": "fa fa-linkedin"
-}, ];
-
 var menuData = [{
     "title": "PROFILE",
     "idProj": "skills",

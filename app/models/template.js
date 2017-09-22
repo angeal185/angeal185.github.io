@@ -1,4 +1,4 @@
-﻿var sidebar =
+var sidebar =
 {"<>":"div","class":"sidebar","html":[
     {"<>":"div","class":"logopanel","html":[
         {"<>":"h1","style":"text-align:center","html":"GITHUB"}
@@ -17,25 +17,22 @@
             {"<>":"span","html":"Navigation"},
             {"<>":"div","class":"pull-right menu-settings","html":[
                 {"<>":"a","id":"hide-top-sidebar","title":"hide","class":"hide-top-sidebar","html":[
-                    {"<>":"i","class":"fa fa-cog","html":""}
+                    {"<>":"i","class":"icon-cog","html":""}
                   ]}
               ]}
           ]},
         {"<>":"ul","id":"menu","class":"nav nav-sidebar","html":[
             {"<>":"li","class":"tm nav-parent","html":[
                 {"<>":"a","id":"indx","html":[
-                    {"<>":"i","class":"fa fa-tachometer c-primary","html":""},
+                    {"<>":"i","class":"icon-tachometer c-primary","html":""},
                     {"<>":"span","html":"Index"}
                   ]}
               ]}
           ]},
         {"<>":"div","html":""},
         {"<>":"div","class":"sidebar-footer clearfix","html":[
-            {"<>":"a","id":"ctm","html":[
-                {"<>":"i","class":"fa fa-envelope-o","html":""}
-              ]},
             {"<>":"a","id":"fsc","html":[
-                {"<>":"i","class":"fa fa-arrows-alt","html":""}
+                {"<>":"i","class":"icon-arrows-alt","html":""}
               ]}
           ]}
       ]}
@@ -63,25 +60,16 @@ var mainContent =
     {"<>":"div","id":"pagecontainer","html":""},
     {"<>":"div","id":"footer","class":"copyright col-md-12","html":""},
     {"<>":"a","class":"scrollup","html":[
-        {"<>":"i","class":"fa fa-angle-up","html":""}
+        {"<>":"i","class":"icon-angle-up","html":""}
       ]}
-  ]};
-
-var follow =
-{"<>":"li","html":[
-    {"<>":"a","href":"${href}","target":"_blank","html":[
-		{"<>":"i","class":"${class}","html":[
-			{"<>":"span","html":"${title}"}
-			]}
-		]}
   ]};
 
 var menu =
 {"<>":"li","class":"tm nav-parent","html":[
     {"<>":"a","html":[
-        {"<>":"i","class":"fa fa-code c-fourth","html":""},
+        {"<>":"i","class":"icon-code c-fourth","html":""},
         {"<>":"span","html":"${title}"},
-        {"<>":"span","class":"fa arrow","html":""}
+        {"<>":"span","class":"arrow","html":""}
       ]},
     {"<>":"ul","class":"children collapse","html":[
         {"<>":"li","html":[

@@ -5,22 +5,22 @@ followData = [
   {
     'title': ' My Website'
     'href': '#'
-    'class': 'fa fa-bolt'
+    'class': 'icon-bolt'
   }
   {
     'title': ' My Github'
     'href': 'https://github.com/angeal185/'
-    'class': 'fa fa-github'
+    'class': 'icon-github'
   }
   {
     'title': ' My Codepen'
     'href': 'http://codepen.io/angeal185/'
-    'class': 'fa fa-codepen'
+    'class': 'icon-codepen'
   }
   {
     'title': ' My linkedin'
     'href': 'https://au.linkedin.com/in/ben-eaves-996991125'
-    'class': 'fa fa-linkedin'
+    'class': 'icon-linkedin'
   }
 ]
 menuData = [
