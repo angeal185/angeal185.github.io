@@ -38,15 +38,21 @@ var menuData = [{
 var headerMainRightData = [{
     "href": "#",
     "id": "wbs1",
-    "time": "7s"
+    "class":"icon-bolt shrink",
+    "time": "7s",
+    "dataTip":""
 }, {
     "href": "http://codepen.io/angeal185/",
     "id": "cdpt",
-    "time": "6s"
+    "class":"icon-codepen shrink",
+    "time": "6s",
+    "dataTip":"My codepen"
 }, {
     "href": "https://au.linkedin.com/in/ben-eaves-996991125",
     "id": "lndt",
-    "time": "5s"
+    "class":"icon-linkedin shrink",
+    "time": "5s",
+    "dataTip":"My linkedin"
 }];
 
 var indexHeader = [{

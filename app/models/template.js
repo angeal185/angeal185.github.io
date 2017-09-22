@@ -24,14 +24,14 @@ var sidebar =
         {"<>":"ul","id":"menu","class":"nav nav-sidebar","html":[
             {"<>":"li","class":"tm nav-parent","html":[
                 {"<>":"a","id":"indx","html":[
-                    {"<>":"i","class":"icon-tachometer c-primary","html":""},
-                    {"<>":"span","html":"Index"}
+                    {"<>":"i","class":"icon-tachometer c-primary shrink","html":""},
+                    {"<>":"span","class":"shrink","html":"Index"}
                   ]}
               ]}
           ]},
         {"<>":"div","html":""},
         {"<>":"div","class":"sidebar-footer clearfix","html":[
-            {"<>":"a","id":"fsc","html":[
+            {"<>":"a","src":"app/images/avatars/github.png","id":"fsc","class":"pull-left toggle_fullscreen shrink","title":"fullscreen","html":[
                 {"<>":"i","class":"icon-arrows-alt","html":""}
               ]}
           ]}
@@ -59,7 +59,7 @@ var mainContent =
       ]},
     {"<>":"div","id":"pagecontainer","html":""},
     {"<>":"div","id":"footer","class":"copyright col-md-12","html":""},
-    {"<>":"a","class":"scrollup","html":[
+    {"<>":"a","class":"scrollup shrink","html":[
         {"<>":"i","class":"icon-angle-up","html":""}
       ]}
   ]};
@@ -67,9 +67,9 @@ var mainContent =
 var menu =
 {"<>":"li","class":"tm nav-parent","html":[
     {"<>":"a","html":[
-        {"<>":"i","class":"icon-code c-fourth","html":""},
-        {"<>":"span","html":"${title}"},
-        {"<>":"span","class":"arrow","html":""}
+        {"<>":"i","class":"icon-code c-fourth shrink","html":""},
+        {"<>":"span","class":"shrink","html":"${title}"},
+        {"<>":"span","class":"arrow shrink","html":""}
       ]},
     {"<>":"ul","class":"children collapse","html":[
         {"<>":"li","html":[
@@ -84,7 +84,7 @@ var menu =
 var headerMain =
 {"<>":"li","html":[
     {"<>":"a","href":"${href}","target":"_blank","html":[
-        {"<>":"i","id":"${id}","data-ani-delay":"${time}","html":""}
+        {"<>":"i","id":"${id}","class":"${class}","data-ani-delay":"${time}","data-tip":"${dataTip}","html":""}
       ]}
   ]};
 
@@ -121,7 +121,7 @@ var template =
             {"<>":"div","class":"panel-footer clearfix","html":[
                 {"<>":"div","class":"pull-right","html":[
 					{"<>":"a","href":"${hrefA}","target":"_blank","html":[
-						{"<>":"button","type":"button","class":"btn btn-white m-r-10","formaction":"${hrefA}","html":"${btnA}"}
+						{"<>":"button","type":"button","class":"btn btn-white m-r-10 shrink","formaction":"${hrefA}","html":"${btnA}"}
 						]}
                   ]}
               ]}
