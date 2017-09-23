@@ -15,5 +15,11 @@
 		"app/models/data.js",
 		"app/models/template.js",
 		"app/models/codepen.js"
+    ],
+	"joinFinal" : [
+		"app/js/loader.js",
+		"app/models/models.js",
+		"app/js/jsonRender.js",
+		"app/js/app.js"
     ]
 }
