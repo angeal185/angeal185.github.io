@@ -235,7 +235,7 @@ var nodejsProjects = [{
 
 var javascriptProjects = [{
     "name": " javascript",
-    "img": "app/images/jquery.png",
+    "img": "app/images/angular.png",
     "title": "cdnjs-api-live-search-app",
     "sub": "cdnjs live search app using the cdnjs API and created with jquery, and materialize",
     "btnA": "Code",
@@ -263,7 +263,7 @@ var javascriptProjects = [{
     "hrefA": "https://github.com/angeal185/Angular-api-wiki-search-app"
 },{
     "name": " javascript",
-    "img": "app/images/jquery.png",
+    "img": "app/images/angular.png",
     "title": "javascript-timestamp-generator-app",
     "sub": "offline timestamp generator written in coffeescript ",
     "btnA": "Code",
