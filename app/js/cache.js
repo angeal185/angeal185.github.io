@@ -49,6 +49,7 @@
 			"app/views/javascript-codepen.tpl",
 			"app/views/python-projects.tpl",
 			"app/views/php-projects.tpl",
+			"app/views/stylus-projects.tpl",
 			"app/views/resume.tpl",
 			"app/views/skills.tpl",
 			"app/images/nodejs.png",
