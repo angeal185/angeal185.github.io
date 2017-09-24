@@ -4,11 +4,11 @@ uglify 		= require("gulp-uglify"),
 concat 		= require("gulp-concat"),
 notify 		= require("gulp-notify");
 
-gulp.task("joinJs", function(){
-    return gulp.src(config.joinJs)
+gulp.task("final", function(){
+    return gulp.src(config.joinFinal)
         .pipe(concat("main.js"))
         .pipe(gulp.dest("main/js"))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest("main/js"))
-		.pipe(notify("Task joinJs complete."));
+		.pipe(notify("Task final complete."));
 });
