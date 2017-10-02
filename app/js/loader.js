@@ -25,7 +25,7 @@ var canvas = document.querySelector('#loader');
     }
 
     function initGraphics () {
-        gl = canvas.getContext('webgl');
+        gl = canvas.getContext('experimental-webgl');
         var width = canvas.width;
         var height = canvas.height;
         gl.viewport(0, 0, width, height);
