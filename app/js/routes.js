@@ -25,7 +25,9 @@ $(function(){
 	$('#h-p').click(function(){
 		$('#pagecontainer').load('app/views/nodejs-projects.tpl', function() {
 			$('#hp01').jsonRender(nodejsProj,header),
-			$('#hp01').jsonRender(nodejsProjects,template),
+			$.getJSON("nodejs.json",function(p){
+				$('#hp01').jsonRender(p.entries,template);
+			}),	
 			$(document).prop('title', 'NodeJS:Projects'),
 			toastr.success('NodeJS:Projects');
 			$('html,body').animate({scrollTop:0},200);
@@ -37,7 +39,9 @@ $(function(){
 	$('#p-p').click(function(){
 		$('#pagecontainer').load('app/views/php-projects.tpl', function() {
 		$('#pp01').jsonRender(phpProj,header),
-		$('#pp01').jsonRender(phpProjects,template),
+		$.getJSON("php.json",function(p){
+			$('#pp01').jsonRender(p.entries,template);
+		}),	
 		$(document).prop('title', 'PHP:Projects'),
 		toastr.success('PHP:Projects');
 		$('html,body').animate({scrollTop:0},200);
@@ -49,7 +53,9 @@ $(function(){
 	$('#j-p').click(function(){
 		$('#pagecontainer').load('app/views/javascript-projects.tpl', function() {
 		$('#jp01').jsonRender(javascriptProj,header),
-		$('#jp01').jsonRender(javascriptProjects,template),
+		$.getJSON("javascript.json",function(p){
+			$('#jp01').jsonRender(p.entries,template);
+		}),	
 		$(document).prop('title', 'JS:Projects'),
 		toastr.success('JS:Projects');
 		$('html,body').animate({scrollTop:0},200);
@@ -76,7 +82,9 @@ $(function(){
 	$('#py-p').click(function(){
 		$('#pagecontainer').load('app/views/python-projects.tpl', function() {
 		$('#pyp01').jsonRender(pythonProj,header),
-		$('#pyp01').jsonRender(pythonProjects,template),
+		$.getJSON("python.json",function(p){
+			$('#pyp01').jsonRender(p.entries,template);
+		}),
 		$(document).prop('title', 'Python:Projects'),
 		toastr.success('Python:Projects');
 		$('html,body').animate({scrollTop:0},200);
@@ -88,7 +96,9 @@ $(function(){
 	$('#c-s').click(function(){
 		$('#pagecontainer').load('app/views/stylus-projects.tpl', function() {
 		$('#sty01').jsonRender(stylusProj,header),
-		$('#sty01').jsonRender(stylusProjects,template),
+		$.getJSON("app/data/stylus.json",function(p){
+			$('#sty01').jsonRender(p.entries,template);
+		}),
 		$(document).prop('title', 'Stylus:Projects'),
 		toastr.success('Stylus:Projects');
 		$('html,body').animate({scrollTop:0},200);

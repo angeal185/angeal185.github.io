@@ -1,0 +1,23 @@
+{
+  "app":{
+    "port":3000
+  },
+  "theme":{
+    "main":"blue"
+  },
+  "entries":[
+	"nodejs",
+	"javascript",
+	"python",
+	"php",
+	"stylus"
+  ],
+  "entriesData":[
+	"name",
+	"img",
+	"title",
+	"sub",
+	"btnA",
+	"hrefA"
+  ]	
+}
