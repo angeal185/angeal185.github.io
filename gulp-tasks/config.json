@@ -17,6 +17,7 @@
 		"app/models/codepen.js"
     ],
 	"joinFinal" : [
+		"app/js/loader.js",
 		"app/js/jsonRender.js",
 		"app/models/concat.js",
 		"app/js/app.js"
