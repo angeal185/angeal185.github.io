@@ -56,7 +56,7 @@ var canvas = document.querySelector('#loader');
     }
 
     function render () {
-        /*gl.uniform1f(ut, (Date.now() - st) / 1000);*/
+      gl.uniform1f(ut, (Date.now() - st) / 1000);
       gl.uniform2fv(um, new Float32Array([mouseX, mouseY]));
         gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
         requestAnimationFrame(render);

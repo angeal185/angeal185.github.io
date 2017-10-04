@@ -25,7 +25,7 @@ $(function(){
 	$('#h-p').click(function(){
 		$('#pagecontainer').load('app/views/nodejs-projects.tpl', function() {
 			$('#hp01').jsonRender(nodejsProj,header),
-			$.getJSON("nodejs.json",function(p){
+			$.getJSON("app/data/nodejs.json",function(p){
 				$('#hp01').jsonRender(p.entries,template);
 			}),	
 			$(document).prop('title', 'NodeJS:Projects'),
@@ -39,7 +39,7 @@ $(function(){
 	$('#p-p').click(function(){
 		$('#pagecontainer').load('app/views/php-projects.tpl', function() {
 		$('#pp01').jsonRender(phpProj,header),
-		$.getJSON("php.json",function(p){
+		$.getJSON("app/data/php.json",function(p){
 			$('#pp01').jsonRender(p.entries,template);
 		}),	
 		$(document).prop('title', 'PHP:Projects'),
@@ -53,7 +53,7 @@ $(function(){
 	$('#j-p').click(function(){
 		$('#pagecontainer').load('app/views/javascript-projects.tpl', function() {
 		$('#jp01').jsonRender(javascriptProj,header),
-		$.getJSON("javascript.json",function(p){
+		$.getJSON("app/data/javascript.json",function(p){
 			$('#jp01').jsonRender(p.entries,template);
 		}),	
 		$(document).prop('title', 'JS:Projects'),
@@ -82,7 +82,7 @@ $(function(){
 	$('#py-p').click(function(){
 		$('#pagecontainer').load('app/views/python-projects.tpl', function() {
 		$('#pyp01').jsonRender(pythonProj,header),
-		$.getJSON("python.json",function(p){
+		$.getJSON("app/data/python.json",function(p){
 			$('#pyp01').jsonRender(p.entries,template);
 		}),
 		$(document).prop('title', 'Python:Projects'),
