@@ -235,6 +235,13 @@ var nodejsProjects = [{
 
 var javascriptProjects = [{
     "name": " javascript",
+    "img": "app/images/jquery.png",
+    "title": "jquery-photographic-portfolio-webapp",
+    "sub": "photography portfolio webapp created with jquery",
+    "btnA": "Code",
+    "hrefA": "https://github.com/angeal185/jquery-photographic-portfolio-webapp"
+},{
+    "name": " javascript",
     "img": "app/images/angular.png",
     "title": "cdnjs-api-live-search-app",
     "sub": "cdnjs live search app using the cdnjs API and created with jquery, and materialize",
