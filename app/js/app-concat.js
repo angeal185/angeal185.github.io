@@ -199,5 +199,5 @@ $(window).load(function() {
 $("#wrapper").css('display','inherit'),
 new ANI().init(),
 $("#loader").delay( 3000 ).fadeOut( 1500 ),
-toastr.success('DASHBOARD');
+toastr('DASHBOARD');
 });

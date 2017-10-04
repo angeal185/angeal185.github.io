@@ -1,20 +1,20 @@
 var consl = "<div id='console' contenteditable='true'><h1>Ben Eaves</h1><h2>Full-Stack web developer</h2><br>welcome to my world...<br><br>Type 'info' and hit enter for instructions.<br><br>Type 'help' and hit enter to see a full list of commands.<br>&nbsp;<br>>&nbsp;</div></div><div class='row' style='height:10vh'></div>";
 
 $(function(){
-		$('#pagecontainer').load('app/views/index.tpl', function() {
-		$('#dash').jsonRender(indexHeader,header),
-		$(document).prop('title', 'Dashboard'),
-		toastr.success('LOADING...');
-		$("#pagecontainer").append(consl);
-		});
+	$('#pagecontainer').load('app/views/index.tpl', function() {
+	$('#dash').jsonRender(indexHeader,header),
+	$(document).prop('title', 'Dashboard'),
+	toastr('LOADING...'),
+	$("#pagecontainer").append(consl);
 	});
+});
 
 $(function(){
 	$('#indx').click(function(){
 		$('#pagecontainer').load('app/views/index.tpl', function() {
 		$('#dash').jsonRender(indexHeader,header),
 		$(document).prop('title', 'Dashboard'),
-		toastr.success('DASHBOARD');
+		toastr('DASHBOARD');
 		$("#pagecontainer").append(consl);
 		$('html,body').animate({scrollTop:0},200);
 		});
@@ -29,7 +29,7 @@ $(function(){
 				$('#hp01').jsonRender(p.entries,template);
 			}),	
 			$(document).prop('title', 'NodeJS:Projects'),
-			toastr.success('NodeJS:Projects');
+			toastr('NodeJS:Projects');
 			$('html,body').animate({scrollTop:0},200);
 		});
 	});
@@ -43,7 +43,7 @@ $(function(){
 			$('#pp01').jsonRender(p.entries,template);
 		}),	
 		$(document).prop('title', 'PHP:Projects'),
-		toastr.success('PHP:Projects');
+		toastr('PHP:Projects');
 		$('html,body').animate({scrollTop:0},200);
 		});
 	});
@@ -57,7 +57,7 @@ $(function(){
 			$('#jp01').jsonRender(p.entries,template);
 		}),	
 		$(document).prop('title', 'JS:Projects'),
-		toastr.success('JS:Projects');
+		toastr('JS:Projects');
 		$('html,body').animate({scrollTop:0},200);
 		});
 	});
@@ -72,7 +72,7 @@ $(function(){
 		$(document).prop('title', 'JS:Codepen'),
 		$('.img-demo').css('width','300px'),
 		$('#codePen').jsonRender(codePenData,codePen),
-		toastr.success('JS:Codepen');
+		toastr('JS:Codepen');
 		$('html,body').animate({scrollTop:0},200);
 		});
 	});
@@ -86,7 +86,7 @@ $(function(){
 			$('#pyp01').jsonRender(p.entries,template);
 		}),
 		$(document).prop('title', 'Python:Projects'),
-		toastr.success('Python:Projects');
+		toastr('Python:Projects');
 		$('html,body').animate({scrollTop:0},200);
 		});
 	});
@@ -100,7 +100,7 @@ $(function(){
 			$('#sty01').jsonRender(p.entries,template);
 		}),
 		$(document).prop('title', 'Stylus:Projects'),
-		toastr.success('Stylus:Projects');
+		toastr('Stylus:Projects');
 		$('html,body').animate({scrollTop:0},200);
 		});
 	});
@@ -126,7 +126,7 @@ $(function(){
 		$('#APILeft').jsonRender(APILeftData,apiSkills),
 		$('#APIRight').jsonRender(APIRightData,apiSkills),
 		$(document).prop('title', 'Profile:Skills'),
-		toastr.success('Profile:Skills'),
+		toastr('Profile:Skills'),
 		$.get("app/js/skills.js");
 		$('html,body').animate({scrollTop:0},200);
 		});
@@ -141,7 +141,7 @@ $(function(){
 		$('#work').jsonRender(workData,work),
 		$('#edu').jsonRender(eduData,edu),
 		$(document).prop('title', 'Profile:Resume'),
-		toastr.success('Profile:Resume');
+		toastr('Profile:Resume');
 		$('html,body').animate({scrollTop:0},200);
 		});
 	});
