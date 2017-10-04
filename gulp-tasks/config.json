@@ -2,8 +2,8 @@
 	"name":"portfolio",
 	"joinJs" : [
 		"app/js/init.js",
-		"app/js/cmd.js",
 		"app/js/routes.js",
+		"app/js/cmd.js",
 		"app/js/animate.js",
 		"app/js/toastr.js",
 		"app/js/app-concat.js",
@@ -13,8 +13,7 @@
     ],
 	"joinModels" : [
 		"app/models/data.js",
-		"app/models/template.js",
-		"app/models/codepen.js"
+		"app/models/template.js"
     ],
 	"joinFinal" : [
 		"app/js/loader.js",

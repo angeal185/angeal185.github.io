@@ -72,7 +72,9 @@ $(function(){
 		$('#jt01').jsonRender(codePenTplData,codePenTpl),
 		$(document).prop('title', 'JS:Codepen'),
 		$('.img-demo').css('width','300px'),
-		$('#codePen').jsonRender(codePenData,codePen),
+		$.getJSON("app/data/codepen.json",function(p){
+			$('#codePen').jsonRender(p.entries,codePen);
+		}),
 		toastr('JS:Codepen');
 		$('html,body').animate({scrollTop:0},200);
 	});

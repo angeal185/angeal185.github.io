@@ -43,14 +43,26 @@
 		};
 	}),
 	$(function() {
-		$.preload([
-			"app/images/nodejs.png",
-			"app/images/python.png",
-			"app/images/jquery.png",
-			"app/images/codepen-logo.svg",
-			"app/images/php.png",
-			"app/images/angular.png",
-			"app/images/stylus.png"
-		]);
+		var arr1 = [
+			'app/images/nodejs.png',
+			'app/images/python.png',
+			'app/images/jquery.png',
+			'app/images/codepen-logo.svg',
+			'app/images/php.png',
+			'app/images/angular.png',
+			'app/images/stylus.png'
+		];		
+		var arr2 = [
+			'nodejs',
+			'javascript',
+			'python',
+			'stylus',
+			'php',
+			'codepen'
+		];
+		$.preload(arr1);
+		arr2.forEach(function(i) {
+			$.getJSON('app/data/' + i + '.json');
+		});
 	});
 });

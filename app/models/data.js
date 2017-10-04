@@ -105,7 +105,7 @@ var resumeProj = [{
     "sub": "RESUME"
 }];
 
-
+var codePenTplData = [{}];
 
 var javascriptTemplates = [{
     "name": "",

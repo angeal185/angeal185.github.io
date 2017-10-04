@@ -12,72 +12,69 @@ listener.sequence_combo("h e l p enter", function() {
 });
 
 listener.sequence_combo("p h p enter", function() {
-  $('#pagecontainer').load('app/views/php-projects.tpl', function() {
-		$('#pp01').jsonRender(phpProj,header),
-		$.getJSON("app/data/php.json",function(p){
-			$('#pp01').jsonRender(p.entries,template);
-		}),
-		$(document).prop('title', 'PHP:Projects'),
-		toastr('PHP:Projects');
-	});
+	loadTpl('pp01'),
+	$('#pp01').jsonRender(phpProj,header),
+	$.getJSON("app/data/php.json",function(p){
+		$('#pp01').jsonRender(p.entries,template);
+	}),
+	$(document).prop('title', 'PHP:Projects'),
+	toastr('PHP:Projects');
 });
 
 listener.sequence_combo("h o m e enter", function() {
-		$('#pagecontainer').load('app/views/index.tpl', function() {
+		loadTpl('dash'),
 		$('#dash').jsonRender(indexHeader,header),
 		$(document).prop('title', 'Dashboard'),
 		toastr('DASHBOARD');
 		$("#pagecontainer").append(consl);
-		});
 	});
 
 listener.sequence_combo("n o d e j s enter", function() {
-		$('#pagecontainer').load('app/views/nodejs-projects.tpl', function() {
-			$('#hp01').jsonRender(nodejsProj,header),
-			$.getJSON("app/data/nodejs.json",function(p){
-				$('#hp01').jsonRender(p.entries,template);
-			}),
-			$(document).prop('title', 'NodeJS:Projects'),
-			toastr('NodeJS:Projects');
-		});
+		loadTpl('hp01'),
+		$('#hp01').jsonRender(nodejsProj,header),
+		$.getJSON("app/data/nodejs.json",function(p){
+			$('#hp01').jsonRender(p.entries,template);
+		}),
+		$(document).prop('title', 'NodeJS:Projects'),
+		toastr('NodeJS:Projects');
 	});
 
 listener.sequence_combo("j a v a s c r i p t enter", function() {
-		$('#pagecontainer').load('app/views/javascript-projects.tpl', function() {
+		loadTpl('jp01'),
 		$('#jp01').jsonRender(javascriptProj,header),
 		$.getJSON("app/data/javascript.json",function(p){
 			$('#jp01').jsonRender(p.entries,template);
 		}),
 		$(document).prop('title', 'JS:Projects'),
 		toastr('JS:Projects');
-		});
 	});
 
 listener.sequence_combo("c o d e p e n enter", function() {
-		$('#pagecontainer').load('app/views/javascript-codepen.tpl', function() {
+		loadTpl('jt01'),
 		$('#jt01').jsonRender(javascriptTemp,header),
 		$('#jt01').jsonRender(codePenTplData,codePenTpl),
 		$(document).prop('title', 'JS:Codepen'),
 		$('.img-demo').css('width','300px'),
-		$('#codePen').jsonRender(codePenData,codePen),
+		$.getJSON("app/data/codepen.json",function(p){
+			$('#codePen').jsonRender(p.entries,codePen);
+		}),
 		toastr('JS:Codepen');
-		});
+		$('html,body').animate({scrollTop:0},200);
 	});
 	
 listener.sequence_combo("p y t h o n enter", function() {
-		$('#pagecontainer').load('app/views/python-projects.tpl', function() {
+		loadTpl('pyp01'),
 		$('#pyp01').jsonRender(pythonProj,header),
 		$.getJSON("app/data/python.json",function(p){
 			$('#pyp01').jsonRender(p.entries,template);
 		}),
 		$(document).prop('title', 'Python:Projects'),
 		toastr('Python:Projects');
-		});
 	});
 
 
 listener.sequence_combo("s k i l l s enter", function() {
-		$('#pagecontainer').load('app/views/skills.tpl', function() {
+		loadTpl('skills01'),
 		$('#skills01').jsonRender(skillsProj,header),
 		$('#skills01').jsonRender(skillsTemplateData,skillsTemplate),
 		$('#codeLeft').jsonRender(codeLeftData,skills),
@@ -97,21 +94,19 @@ listener.sequence_combo("s k i l l s enter", function() {
 		$(document).prop('title', 'Profile:Skills'),
 		toastr('Profile:Skills'),
 		$.get("app/js/skills.js");
-		
-		});
 	});
 
 listener.sequence_combo("r e s u m e enter", function() {
-		$('#pagecontainer').load('app/views/resume.tpl', function() {
+		loadTpl('resume01'),
 		$('#resume01').jsonRender(resumeProj,header),
 		$('#resume01').jsonRender(resumeData,resume),
 		$('#work').jsonRender(workData,work),
 		$('#edu').jsonRender(eduData,edu),
 		$(document).prop('title', 'Profile:Resume'),
 		toastr('Profile:Resume');
-		});
 	});
 	
 listener.sequence_combo("k i l l enter", function() {
 	$('html').remove();
+	console.log('D E A D');
 });
