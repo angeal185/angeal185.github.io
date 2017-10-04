@@ -1,1 +1,0 @@
-<div class="page-content" id="hp01"></div>

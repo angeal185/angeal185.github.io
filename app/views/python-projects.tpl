@@ -1,1 +1,0 @@
-<div class="page-content" id="pyp01"></div>

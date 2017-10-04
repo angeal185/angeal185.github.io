@@ -8,6 +8,6 @@ gulp.task("final", function(){
     return gulp.src(config.joinFinal)
         .pipe(concat("main.js"))
         .pipe(uglify())
-        .pipe(gulp.dest("app/js/main/js"))
+        .pipe(gulp.dest("app/js/"))
 		.pipe(notify("Task final complete."));
 });
