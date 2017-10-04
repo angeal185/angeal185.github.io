@@ -654,7 +654,7 @@ var doc = document,
     windowHeight = $(window).height(),
     start = delta = end = 0;
 
-$(window).load(function() {
+$(window).on('load', function() {
     setTimeout(function() {
         $(".loader-overlay").addClass("loaded"), $("body > section").animate({
             opacity: 1
@@ -720,7 +720,7 @@ var toolTips = {
 
 toolTips.init();
 
-$(window).load(function() {
+$(window).on('load', function() {
 $("#wrapper").css('display','inherit'),
 new ANI().init(),
 $("#loader").delay( 3000 ).fadeOut( 1500 ),
@@ -728,7 +728,7 @@ toastr('DASHBOARD');
 });
 
 function line(){this.path=[],this.speed=rand(10,20),this.count=randInt(10,30),this.x=width/2,1,this.y=height/2+1,this.target={x:width/2,y:height/2},this.dist=0,this.angle=0,this.hue=tick/5,this.life=1,this.updateAngle(),this.updateDist()}function rand(t,i){return Math.random()*(i-t)+t}function randInt(t,i){return Math.floor(t+Math.random()*(i-t+1))}function init(){canvas=document.getElementById("canvas"),ctx=canvas.getContext("2d"),size=30,lines=[],reset(),loop()}function reset(){width=2*Math.ceil(window.innerWidth/2),height=2*Math.ceil(window.innerHeight/2),tick=0,lines.length=0,canvas.width=width,canvas.height=height}function create(){tick%10===0&&lines.push(new line)}function step(){for(var t=lines.length;t--;)lines[t].step(t)}function clear(){ctx.globalCompositeOperation="destination-out",ctx.fillStyle="hsla(0, 0%, 0%, 0.1",ctx.fillRect(0,0,width,height),ctx.globalCompositeOperation="lighter"}function draw(){ctx.save(),ctx.translate(width/2,height/2),ctx.rotate(.001*tick);var t=.8+.2*Math.cos(.02*tick);ctx.scale(t,t),ctx.translate(-width/2,-height/2);for(var i=lines.length;i--;)lines[i].draw(i);ctx.restore()}function loop(){requestAnimationFrame(loop),create(),step(),clear(),draw(),tick++}function onresize(){reset()}var canvas,ctx,width,height,size,lines,tick;line.prototype.step=function(t){this.x+=Math.cos(this.angle)*this.speed,this.y+=Math.sin(this.angle)*this.speed,this.updateDist(),this.dist<this.speed&&(this.x=this.target.x,this.y=this.target.y,this.changeTarget()),this.path.push({x:this.x,y:this.y}),this.path.length>this.count&&this.path.shift(),this.life-=.001,this.life<=0&&(this.path=null,lines.splice(t,1))},line.prototype.updateDist=function(){var t=this.target.x-this.x,i=this.target.y-this.y;this.dist=Math.sqrt(t*t+i*i)},line.prototype.updateAngle=function(){var t=this.target.x-this.x,i=this.target.y-this.y;this.angle=Math.atan2(i,t)},line.prototype.changeTarget=function(){var t=randInt(0,3);switch(t){case 0:this.target.y=this.y-size;break;case 1:this.target.x=this.x+size;break;case 2:this.target.y=this.y+size;break;case 3:this.target.x=this.x-size}this.updateAngle()},line.prototype.draw=function(t){ctx.beginPath();for(var i=rand(0,10),e=0,s=this.path.length;s>e;e++)ctx[0===e?"moveTo":"lineTo"](this.path[e].x+rand(-i,i),this.path[e].y+rand(-i,i));ctx.strokeStyle="hsla("+rand(this.hue,this.hue+30)+", 80%, 55%, "+this.life/3+")",ctx.lineWidth=rand(.1,2),ctx.stroke()},window.addEventListener("resize",onresize),init();
-$(window).load(function() {
+$(window).on('load', function() {
 	 $(function(e) {
 		e.preload = function(t, n, a) {
 			var r = [],

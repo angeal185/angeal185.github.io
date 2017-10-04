@@ -1,4 +1,4 @@
-﻿$(window).load(function() {
+﻿$(window).on('load', function() {
 	 $(function(e) {
 		e.preload = function(t, n, a) {
 			var r = [],

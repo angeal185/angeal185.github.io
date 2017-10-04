@@ -129,7 +129,7 @@ var doc = document,
     windowHeight = $(window).height(),
     start = delta = end = 0;
 
-$(window).load(function() {
+$(window).on('load', function() {
     setTimeout(function() {
         $(".loader-overlay").addClass("loaded"), $("body > section").animate({
             opacity: 1
@@ -195,7 +195,7 @@ var toolTips = {
 
 toolTips.init();
 
-$(window).load(function() {
+$(window).on('load', function() {
 $("#wrapper").css('display','inherit'),
 new ANI().init(),
 $("#loader").delay( 3000 ).fadeOut( 1500 ),
