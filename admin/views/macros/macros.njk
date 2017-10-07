@@ -1,1 +1,28 @@
-{%- macro css(s) -%}<link rel="stylesheet" href="/css/{{s}}.css">{%- endmacro -%}{%- macro js(s) -%}<script src="js/{{s}}.js"></script>{%- endmacro -%}
+{%- macro css(s) -%}
+<link rel="stylesheet" href="/css/{{s}}.css">
+{%- endmacro -%}
+{%- macro js(s) -%}
+<script src="js/{{s}}.js"></script>
+{%- endmacro -%}
+
+{%- macro skills1(t,i) -%}
+<form role="form" way-data="{{i}}">
+    <h5>{{t}}</h5>
+    <div class="form-group"><a href="#" way-action-push="{{i}}">Add entry</a></div>
+    <div class="form-group" way-repeat="{{i}}">
+        <div>
+          <div class="item-entry">
+              {% for item in config.skillsData %}
+              <label>{{item}}</label>
+              <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
+              {% endfor %}
+            </div>
+        <a href="#" way-action-remove="{{i}}.$$key">Remove entry</a>
+      </div>
+    </div>
+</form>
+{%- endmacro -%}
+
+{%- macro lnk(item) -%}
+  <li><a href="{{item}}">{{item|capitalize}}</a></li>
+{%- endmacro -%}

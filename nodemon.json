@@ -6,13 +6,15 @@
   ],
   "verbose": true,
   "execMap": {
-    "js": "node"
+    "js": "node",
+	"start": "node ./admin/app/bin/www"
   },
   "watch": [
     "app/",
-	"views/",
-	"models/",
-	"app/js/"
+	"adminviews/",
+	"app/models/",
+	"app/js/",
+	"admin"
   ],
-  "ext": "js, json, html, css, tpl"
+  "ext": "js, json, html, css"
 }

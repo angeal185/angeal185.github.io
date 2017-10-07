@@ -23,6 +23,14 @@ a.forEach(function(i) {
 	});
 });
 
+router.get('/skills', function(req, res) {
+  res.render('skills', {
+    title: 'skills',
+    skills:require('../../../app/data/skills'),
+    config:config
+  });
+});
+
 a.forEach(function(i) {
 	router.post('/update' + i, function(req, res) {
 	var toUpdate = req.body.toUpdate; //get task command from body
@@ -34,5 +42,13 @@ a.forEach(function(i) {
 	});
 });
 
+router.post('/updateskills', function(req, res) {
+var toUpdate = req.body.toUpdate; //get task command from body
+fs.writeFile('./app/data/skills.json', toUpdate, 'utf8'),
+      function(err) {
+        if (err) throw err;
+      };
+  res.redirect('/');
+});
 
 module.exports = router;

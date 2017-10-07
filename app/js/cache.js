@@ -51,14 +51,15 @@
 			'app/images/php.png',
 			'app/images/angular.png',
 			'app/images/stylus.png'
-		];		
+		];
 		var arr2 = [
 			'nodejs',
 			'javascript',
 			'python',
 			'stylus',
 			'php',
-			'codepen'
+			'codepen',
+			'skills'
 		];
 		$.preload(arr1);
 		arr2.forEach(function(i) {

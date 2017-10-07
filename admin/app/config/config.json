@@ -1,23 +1,46 @@
 {
-  "app":{
-    "port":3000
-  },
-  "theme":{
-    "main":"blue"
-  },
-  "entries":[
-	"nodejs",
-	"javascript",
-	"python",
-	"php",
-	"stylus"
-  ],
-  "entriesData":[
-	"name",
-	"img",
-	"title",
-	"sub",
-	"btnA",
-	"hrefA"
-  ]	
+    "app": {
+        "port": 3000
+    },
+    "theme": {
+        "main": "blue"
+    },
+    "entries": [
+        "nodejs",
+        "javascript",
+        "python",
+        "php",
+        "stylus"
+    ],
+    "entriesData": [
+        "name",
+        "img",
+        "title",
+        "sub",
+        "btnA",
+        "hrefA"
+    ],
+    "skills": [
+        "codeLeftData",
+        "codeRightData",
+        "skillsLeftData",
+        "skillsRightData",
+        "dbLeftData",
+        "dbRightData",
+        "CMSLeftData",
+        "CMSRightData",
+        "OSLeftData",
+        "OSRightData",
+        "otherLeftData",
+        "otherRightData",
+        "APILeftData",
+        "APIRightData"
+    ],
+    "skillsData": [
+        "title",
+        "percent"
+    ],
+    "otherData": [
+        "title"
+    ]
 }

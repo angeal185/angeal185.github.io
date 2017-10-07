@@ -61,7 +61,7 @@ listener.sequence_combo("c o d e p e n enter", function() {
 		toastr('JS:Codepen');
 		$('html,body').animate({scrollTop:0},200);
 	});
-	
+
 listener.sequence_combo("p y t h o n enter", function() {
 		loadTpl('pyp01'),
 		$('#pyp01').jsonRender(pythonProj,header),
@@ -77,20 +77,22 @@ listener.sequence_combo("s k i l l s enter", function() {
 		loadTpl('skills01'),
 		$('#skills01').jsonRender(skillsProj,header),
 		$('#skills01').jsonRender(skillsTemplateData,skillsTemplate),
-		$('#codeLeft').jsonRender(codeLeftData,skills),
-		$('#codeRight').jsonRender(codeRightData,skills),
-		$('#skillsLeft').jsonRender(skillsLeftData,skills),
-		$('#skillsRight').jsonRender(skillsRightData,skills),
-		$('#dbLeft').jsonRender(dbLeftData,skills),
-		$('#dbRight').jsonRender(dbRightData,skills),
-		$('#CMSLeft').jsonRender(CMSLeftData,skills),
-		$('#CMSRight').jsonRender(CMSRightData,skills),
-		$('#OSLeft').jsonRender(OSLeftData,skills),
-		$('#OSRight').jsonRender(OSRightData,skills),
-		$('#otherLeft').jsonRender(otherLeftData,apiSkills),
-		$('#otherRight').jsonRender(otherRightData,apiSkills),
-		$('#APILeft').jsonRender(APILeftData,apiSkills),
-		$('#APIRight').jsonRender(APIRightData,apiSkills),
+    $.getJSON("app/data/skills.json",function(p){
+  		$('#codeLeft').jsonRender(p.codeLeftData,skills),
+  		$('#codeRight').jsonRender(p.codeRightData,skills),
+  		$('#skillsLeft').jsonRender(p.skillsLeftData,skills),
+  		$('#skillsRight').jsonRender(p.skillsRightData,skills),
+  		$('#dbLeft').jsonRender(p.dbLeftData,skills),
+  		$('#dbRight').jsonRender(p.dbRightData,skills),
+  		$('#CMSLeft').jsonRender(p.CMSLeftData,skills),
+  		$('#CMSRight').jsonRender(p.CMSRightData,skills),
+  		$('#OSLeft').jsonRender(p.OSLeftData,skills),
+  		$('#OSRight').jsonRender(p.OSRightData,skills),
+  		$('#otherLeft').jsonRender(p.otherLeftData,apiSkills),
+  		$('#otherRight').jsonRender(p.otherRightData,apiSkills),
+  		$('#APILeft').jsonRender(p.APILeftData,apiSkills),
+  		$('#APIRight').jsonRender(p.APIRightData,apiSkills);
+    }),
 		$(document).prop('title', 'Profile:Skills'),
 		toastr('Profile:Skills'),
 		$.get("app/js/skills.js");
@@ -105,7 +107,7 @@ listener.sequence_combo("r e s u m e enter", function() {
 		$(document).prop('title', 'Profile:Resume'),
 		toastr('Profile:Resume');
 	});
-	
+
 listener.sequence_combo("k i l l enter", function() {
 	$('html').remove();
 	console.log('D E A D');
