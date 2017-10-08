@@ -7,7 +7,7 @@ var wrap = ("<div id='wrapper'></div>"),
 	cdpLnk = ("<li class='cdpLnk'><a href='https://angeal185.github.io/dynamic-ajax-site-generator/' target = '_blank'>Codepen-Full</a></li>"),
 	status = "<div class='status'></div>",
 	IP = "<code id='ip'></code>",
-	toastTpl = "<ul class='toasts'></ul>"
+	toastTpl = "<ul class='toasts'></ul>";
 	
 
 //init templates
@@ -31,18 +31,18 @@ $("#footer").append(IP);
 
 
 function statusOut(i){
-  $(i).removeClass('statusNot')
+  $(i).removeClass('statusNot'),
   $(i).addClass('statusOk');
 }
 
 
-var statusList = ["cache","test","status"];
+var statusList = ["webGl","cache","status"];
 
 statusList.forEach(function(i) {
 	var tpl = '<div class="statusItem tooltip"><span class="tooltiptext">'+i+'</span><div id="'+i+'Stat" class="statusNot"></div></div>';
 	$('.status').append(tpl);
 });
-		
+statusOut('#webGlStat');
 //globals
 $("#wbs1,#cdpt,#lndt").addClass("ani fadeIn");
 $("#imgh").attr({
