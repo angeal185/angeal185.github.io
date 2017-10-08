@@ -1,7 +1,7 @@
 var sidebar =
 {"<>":"div","class":"sidebar","html":[
     {"<>":"div","class":"logopanel","html":[
-        {"<>":"h1","style":"text-align:center","html":"GITHUB"}
+        {"<>":"h1","style":"text-align:center","html":"PORTFOLIO"}
       ]},
     {"<>":"div","class":"sidebar-inner","html":[
         {"<>":"div","class":"sidebar-top small-img clearfix","style":"display: block","html":[

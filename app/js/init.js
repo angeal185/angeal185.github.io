@@ -5,6 +5,7 @@ var wrap = ("<div id='wrapper'></div>"),
 	footer = ("<p class='sm-pull-reset shrink' style='margin:10px 80px'>2017 Ben eaves. All rights reserved.</p>"),
 	svg1 = ("<div id='svg'></div>"),
 	cdpLnk = ("<li class='cdpLnk'><a href='https://angeal185.github.io/dynamic-ajax-site-generator/' target = '_blank'>Codepen-Full</a></li>"),
+	status = "<div class='status'></div>",
 	IP = "<code id='ip'></code>",
 	toastTpl = "<ul class='toasts'></ul>"
 	
@@ -25,8 +26,23 @@ $(".cdpLnk").eq(1).remove(),
 $("#footer").prepend(footer),
 $(".main-content").after(svg1),
 $( "#svg" ).load( "app/views/svg.tpl" );
+$("#footer").append(status);
 $("#footer").append(IP);
 
+
+function statusOut(i){
+  $(i).removeClass('statusNot')
+  $(i).addClass('statusOk');
+}
+
+
+var statusList = ["cache","test","status"];
+
+statusList.forEach(function(i) {
+	var tpl = '<div class="statusItem tooltip"><span class="tooltiptext">'+i+'</span><div id="'+i+'Stat" class="statusNot"></div></div>';
+	$('.status').append(tpl);
+});
+		
 //globals
 $("#wbs1,#cdpt,#lndt").addClass("ani fadeIn");
 $("#imgh").attr({

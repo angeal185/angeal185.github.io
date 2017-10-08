@@ -64,6 +64,7 @@
 		$.preload(arr1);
 		arr2.forEach(function(i) {
 			$.getJSON('app/data/' + i + '.json');
+			statusOut('#cacheStat');
 		});
 	});
 });
