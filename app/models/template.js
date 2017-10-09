@@ -161,7 +161,7 @@ var apiSkills =
   ]};
 
 var resume =
-{"<>":"div","class":"row panel","style":"padding: 100px;margin-top: 200px;","html":[
+{"<>":"div","class":"row panel","style":"padding:100px;margin-top: 200px;width:100%","html":[
     {"<>":"div","class":"col-md-12 col-sm-12","style":"height:40px;","html":""},
     {"<>":"div","class":"container","html":[
         {"<>":"div","class":"text-center ani fadeIn","html":[
@@ -189,7 +189,7 @@ var work =
 [
   {"<>":"div","class":"block","html":[
       {"<>":"h3","html":"${date}"},
-      {"<>":"h2","class":"ani fadeIn c-primary","html":"${title}"},
+      {"<>":"h2","class":"c-primary","html":"${title}"},
       {"<>":"p","html":"${location}"},
 	  {"<>":"H3","html":"Responsibilities"},
 	  {"<>":"div","html":"${about}"},
@@ -201,7 +201,7 @@ var work =
 var edu =
 {"<>":"div","class":"block","html":[
     {"<>":"h3","html":"${date}"},
-    {"<>":"h2","class":" ani  fadeIn c-primary","html":"${title}"},
+    {"<>":"h2","class":"c-primary","html":"${title}"},
     {"<>":"p","html":"${location}"},
 	{"<>":"br","html":""},
 	{"<>":"br","html":""}
