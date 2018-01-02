@@ -1,7 +1,9 @@
 const express = require('express'),
 fs = require('fs'),
 router = express.Router(),
+chalk = require('chalk'),
 config = require('../config/config');
+const { exec } = require('child_process');
 
 var a = config.entries;
 
@@ -48,6 +50,19 @@ fs.writeFile('./app/data/skills.json', toUpdate, 'utf8'),
       function(err) {
         if (err) throw err;
       };
+  res.redirect('/');
+});
+
+router.post('/task', function(req, res) {
+let task = req.body.taskOut; //get task command from body
+exec('gulp '+ task, (err, stdout, stderr) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(stdout);
+  console.log(chalk.greenBright("Task: ") + chalk.cyanBright("[" + task +"]") + chalk.greenBright(" done."));
+});
   res.redirect('/');
 });
 

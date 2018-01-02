@@ -42,5 +42,30 @@
     ],
     "otherData": [
         "title"
-    ]
+    ],
+    "tasks":[{
+        "task":"joinJs",
+        "name":"Join js files",
+        "description":"Concat all apps js files into one"
+      },{
+        "task":"joinModels",
+        "name":"Join json models",
+        "description":"Concat all apps json model files"
+      },{
+        "task":"minCss",
+        "name":"Minify Css files",
+        "description":"Minify all apps css files"
+      },{
+        "task":"minImg",
+        "name":"Minify images",
+        "description":"Minify apps image files to reduce filesize"
+      },{
+        "task":"jshint",
+        "name":"jshint js",
+        "description":"Check all js files for errors"
+      },{
+        "task":"final",
+        "name":"Final concat",
+        "description":"Concat and minify all js and json files for production"
+    }]
 }

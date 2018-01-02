@@ -7,7 +7,7 @@
   "verbose": true,
   "execMap": {
     "js": "node",
-	"start": "node ./admin/app/bin/www"
+	"start": "nodemon ./admin/app/bin/www"
   },
   "watch": [
     "app/",
@@ -16,5 +16,5 @@
 	"app/js/",
 	"admin"
   ],
-  "ext": "js, json, html, css"
+  "ext": "js json html css njk"
 }

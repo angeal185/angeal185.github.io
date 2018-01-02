@@ -8,17 +8,20 @@
 
 <body>
     <nav class="top-nav">
-        <div class="nav-wrapper {{config.theme.main}}"><a href="#" class="brand-logo">Logo</a>
+        <div class="nav-wrapper {{config.theme.main}}"><a href="/" class="brand-logo effect-waves">Dash</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               {% for item in config.entries %}
-                <li><a href="{{item}}">{{item|capitalize}}</a></li>
+                <li class="effect-waves"><a href="{{item}}">{{item|capitalize}}</a></li>
               {% endfor %}
               {{macro.lnk(item="skills")}}
             </ul>
         </div>
     </nav>
     {% block content %}{% endblock %}
+    <a id="scroll-to-top" class="icon-angle-up"></a>
+    {{macro.js(s="jquery")}}
     {{macro.js(s="way")}}
+    {{macro.js(s="app")}}
     {%block scripts%}{% endblock %}
   </body>
 </html>
