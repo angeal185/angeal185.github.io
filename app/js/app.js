@@ -11,11 +11,11 @@ var wrap = ("<div id='wrapper'></div>"),
 
 var xtraLnk = [{
 	"li":"li:has(#j-p)",
-	"link":"https://angeal185.github.io/dynamic-ajax-site-generator/",
+	"link":"https://angeal185.github.io/codepen-portfolio",
 	"title":"Codepen-Full"
 },{
 	"li":"li:has(#j-p)",
-	"link":"https://angeal185.github.io/animated-ajax-carosel-portfolio/",
+	"link":"https://angeal185.github.io/animated-ajax-carosel-portfolio",
 	"title":"Animations"
 }];
 
