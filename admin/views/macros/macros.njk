@@ -26,3 +26,19 @@
 {%- macro lnk(item) -%}
   <li><a href="{{item}}">{{item|capitalize}}</a></li>
 {%- endmacro -%}
+
+{%- macro pre(title) -%}
+<div class="col s12 m6">
+    <h3 class="center">JSON output</h3>
+    <pre><code way-data="__all__" way-json="true" way-default="{}" class="javascript"></code></pre>
+    <div class="col s6">
+        <button class="effect-waves btn btn-default" way-clear>Clear data</button>
+    </div>
+    <form role="form" action="/update{{title}}" method="post">
+        <div class="col s6">
+            <button type="submit" class="effect-waves btn btn-default right">Save changes</button>
+        </div>
+        <input type="text" id="toUpdate" name="toUpdate" class="form-control" way-data="__all__" way-json="false" way-default="{}" hidden>
+    </form>
+</div>
+{%- endmacro -%}

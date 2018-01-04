@@ -2,9 +2,10 @@
   "name": "angeal185.github.io-master",
   "version": "1.0.0",
   "description": "my website",
-  "main": "server.js",
+  "main": "./admin/app/bin/www",
   "scripts": {
-    "start": "node ./admin/app/bin/www"
+    "start": "nodemon server.js",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",

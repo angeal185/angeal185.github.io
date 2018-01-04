@@ -1,6 +1,8 @@
 {
     "app": {
-        "port": 3000
+        "port": 3000,
+        "address":"https://angeal185.github.io/",
+        "icon":"app/images/avatars/github.png"
     },
     "theme": {
         "main": "blue"

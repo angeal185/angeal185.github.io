@@ -4,7 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{title}}</title>{{macro.css(s="style")}}</head>
+    <title>{{title}}</title>
+    {{macro.css(s="style")}}
+    {{macro.css(s="atom-one-dark")}}
+  </head>
 
 <body>
     <nav class="top-nav">
@@ -14,6 +17,7 @@
                 <li class="effect-waves"><a href="{{item}}">{{item|capitalize}}</a></li>
               {% endfor %}
               {{macro.lnk(item="skills")}}
+              {{macro.lnk(item="status")}}
             </ul>
         </div>
     </nav>
@@ -21,6 +25,7 @@
     <a id="scroll-to-top" class="icon-angle-up"></a>
     {{macro.js(s="jquery")}}
     {{macro.js(s="way")}}
+    {{macro.js(s="highlight")}}
     {{macro.js(s="app")}}
     {%block scripts%}{% endblock %}
   </body>

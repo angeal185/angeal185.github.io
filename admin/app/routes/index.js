@@ -1,11 +1,17 @@
 const express = require('express'),
 fs = require('fs'),
+os = require('os'),
 router = express.Router(),
 chalk = require('chalk'),
-config = require('../config/config');
+config = require('../config/config'),
+pkg = require('../../../package');
 const { exec } = require('child_process');
 
 var a = config.entries;
+
+function apiRes(i){
+	console.log('API: '+chalk.blue('['+i+']'),chalk.green(`[connected]`));
+}
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -33,24 +39,59 @@ router.get('/skills', function(req, res) {
   });
 });
 
+router.get('/status', function(req, res) {
+  res.render('status', {
+    title: 'status',
+    config:config,
+    pkg:pkg
+  });
+});
+
+router.get('/API', function(req, res) {
+  res.json({
+		platform: os.platform(),
+		prelease: os.release(),
+		ptype: os.type(),
+		arch: os.arch(),
+		cpu: os.cpus(),
+		cpuUsage:process.cpuUsage(),
+		freemem: os.freemem(),
+		totalmem: os.totalmem(),
+		nodemem:process.memoryUsage().rss,
+		hostname: os.hostname(),
+		loadavg: os.loadavg(),
+		nodev:process.versions,
+		uptime:process.uptime(),
+		cwd:process.cwd()
+	});
+	apiRes('status');
+
+});
+
 a.forEach(function(i) {
 	router.post('/update' + i, function(req, res) {
 	var toUpdate = req.body.toUpdate; //get task command from body
-	fs.writeFile('./app/data/' + i +'.json', toUpdate, 'utf8'),
+  //console.log(toUpdate);
+  fs.writeFile('./app/data/' + i +'.json', toUpdate, 'utf8'),
 			  function(err) {
 				  if (err) throw err;
 			  };
+    console.log(chalk.greenBright("Task: ") + chalk.cyanBright("[" + i +"]") + chalk.greenBright(" done."));
 	  res.redirect('/');
 	});
+
 });
 
 router.post('/updateskills', function(req, res) {
 var toUpdate = req.body.toUpdate; //get task command from body
+console.log(toUpdate);
 fs.writeFile('./app/data/skills.json', toUpdate, 'utf8'),
       function(err) {
         if (err) throw err;
       };
+  console.log(chalk.greenBright("Task: ") + chalk.cyanBright("[updateSkills]") + chalk.greenBright(" done."));
   res.redirect('/');
+
 });
 
 router.post('/task', function(req, res) {
