@@ -12,3 +12,4 @@ app/stylus/
 app/css/styles.css
 
 /server.cmd
+npm-debug\.log

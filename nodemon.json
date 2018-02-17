@@ -1,4 +1,5 @@
 {
+  "delay":3000,
   "restartable": "rs",
   "ignore": [
     ".git",
