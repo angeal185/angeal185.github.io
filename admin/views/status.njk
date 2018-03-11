@@ -17,14 +17,11 @@
       </div>
     </div>
     <div id="status" class="row"></div>
-
   </div>
 {% endblock %}
-
 {%block scripts%}
   <script>
     var p = new Ping();
-
     p.ping("{{config.app.address}}{{config.app.icon}}", function (err, data) {
       // Also display error if err is returned.
       if (err) {
@@ -34,8 +31,5 @@
       $("#websiteStatus").text("Online").addClass('green');
     }
     });
-
-
-
   </script>
 {% endblock %}

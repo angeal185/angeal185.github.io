@@ -9,8 +9,8 @@
           <div class="form-group">
             <a href="#" way-action-push="entries">Add entry</a>
           </div>
-          <div class="form-group" way-repeat="entries">
-            <div>
+          <div id="sortContainer">
+          <div class="form-group sort" way-repeat="entries">
               <div class="item-entry">
                 <h5>entries</h5>
                 {% for item in config.entriesData %}
