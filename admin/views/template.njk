@@ -1,33 +1,113 @@
 {% extends 'layout.njk' %}
+
 {% block content %}
-  <div class="mt100">
-    <h1 class="center">{{title}}</h1>
-    <div class="row">
-      <div class="col s12 m6">
-        <h3 class="center">entries list</h3>
-        <form role="form" way-data="entries">
-          <div class="form-group">
-            <a href="#" way-action-push="entries">Add entry</a>
-          </div>
-          <div id="sortContainer">
-          <div class="form-group sort" way-repeat="entries">
-              <div class="item-entry">
-                <h5>entries</h5>
-                {% for item in config.entriesData %}
-                  <label>{{item}}</label><input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                {% endfor %}
-              </div>
-              <a href="#" way-action-remove="entries.$$key">Remove entry</a>
+<div class="mt100 w90 center">
+  <h1>{{title}}</h1>
+  <h3>entries list</h3>
+  <button id="addNew" class="btn mb40">Add entry</button>
+  <div id="sortContainer" class="row">
+
+      {% for i in data.entries %}
+      <div class="col s6 sort">
+        <div class="card">
+        <div class="form-group card-panel">
+            <div class="card-title">
+              <h5>{{i.title}}<span class="showEntries">show</span></h5>
             </div>
+            <div class="row card-content entry hidden">
+              {{macro.entries(n="name",s=i.name)}}
+              {{macro.entries(n="image",s=i.img)}}
+              {{macro.entries(n="title",s=i.title)}}
+              {{macro.entries(n="sub",s=i.sub)}}
+              {{macro.entries(n="button",s=i.btnA)}}
+              {{macro.entries(n="address",s=i.hrefA)}}
+            </div>
+            <a class="removeBlock">Remove entry</a>
           </div>
-        </form>
+        </div>
       </div>
-      {{macro.pre(title=title)}}
+      {% endfor %}
+
+  </div>
+  <div class="row">
+    <div class="col s6 sort">
+      <button type="button" id="showIt" class="effect-waves btn">Update</button>
+    </div>
+    <div class="col s6 sort">
+      <button type="button" id="commit" class="effect-waves btn" disabled>Commit</button>
     </div>
   </div>
+  <form role="form" id="post" action="/update{{title}}" method="post">
+      <textarea type="text" id="toUpdate" name="toUpdate" class="form-control" hidden></textarea>
+  </form>
+</div>
 {% endblock %}
 {%block scripts%}
-  <script>
-    way.set("entries", {{data.entries|dump|safe}});
-  </script>
+<script>
+
+var container = document.getElementById("sortContainer");
+
+var sort = Sortable.create(container, {
+  animation: 150,
+  handle: ".sort",
+  draggable: ".sort",
+  onUpdate: function (evt){
+     var item = evt.item;
+   },
+   onSort: function (evt) {
+		if ((location.href)===('http://'+location.host+'/javascript')){
+      $('.entryimage').filter( ":even" ).val('app/images/jquery.png');
+      $('.entryimage').filter( ":odd" ).val('app/images/angular.png');
+    }
+	},
+});
+
+function showEntries(){
+  $('.showEntries').click(function() {
+    $(this).text($(this).text() == 'hide' ? 'show' : 'hide');
+    $(this).parents('.card-title').next().toggleClass('hidden');
+  });
+  $('.removeBlock').click(function() {
+    $(this).parents('.sort').remove();
+  });
+}
+
+$('#showIt').click(function(event) {
+  var arr = {"entries":[]};
+  $('#toUpdate').empty();
+  $('.entry').each(function(index, el) {
+
+    let ent =  arr.entries;
+    let inp = $(this).children('.s6');
+    ent.push({
+        "name":inp.children('.entryname').val(),
+        "img":inp.children('.entryimage').val(),
+        "title":inp.children('.entrytitle').val(),
+        "sub":inp.children('.entrysub').val(),
+        "btnA":inp.children('.entrybutton').val(),
+        "hrefA":inp.children('.entryaddress').val()
+      });
+  });
+  $('#toUpdate').html(JSON.stringify(arr));
+  $('#commit').attr('disabled', false);
+  $('#toUpdate').fadeIn('slow');
+});
+
+$('#commit').click(function(event) {
+  $('#post').submit();
+});
+
+$('#addNew').click(function() {
+  var a = $('.sort').eq(1).clone();
+  a.find('h5').html('<h5>new<span class="showEntries">show</span></h5>');
+  a.find('.entrytitle,.entrysub,.entryaddress').val('');
+  a.prependTo('#sortContainer');
+  $('.showEntries,.removeBlock').unbind();
+  showEntries();
+});
+showEntries();
+
+
+
+</script>
 {% endblock %}

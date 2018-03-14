@@ -1,247 +1,239 @@
 {% extends 'layout.njk' %}{% block content %}
-<div class="mt100">
-    <h1 class="center">{{title}}</h1>
-    <div class="row">
-        <div class="col s12 m6">
-            <h3 class="center">{{title}} list</h3>
-            <form role="form" way-data="codeLeftData">
-                <h5>Skills left:<span id="skillsCount1">{{skills.codeLeftData | length}}</span></h5>
-                <div class="form-group"><a class="add" href="#" way-action-push="codeLeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="codeLeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="codeLeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="codeRightData">
-                <h5>Skills right:<span id="skillsCount2">{{skills.codeRightData | length}}</span></h5>
-                <div class="form-group"><a href="#" way-action-push="codeRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="codeRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="codeRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
+<div class="mt100 w90 center">
+  <h1>{{title}}</h1>
 
-            <form role="form" way-data="skillsLeftData">
-                <h5>frameworks left:{{skills.skillsLeftData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="skillsLeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="skillsLeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="skillsLeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="skillsRightData">
-                <h5>frameworks right:{{skills.skillsRightData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="skillsRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="skillsRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="skillsRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
+  <h3>Skills left:<span>{{skills.codeLeftData | length}}</span></h3>
+  <button id="codeLeftNew" class="btn mb40">Add entry</button>
+  <div id="codeLeftContainer" class="row">
+  {% for i in skills.codeLeftData %}
+  {{macro.skills(a=i.title,b=i.percent,x="codeLeft")}}
+  {% endfor %}
+  </div>
 
-            <form role="form" way-data="dbLeftData">
-                <h5>database left:{{skills.dbLeftData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="dbLeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="dbLeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="dbLeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="dbRightData">
-                <h5>database right:{{skills.dbRightData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="dbRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="dbRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="dbRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
+  <h3>Skills right:<span>{{skills.codeRightData | length}}</span></h3>
+  <button id="codeRightNew" class="btn mb40">Add entry</button>
+  <div id="codeRightContainer" class="row">
+  {% for i in skills.codeRightData %}
+  {{macro.skills(a=i.title,b=i.percent,x="codeRight")}}
+  {% endfor %}
+  </div>
 
-            <form role="form" way-data="CMSLeftData">
-                <h5>CMS left:{{skills.CMSLeftData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="CMSLeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="CMSLeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="CMSLeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="CMSRightData">
-                <h5>CMS right:{{skills.CMSRightData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="CMSRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="CMSRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="CMSRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
+  <h3>Frameworks left:<span>{{skills.skillsLeftData | length}}</span></h3>
+  <button id="skillsLeftNew" class="btn mb40">Add entry</button>
+  <div id="skillsLeftContainer" class="row">
+  {% for i in skills.skillsLeftData %}
+  {{macro.skills(a=i.title,b=i.percent,x="skillsLeft")}}
+  {% endfor %}
+  </div>
 
-            <form role="form" way-data="OSLeftData">
-                <h5>OS left:{{skills.OSLeftData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="OSLeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="OSLeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="OSLeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="OSRightData">
-                <h5>OS right:{{skills.OSRightData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="OSRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="OSRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.skillsData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="OSRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
+  <h3>Frameworks right:<span>{{skills.skillsRightData | length}}</span></h3>
+  <button id="skillsRightNew" class="btn mb40">Add entry</button>
+  <div id="skillsRightContainer" class="row">
+  {% for i in skills.skillsRightData %}
+  {{macro.skills(a=i.title,b=i.percent,x="skillsRight")}}
+  {% endfor %}
+  </div>
 
-            <form role="form" way-data="otherLeftData">
-                <h5>other left:{{skills.otherLeftData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="otherLeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="otherLeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.otherData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="otherLeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="otherRightData">
-                <h5>other right:{{skills.otherRightData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="otherRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="otherRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.otherData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="otherRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
+  <h3>DB left:<span>{{skills.dbLeftData | length}}</span></h3>
+  <button id="dbLeftNew" class="btn mb40">Add entry</button>
+  <div id="dbLeftContainer" class="row">
+  {% for i in skills.dbLeftData %}
+  {{macro.skills(a=i.title,b=i.percent,x="dbLeft")}}
+  {% endfor %}
+  </div>
 
-            <form role="form" way-data="APILeftData">
-                <h5>API left:{{skills.APILeftData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="APILeftData">Add entry</a></div>
-                <div class="form-group" way-repeat="APILeftData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.otherData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="APILeftData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-            <form role="form" way-data="APIRightData">
-                <h5>API right:{{skills.APIRightData | length}}</h5>
-                <div class="form-group"><a href="#" class="add" way-action-push="APIRightData">Add entry</a></div>
-                <div class="form-group" way-repeat="APIRightData">
-                    <div>
-                      <div class="item-entry">
-                          {% for item in config.otherData %}
-                          <label>{{item}}</label>
-                          <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-                          {% endfor %}
-                        </div>
-        						<a href="#" class="remove" way-action-remove="APIRightData.$$key">Remove entry</a>
-        					</div>
-                </div>
-            </form>
-        </div>
-        {{macro.pre(title=title)}}
+  <h3>DB right:<span>{{skills.dbRightData | length}}</span></h3>
+  <button id="dbRightNew" class="btn mb40">Add entry</button>
+  <div id="dbRightContainer" class="row">
+  {% for i in skills.dbRightData %}
+  {{macro.skills(a=i.title,b=i.percent,x="dbRight")}}
+  {% endfor %}
+  </div>
+
+  <h3>CMS left:<span>{{skills.CMSLeftData | length}}</span></h3>
+  <button id="cmsLeftNew" class="btn mb40">Add entry</button>
+  <div id="cmsLeftContainer" class="row">
+  {% for i in skills.CMSLeftData %}
+  {{macro.skills(a=i.title,b=i.percent,x="CMSLeft")}}
+  {% endfor %}
+  </div>
+
+  <h3>CMS right:<span>{{skills.CMSRightData | length}}</span></h3>
+  <button id="cmsRightNew" class="btn mb40">Add entry</button>
+  <div id="cmsRightContainer" class="row">
+  {% for i in skills.CMSRightData %}
+  {{macro.skills(a=i.title,b=i.percent,x="CMSRight")}}
+  {% endfor %}
+  </div>
+
+  <h3>OS left:<span>{{skills.OSLeftData | length}}</span></h3>
+  <button id="osLeftNew" class="btn mb40">Add entry</button>
+  <div id="osLeftContainer" class="row">
+  {% for i in skills.OSLeftData %}
+  {{macro.skills(a=i.title,b=i.percent,x="OSLeft")}}
+  {% endfor %}
+  </div>
+
+  <h3>OS right:<span>{{skills.OSRightData | length}}</span></h3>
+  <button id="osRightNew" class="btn mb40">Add entry</button>
+  <div id="osRightContainer" class="row">
+  {% for i in skills.OSRightData %}
+  {{macro.skills(a=i.title,b=i.percent,x="OSRight")}}
+  {% endfor %}
+  </div>
+
+  <h3>Other left:<span>{{skills.otherLeftData | length}}</span></h3>
+  <button id="otherLeftNew" class="btn mb40">Add entry</button>
+  <div id="otherLeftContainer" class="row">
+  {% for i in skills.otherLeftData %}
+  {{macro.skillsMin(a=i.title,x="otherLeft")}}
+  {% endfor %}
+  </div>
+
+  <h3>Other right:<span>{{skills.otherRightData | length}}</span></h3>
+  <button id="otherRightNew" class="btn mb40">Add entry</button>
+  <div id="otherRightContainer" class="row">
+  {% for i in skills.otherRightData %}
+  {{macro.skillsMin(a=i.title,x="otherRight")}}
+  {% endfor %}
+  </div>
+
+  <h3>API left:<span>{{skills.APILeftData | length}}</span></h3>
+  <button id="APILeftNew" class="btn mb40">Add entry</button>
+  <div id="APILeftContainer" class="row">
+  {% for i in skills.APILeftData %}
+  {{macro.skillsMin(a=i.title,x="APILeft")}}
+  {% endfor %}
+  </div>
+
+  <h3>API right:<span>{{skills.APIRightData | length}}</span></h3>
+  <button id="APIRightNew" class="btn mb40">Add entry</button>
+  <div id="APIRightContainer" class="row">
+  {% for i in skills.APIRightData %}
+  {{macro.skillsMin(a=i.title,x="APIRight")}}
+  {% endfor %}
+  </div>
+
+  <div class="row">
+    <div class="col s6 sort">
+      <button type="button" id="showIt" class="effect-waves btn">Update</button>
     </div>
+    <div class="col s6 sort">
+      <button type="button" id="commit" class="effect-waves btn" disabled>Commit</button>
+    </div>
+  </div>
+  <form role="form" id="post" action="/update{{title}}" method="post">
+      <textarea type="text" id="toUpdate" name="toUpdate" class="form-control" hidden></textarea>
+  </form>
+
+
+
+
+
 </div>
 {% endblock %}
 {%block scripts%}
 <script>
-    way.set("codeLeftData", {{skills.codeLeftData | dump | safe}});
-    way.set("codeRightData", {{skills.codeRightData | dump | safe}});
-    way.set("skillsLeftData", {{skills.skillsLeftData | dump | safe}});
-    way.set("skillsRightData", {{skills.skillsRightData | dump | safe}});
-    way.set("dbLeftData", {{skills.dbLeftData | dump | safe}});
-    way.set("dbRightData", {{skills.dbRightData | dump | safe}});
-    way.set("CMSLeftData", {{skills.CMSLeftData | dump | safe}});
-    way.set("CMSRightData", {{skills.CMSRightData | dump | safe}});
-    way.set("OSLeftData", {{skills.OSLeftData | dump | safe}});
-    way.set("OSRightData", {{skills.OSRightData | dump | safe}});
-    way.set("otherLeftData", {{skills.otherLeftData | dump | safe}});
-    way.set("otherRightData", {{skills.otherRightData | dump | safe}});
-    way.set("APILeftData", {{skills.APILeftData | dump | safe}});
-    way.set("APIRightData", {{skills.APIRightData | dump | safe}});
+const skills =  {{skills|dump|safe}};
+var arr = {"codeLeftData":[],"codeRightData":[],"skillsLeftData":[],"skillsRightData":[],"dbLeftData":[],"dbRightData":[],"CMSLeftData":[],"CMSRightData":[],"OSLeftData":[],"OSRightData":[],"otherLeftData":[],"otherRightData":[],"APILeftData":[],"APIRightData":[]};
+var codeL = arr.codeLeftData,
+codeR = arr.codeRightData,
+skillsL = arr.skillsLeftData,
+skillsR = arr.skillsRightData,
+dbL = arr.dbLeftData,
+dbR = arr.dbRightData,
+CMSL = arr.CMSLeftData,
+CMSR = arr.CMSRightData,
+OSL = arr.OSLeftData,
+OSR = arr.OSRightData,
+otherL = arr.otherLeftData,
+otherR = arr.otherRightData,
+APIL = arr.APILeftData,
+APIR = arr.APIRightData;
+
+var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight","cmsLeft","cmsRight","osLeft","osRight","otherLeft","otherRight","APILeft","APIRight"];
+
+  function showEntries(){
+    $('.showEntries').click(function() {
+      $(this).text($(this).text() == 'hide' ? 'show' : 'hide');
+      $(this).parents('.card-title').next().toggleClass('hidden');
+    });
+    $('.removeBlock').click(function() {
+      $(this).parents('.sort').remove();
+    });
+  }
+
+  lst.forEach(function(i) {
+    var container = document.getElementById(i + "Container");
+    var sort = Sortable.create(container, {
+      animation: 150,
+      handle: ".sort",
+      draggable: ".sort",
+      onUpdate: function (evt){
+         var item = evt.item;
+       }
+    });
+
+    $('#'+i+'New').click(function() {
+      var a = $('.sort').eq(1).clone();
+      a.find('h5').html('<h5>new<span class="showEntries">show</span></h5>');
+      a.find('.entrytitle,.entrypercent').val('');
+      a.prependTo('#'+i+'Container');
+      $('.showEntries,.removeBlock').unbind();
+      showEntries();
+    });
+  });
+
+  $('#showIt').click(function() {
 
 
+    $('#toUpdate').empty();
+
+    function bld(i,e){
+      $(i).each(function(index, el) {
+          let inp = $(this).children('.s6');
+          e.push({
+              "title":inp.children('.entrytitle').val(),
+              "percent":inp.children('.entrypercent').val()
+            });
+        });
+    }
+    function bldMin(i,e){
+      $(i).each(function(index, el) {
+          let inp = $(this).children('.s6');
+          e.push({
+              "title":inp.children('.entrytitle').val(),
+              "percent":inp.children('.entrypercent').val()
+            });
+        });
+    }
+
+    bld('.codeLeftentry',codeL);
+    bld('.codeRightentry',codeR);
+    bld('.skillsLeftentry',skillsL);
+    bld('.skillsRightentry',skillsR);
+    bld('.dbLeftentry',dbL);
+    bld('.dbRightentry',dbR);
+    bld('.CMSLeftentry',CMSL);
+    bld('.CMSRightentry',CMSR);
+    bld('.OSLeftentry',OSL);
+    bld('.OSRightentry',OSR);
+
+    bldMin('.otherLeftentry',otherL);
+    bldMin('.otherRightentry',otherR);
+    bldMin('.APILeftentry',APIL);
+    bldMin('.APIRightentry',APIR);
+
+    $('#toUpdate').html(JSON.stringify(arr));
+    $('#commit').attr('disabled', false);
+    $('#toUpdate').fadeIn('slow');
+    console.log(JSON.stringify(arr));
+  });
+
+  $('#commit').click(function(event) {
+    $('#post').submit();
+  });
+
+  showEntries();
 </script>
 {% endblock %}

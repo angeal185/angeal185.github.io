@@ -5,6 +5,16 @@
 <script src="js/{{s}}.js"></script>
 {%- endmacro -%}
 
+{%- macro node(s) -%}
+<script src="{{s}}.js"></script>
+{%- endmacro -%}
+
+{%- macro entries(n,s) -%}
+<div class="col s6">
+  <label>{{n}}</label><input type="text" class="form-control entry{{n}}"  value="{{s}}">
+</div>
+{%- endmacro -%}
+
 {%- macro skills1(t,i) -%}
 <form role="form" way-data="{{i}}">
     <h5>{{t}}</h5>
@@ -21,6 +31,40 @@
       </div>
     </div>
 </form>
+{%- endmacro -%}
+
+
+{%- macro skills(n,a,b,x) -%}
+<div class="col s6 sort">
+  <div class="card">
+  <div class="form-group card-panel">
+      <div class="card-title">
+        <h5>{{a}}<span class="showEntries">show</span></h5>
+      </div>
+      <div class="row card-content {{x}}entry hidden">
+        {{entries(n="title",s=a)}}
+        {{entries(n="percent",s=b)}}
+      </div>
+      <a class="removeBlock">Remove entry</a>
+    </div>
+  </div>
+</div>
+{%- endmacro -%}
+
+{%- macro skillsMin(n,a,x) -%}
+<div class="col s6 sort">
+  <div class="card">
+  <div class="form-group card-panel">
+      <div class="card-title">
+        <h5>{{a}}<span class="showEntries">show</span></h5>
+      </div>
+      <div class="row card-content {{x}}entry hidden">
+        {{entries(n="title",s=a)}}
+      </div>
+      <a class="removeBlock">Remove entry</a>
+    </div>
+  </div>
+</div>
 {%- endmacro -%}
 
 {%- macro lnk(item) -%}
