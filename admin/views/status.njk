@@ -1,23 +1,22 @@
 {% extends 'layout.njk' %}
 {% block content %}
-  <div class="mt100 container">
-    <h1 class="center">{{title}}</h1>
-
-    <div class="card-panel blue">
-      <div class="row">
-        <div class="col s6">
-          <h4 class="card-title">Website:</h4>
-          <h5 class="green">{{config.app.address}}</h5>
-          <h5 class="green">{{pkg.repository.url}}</h5>
-        </div>
-        <div class=" col s6">
-          <h4 class="card-title">Status:</h4>
-          <h5 id="websiteStatus">Loading...</h5>
-        </div>
+<div class="mt100 container">
+  <h1 class="center">{{title}}</h1>
+  <div class="card-panel blue">
+    <div class="row">
+      <div class="col s6">
+        <h4 class="card-title">Website:</h4>
+        <h5 class="green">{{config.app.address}}</h5>
+        <h5 class="green">{{pkg.repository.url}}</h5>
+      </div>
+      <div class=" col s6">
+        <h4 class="card-title">Status:</h4>
+        <h5 id="websiteStatus">Loading...</h5>
       </div>
     </div>
-    <div id="status" class="row"></div>
   </div>
+  <div id="status" class="row"></div>
+</div>
 {% endblock %}
 {%block scripts%}
   <script>

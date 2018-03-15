@@ -79,7 +79,7 @@ a.forEach(function(i) {
 				  if (err) throw err;
 			  };
     console.log(chalk.greenBright("Task: ") + chalk.cyanBright("[" + i +"]") + chalk.greenBright(" done."));
-	  res.redirect('/');
+	  res.format({html: function(){res.send('<p>done!</p><script>open(location, "_self").close()</script>');}});
 	});
 
 });
@@ -92,7 +92,7 @@ fs.writeFile('./app/data/skills.json', jsonminify(toUpdate), 'utf8'),
         if (err) throw err;
       };
   console.log(chalk.greenBright("Task: ") + chalk.cyanBright("[updateSkills]") + chalk.greenBright(" done."));
-  res.redirect('/');
+	res.format({html: function(){res.send('<p>done!</p><script>open(location, "_self").close()</script>');}});
 
 });
 
