@@ -1,0 +1,18 @@
+<nav id="menu">
+    <ul class="mobile-nav" id="mobile">
+      {% for item in config.entries %}
+        <li class="effect-waves menu-item"><a href="{{item}}">{{item|capitalize}}</a></li>
+      {% endfor %}
+      {{macro.lnk(item="skills")}}
+      {{macro.lnk(item="status")}}
+    </ul>
+</nav>
+<nav class="top-nav">
+    <div class="nav-wrapper {{config.theme.main}}">
+      <a class="menu-btn menu-link" id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+</nav>

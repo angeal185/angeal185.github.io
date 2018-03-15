@@ -113,7 +113,7 @@
   {{macro.skillsMin(a=i.title,x="APIRight")}}
   {% endfor %}
   </div>
-
+  <textarea type="text" id="editor1"></textarea>
   <div class="row">
     <div class="col s6 sort">
       <button type="button" id="showIt" class="effect-waves btn">Update</button>
@@ -149,8 +149,8 @@ OSR = arr.OSRightData,
 otherL = arr.otherLeftData,
 otherR = arr.otherRightData,
 APIL = arr.APILeftData,
-APIR = arr.APIRightData;
-
+APIR = arr.APIRightData,
+editor = ace.edit("editor1");
 var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight","cmsLeft","cmsRight","osLeft","osRight","otherLeft","otherRight","APILeft","APIRight"];
 
   function showEntries(){
@@ -183,6 +183,9 @@ var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight",
       showEntries();
     });
   });
+
+  editor.setTheme("ace/theme/twilight");
+  editor.session.setMode("ace/mode/json");
 
   $('#showIt').click(function() {
 
@@ -224,13 +227,14 @@ var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight",
     bldMin('.APILeftentry',APIL);
     bldMin('.APIRightentry',APIR);
 
-    $('#toUpdate').html(JSON.stringify(arr));
+    editor.getSession().setUseWrapMode(true);
+    editor.insert(JSON.stringify(arr, null, 2));
     $('#commit').attr('disabled', false);
-    $('#toUpdate').fadeIn('slow');
-    console.log(JSON.stringify(arr));
+    //console.log(JSON.stringify(arr));
   });
 
   $('#commit').click(function(event) {
+    $('#toUpdate').val(editor.getValue());
     $('#post').submit();
   });
 

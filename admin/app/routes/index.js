@@ -2,8 +2,10 @@ const express = require('express'),
 fs = require('fs'),
 os = require('os'),
 router = express.Router(),
+jsonminify = require("jsonminify"),
 chalk = require('chalk'),
 config = require('../config/config'),
+//listFiles = require('../modules/listFiles'),
 pkg = require('../../../package');
 const { exec } = require('child_process');
 
@@ -72,7 +74,7 @@ a.forEach(function(i) {
 	router.post('/update' + i, function(req, res) {
 	var toUpdate = req.body.toUpdate; //get task command from body
   //console.log(toUpdate);
-  fs.writeFile('./app/data/' + i +'.json', toUpdate, 'utf8'),
+  fs.writeFile('./app/data/' + i +'.json', jsonminify(toUpdate), 'utf8'),
 			  function(err) {
 				  if (err) throw err;
 			  };
@@ -84,8 +86,8 @@ a.forEach(function(i) {
 
 router.post('/updateskills', function(req, res) {
 var toUpdate = req.body.toUpdate; //get task command from body
-console.log(toUpdate);
-fs.writeFile('./app/data/skills.json', toUpdate, 'utf8'),
+//console.log(toUpdate);
+fs.writeFile('./app/data/skills.json', jsonminify(toUpdate), 'utf8'),
       function(err) {
         if (err) throw err;
       };

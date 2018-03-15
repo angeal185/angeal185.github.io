@@ -29,6 +29,7 @@
       {% endfor %}
 
   </div>
+  <textarea type="text" id="editor1"></textarea>
   <div class="row">
     <div class="col s6 sort">
       <button type="button" id="showIt" class="effect-waves btn">Update</button>
@@ -40,13 +41,14 @@
   <form role="form" id="post" action="/update{{title}}" method="post">
       <textarea type="text" id="toUpdate" name="toUpdate" class="form-control" hidden></textarea>
   </form>
+
 </div>
 {% endblock %}
 {%block scripts%}
 <script>
 
 var container = document.getElementById("sortContainer");
-
+var editor = ace.edit("editor1");
 var sort = Sortable.create(container, {
   animation: 150,
   handle: ".sort",
@@ -72,6 +74,9 @@ function showEntries(){
   });
 }
 
+editor.setTheme("ace/theme/twilight");
+editor.session.setMode("ace/mode/json");
+
 $('#showIt').click(function(event) {
   var arr = {"entries":[]};
   $('#toUpdate').empty();
@@ -88,12 +93,13 @@ $('#showIt').click(function(event) {
         "hrefA":inp.children('.entryaddress').val()
       });
   });
-  $('#toUpdate').html(JSON.stringify(arr));
+  editor.getSession().setUseWrapMode(true);
+  editor.insert(JSON.stringify(arr, null, 2));
   $('#commit').attr('disabled', false);
-  $('#toUpdate').fadeIn('slow');
 });
 
 $('#commit').click(function(event) {
+  $('#toUpdate').val(editor.getValue());
   $('#post').submit();
 });
 

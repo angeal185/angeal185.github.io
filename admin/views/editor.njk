@@ -1,0 +1,695 @@
+{% extends 'admin.njk' %}
+{% block content %}
+  <div class="w90p">
+    <div class="row">
+      <div class="col-sm-3">
+
+        <div class="well">
+          <label>File</label>
+          <input id="loaded" type="text" class="form-control mb20" value="Select file" readonly>
+          <button type="button" id="deleteFileBtn" class="btn btn-dark btn-block mb20 hidden" data-toggle="modal" data-target=".delete-modal" >Delete</button>
+          <label>DIR</label>
+          <input id="DIR" type="text" class="form-control mb20" value="Select file" readonly>
+          <button type="button" id="addNewBtn" class="btn btn-dark btn-block mb20 hidden" data-toggle="modal" data-target=".addNew-modal" >Add new</button>
+          <label>Mode</label>
+          <input id="format" type="text" class="form-control mb20" value="Select file" readonly>
+        </div>
+
+        <ul class="list-group well">
+          <h3>Public</h3>
+          <li id="css" class="list-group-item lgMain">CSS<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+          {% for i in files.public.css %}
+          <li  class="list-group-item cssItems lgSub"><span class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+          <li id="js" class="list-group-item lgMain">Javascript<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+          {% for i in files.public.js %}
+          <li class="list-group-item jsItems lgSub"><span id="{{i}}" class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+          <li id="json" class="list-group-item lgMain">Json<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+          {% for i in files.public.data %}
+          <li class="list-group-item jsonItems lgSub"><span id="{{i}}" class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+        </ul>
+
+        <ul class="list-group well">
+          <h3>Templates</h3>
+          <li id="mainTpl" class="list-group-item lgMain">main<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+            {% for i in files.views.main %}
+            <li  class="list-group-item mainTplItems lgSub"><span class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+          <li id="elements" class="list-group-item lgMain">elements<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+            {% for i in files.views.elements %}
+            <li  class="list-group-item elementsItems lgSub"><span class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+          <li id="includes" class="list-group-item lgMain">includes<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+            {% for i in files.views.includes %}
+            <li  class="list-group-item includesItems lgSub"><span class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+          <li id="macros" class="list-group-item lgMain">macros<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+            {% for i in files.views.macros %}
+            <li  class="list-group-item macrosItems lgSub"><span class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+        </ul>
+
+        <ul class="list-group well">
+          <h3>Gulp</h3>
+          <li id="gulp" class="list-group-item lgMain">Gulp-tasks<span class="fa-chevron-right pull-right"></span></li>
+          <ul>
+            {% for i in files.gulp %}
+            <li  class="list-group-item gulpItems lgSub"><span class="dataChoice">{{i}}</span></li>
+            {% endfor %}
+          </ul>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        <div>
+          <div id="editor" name="editor"></div>
+          <div id="demo" style="display:none"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+        <button type="button" id="editorSettings"  class="btn btn-block btn-dark mb20">settings</button>
+        </div>
+        <div class="col-md-6">
+        <button type="button" id="keyCodes" class="btn btn-block btn-dark mb20">Key codes</button>
+        </div>
+        </div>
+        <button type="button" id="toSave" class="btn btn-block btn-dark">Save</button>
+      </div>
+
+
+
+        <textarea id="aceConfig" class="hidden"></textarea>
+
+
+    </div>
+    <div class="toolbarRight fadeInRight">
+      <h2 class="blink">Options</h2>
+      <div class="input-group mb20">
+        <label>Find</label>
+        <input type="text" id="search" class="form-control o7" placeholder="find...">
+        <span class="input-group-btn">
+          <button id="searchBtn" class="btn btn-dark t12" type="button">Go!</button>
+        </span>
+      </div>
+      <div class="input-group">
+        <label>Replace</label>
+        <input type="text" id="replace" class="form-control o7" placeholder="replace...">
+        <span class="input-group-btn">
+          <button id="replaceBtn" class="btn btn-dark t12" type="button">Go!</button>
+        </span>
+      </div>
+      <div class="input-group mb20">
+        <label>Replace all</label>
+        <input type="text" id="replaceAll" class="form-control o7" placeholder="replace all...">
+        <span class="input-group-btn">
+          <button id="replaceAllBtn" class="btn btn-dark t12" type="button">Go!</button>
+        </span>
+      </div>
+      <label>Beautify code</label>
+      <button type="button" id="beautifyBtn" data-toggle="modal" data-target=".beautify-modal"  class="btn btn-dark btn-block mb20">beautify</button>
+      <label>Minify code</label>
+        <button type="button" id="uglifyBtn" data-toggle="modal" data-target=".uglifyJs-modal" class="btn btn-dark btn-block mb10">Js</button>
+        <button type="button" id="minCssBtn" data-toggle="modal" data-target=".minCss-modal" class="btn btn-dark btn-block mb10">Css</button>
+        <button type="button" id="minHtmlBtn" data-toggle="modal" data-target=".minHtml-modal" class="btn btn-dark btn-block mb20">Njk/JSON</button>
+
+        <label>Advanced</label>
+        <button type="button"  data-toggle="modal" data-target=".advanced-modal" class="btn btn-dark btn-block mb10">Config</button>
+
+    </div>
+
+
+    <div class="modal fade beautify-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Beautify</h4>
+          </div>
+          <div class="modal-body">
+            <textarea id="beautifyRes" class="c-modal"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="clear" class="btn btn-dark">Clear</button>
+            <button type="button" id="beautify" class="btn btn-dark">beautify</button>
+            <button type="button" id="replaceBeautify" class="btn btn-dark" disabled>Commit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade uglifyJs-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Uglify</h4>
+          </div>
+          <div class="modal-body">
+            <textarea id="uglifyRes" class="c-modal"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="clear" class="btn btn-dark">Clear</button>
+            <button type="button" id="uglifyJs" class="btn btn-dark">uglifyJs</button>
+            <button type="button" id="replaceUglifyJs" class="btn btn-dark" disabled>Commit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade minCss-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Minify CSS</h4>
+          </div>
+          <div class="modal-body">
+            <textarea id="minCssRes" class="c-modal"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="clear" class="btn btn-dark">Clear</button>
+            <button type="button" id="minCss" class="btn btn-dark">Minify</button>
+            <button type="button" id="replaceMinCss" class="btn btn-dark" disabled>Commit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade minHtml-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Minify njk or JSON</h4>
+          </div>
+          <div class="modal-body">
+            <textarea id="minHtmlRes" class="c-modal"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="clear" class="btn btn-dark">Clear</button>
+            <button type="button" id="minHtml" class="btn btn-dark">Minify</button>
+            <button type="button" id="replaceMinHtml" class="btn btn-dark" disabled>Commit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade advanced-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Advanced options</h4>
+          </div>
+          <div id="advancedMain" class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" id="aceUpdateBtn" class="btn btn-dark btn-block" onclick="updateAceConf()">update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade addNew-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Add new file</h4>
+          </div>
+          <div class="modal-body">
+            <label>Name</label>
+            <input id="newFileName" type="text" class="form-control mb20" value="new">
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="addNew" class="btn btn-dark">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade delete-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title blink">Delete file</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <strong class="blink">Warning!</strong><span class="pull-right">
+                This will delete your file perminantly.</span>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark pull-left" onclick="$(this).next().removeAttr('disabled')">Confirm</button>
+            <button type="button" id="deleteFile" class="btn btn-dark" disabled>Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<input id="rout" type="text" hidden>
+
+  {% endblock %}
+  {%block scripts%}
+    <script>
+var aceConf = {{aceConf|dump|safe}};
+
+
+$.each(aceConf, function( i, e ) {
+  $('#advancedMain').append('<label class="blink">'+i+'</label><input type="text" id="'+i+'" class="form-control mb20 text-center" value="'+e+'" readonly><button type="button" class="btn btn-dark btn-block mb20" onclick="toggleBool($(this).prev())">change</button>');
+});
+
+
+
+$('#clear').click(function() {
+  $('.modal-body textarea').val('');
+});
+    {% if config.app.audio %}
+      $('.toolbarRight').hover(function () {
+        createjs.Sound.play("hover");
+      });
+    {% endif %}
+
+
+      var choice = {
+        "css":"css",
+        "js":"js",
+        "json":"json",
+        "mainTpl":"html",
+        "elements":"html",
+        "includes":"html",
+        "macros":"html",
+        "gulp":"js"
+      };
+
+      $.each( choice, function( i, e ) {
+        $("#"+i).click(function() {
+          $("."+i+"Items").toggle("slow");
+        });
+        $("."+i+"Items").click(function() {
+          $("#format").val(e);
+          //console.log(format)
+        });
+      //  $("#DIR").val("")
+
+      });
+
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/{{elements.options.aceTheme}}");
+      editor.getSession();
+      editor.setOptions(aceConf);
+      editor.commands.addCommand({
+        name: "showKeyboardShortcuts",
+        bindKey: {win: "Ctrl-Alt-h", mac: "Command-Alt-h"},
+        exec: function(editor) {
+            ace.config.loadModule("ace/ext/keybinding_menu", function(module) {
+                module.init(editor);
+                editor.showKeyboardShortcuts()
+
+            })
+        }
+    });
+
+    editor.commands.addCommand({
+      name: "showSettingsMenu",
+      bindKey: {win: "Ctrl-,", mac: "Command-,"},
+      exec: function(editor) {
+          ace.config.loadModule("ace/ext/settings_menu", function(module) {
+              module.init(editor);
+              editor.showSettingsMenu()
+          })
+      }
+  });
+  editor.execCommand("showSettingsMenu")
+  setTimeout(function(){
+    $('#ace_settingsmenu').parent().parent().remove();
+  }, 800);
+
+
+    $('#keyCodes').click(function() {
+      editor.execCommand("showKeyboardShortcuts")
+    });
+    $('#editorSettings').click(function() {
+
+
+      editor.execCommand("showSettingsMenu")
+      $('#ace_settingsmenu').css('display', 'block');
+      $('td label').addClass('blink');
+      $('.ace_optionsMenuEntry input,.ace_optionsMenuEntry select').addClass('form-control');
+      $('.ace_optionsMenuEntry button').addClass('btn');
+    });
+
+
+
+
+
+
+function updateAceConf(){
+  $('#advancedMain input').each(function (div, i) {
+      $('#aceConfig').append(JSON.stringify(this.id)+": "+JSON.parse(this.value)+",");
+  });
+  $('#aceConfig').html($('#aceConfig').html().slice(0, -1)).prepend('{').append('}');
+  socket.emit('AceConfUpdate', $('#aceConfig').html());
+  $('#aceUpdateBtn').attr('disabled', 'true');
+  setTimeout(function(){
+    window.location.reload(false);
+  }, 6000);
+  //console.log($('#aceConfig').html())
+}
+
+$("#toSave").click(function() {
+  let data = editor.getValue();
+  let file = $('#loaded').val();
+  let dir = $('#DIR').val();
+  //console.log({"data":data,"file":file,"dir":dir});
+  if ((file) === ('Select file')) {
+    showtoast("No file selected");
+    } else {
+    socket.emit('editorSave', {"data":data,"file":file,"dir":dir});
+  }
+});
+
+socket.addEventListener("editorSave", function (i) {
+  showtoast(i.data);
+});
+
+$("#searchBtn").click(function() {
+  let find = $("#search").val();
+  editor.find(find);
+});
+
+$("#replaceBtn").click(function() {
+  let find = $("#search").val();
+  let replace = $("#replace").val();
+  editor.find(find);
+  editor.replace(replace);
+});
+
+$("#replaceAllBtn").click(function() {
+  let find = $("#search").val();
+  let replaceAll = $("#replaceAll").val();
+  editor.find(find);
+  editor.replaceAll(replaceAll);
+});
+
+
+$('.cssItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readCss', ele);
+  $('#DIR').val('{{files.dir.cssDir}}');
+  return false;
+});
+
+$('.jsItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readJs', ele);
+  $('#DIR').val('{{files.dir.jsDir}}');
+  return false;
+});
+
+$('.jsonItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readJson', ele);
+  $('#DIR').val('{{files.dir.jsonDir}}');
+  return false;
+});
+
+
+$('.elementsItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readElements', ele);
+  $('#DIR').val('{{files.dir.elementsDir}}');
+  return false;
+});
+
+$('.macrosItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readMacros', ele);
+  $('#DIR').val('{{files.dir.macrosDir}}');
+  return false;
+});
+
+$('.includesItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readIncludes', ele);
+  $('#DIR').val('{{files.dir.includesDir}}');
+  return false;
+});
+
+$('.mainTplItems').click(function (event) {
+  let ele = $(this).children().html();
+  socket.emit('readMainTpl', ele);
+  $('#DIR').val('{{files.dir.mainTplDir}}');
+  return false;
+});
+
+$('.gulpItems').click(function (event) {
+  let ele = $(this).children().html();
+  if ((ele)===("gulpfile.js")){
+  $('#DIR').val('./');
+  } else {
+  $('#DIR').val('{{files.dir.gulpDir}}');
+  }
+    console.log({"dir":$('#DIR').val(),"ele":ele})
+
+  socket.emit('readGulp', {"dir":$('#DIR').val(),"ele":ele});
+  return false;
+});
+
+socket.addEventListener("readGulp", function (i) {
+  editor.setValue(i.data);
+  if ((i.title)===("config.json")){
+    $( "#format" ).val('json')
+    editor.session.setMode("ace/mode/json");
+    console.log('json')
+  } else {
+    editor.session.setMode("ace/mode/javascript");
+  }
+  console.log(i.title)
+
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readCss", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/css");
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readJs", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/javascript");
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readJson", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/json");
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readElements", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/twig");
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readMacros", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/twig");
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readIncludes", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/twig");
+  $( "#loaded" ).val(i.title)
+});
+
+socket.addEventListener("readMainTpl", function (i) {
+  editor.setValue(i.data);
+  editor.session.setMode("ace/mode/twig");
+  $( "#loaded" ).val(i.title)
+});
+
+
+$("#beautifyBtn").click(function() {
+  let data = editor.getValue();
+  $("#beautifyRes").val(data);
+});
+
+$("#uglifyBtn").click(function() {
+  let data = editor.getValue();
+  $("#uglifyRes").val(data);
+});
+$("#minCssBtn").click(function() {
+  let data = editor.getValue();
+  $("#minCssRes").val(data);
+});
+$("#minHtmlBtn").click(function() {
+  let data = editor.getValue();
+  $("#minHtmlRes").val(data);
+});
+
+$("#beautify").click(function() {
+  let data = $("#beautifyRes").val();
+  let format = $("#format").val();
+  socket.emit('beautify', {"data":data,"format":format});
+  $("#replaceBeautify").removeAttr("disabled");
+  //console.log(format)
+  return false;
+});
+
+socket.addEventListener("beautify", function (i) {
+  $("#beautifyRes").val(i.data);
+    if ((i.format) === ("js")) {
+      format === "javascript";
+    }
+    if ((i.format) === ("html")) {
+      format === "twig";
+    }
+});
+
+$("#replaceBeautify").click(function(event) {
+  editor.setValue($("#beautifyRes").val());
+});
+
+$("#uglifyJs").click(function() {
+  let data = editor.getValue();
+  socket.emit('uglifyJs', data);
+  $("#replaceUglifyJs").removeAttr("disabled");
+  return false;
+});
+
+socket.addEventListener("uglifyJs", function (i) {
+  $("#uglifyRes").val(i.data);
+});
+
+$("#replaceUglifyJs").click(function(event) {
+  editor.setValue($("#uglifyRes").val());
+});
+
+
+$("#minCss").click(function() {
+  let data = editor.getValue();
+  socket.emit('minCss', data);
+  $("#replaceMinCss").removeAttr("disabled");
+  return false;
+});
+
+$("#minHtml").click(function() {
+  let data = editor.getValue();
+  socket.emit('minHtml', data);
+  $("#replaceMinHtml").removeAttr("disabled");
+  return false;
+});
+
+socket.addEventListener("minCss", function (i) {
+  $("#minCssRes").val(i.data.styles);
+});
+
+socket.addEventListener("minHtml", function (i) {
+  $("#minHtmlRes").val(i.data);
+});
+
+$("#replaceMinCss").click(function(event) {
+  editor.setValue($("#minCssRes").val());
+});
+
+$("#replaceMinHtml").click(function(event) {
+  editor.setValue($("#minHtmlRes").val());
+});
+
+$("#advanced").click(function() {
+  editor.setOption('fontSize', '32px')
+});
+
+editor.getValue();
+ $('.lgMain').click(function() {
+   $(this).children('span').toggleClass("fa-chevron-right fa-chevron-down");
+ });
+
+ $('.dataChoice').each(function() {
+      $(this).attr({'data-toggle':'tooltip', 'title':$(this).html(), 'data-placement':'right'});
+});
+ $('.dataChoice').click(function() {
+   $('#addNewBtn,#deleteFileBtn').removeClass("hidden");
+   });
+
+
+
+
+
+$("#addNewBtn").click(function() {
+  let type;
+  if ($('#DIR').val().indexOf('public') > -1){
+    type = 'public';
+  } else if ($('#DIR').val().indexOf('views') > -1) {
+    type = 'views';
+  } else {
+    type = 'gulp'
+  }
+  let rout = $('#rout').val()
+  console.log(rout);
+  $("#addNew").click(function() {
+    let name = $('#newFileName').val();
+    let ext = $('#format').val();
+    let dir = $('#DIR').val();
+    if ((ext)===('html')){
+      ext = 'njk';
+    }
+    socket.emit('addNewFile', {"title":name+"."+ext,"dir":dir,"rout":rout,"type":type});
+    return false;
+  });
+});
+
+function Reload(i){
+  showtoast(i);
+  showtoast("reloading...");
+  setTimeout(function(){
+    window.location.reload(false);
+  }, 6000);
+}
+socket.addEventListener("addNewFile", function (i) {
+  Reload(i.data)
+});
+
+
+$("#deleteFile").click(function() {
+  let name = $('#loaded').val();
+  let dir = $('#DIR').val();
+  let rout = $('#rout').val()
+ console.log(rout)
+  socket.emit('deleteFile', {"title":dir+name,"rout":rout});
+  return false;
+});
+
+
+
+
+$('.lgSub').click(function(event) {
+  let mainH = $(this).parent().prev('.lgMain').text().toLowerCase();
+  $('#rout').val(mainH);
+});
+
+editor.focus();
+      //editor.session.setMode("ace/mode/javascript");
+    //  editor.getSession("./admin/public/css/styles.css").setMode("ace/mode/javascript");
+    </script>
+  {% endblock %}

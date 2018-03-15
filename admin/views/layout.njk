@@ -10,25 +10,23 @@
   </head>
 
 <body>
-    <nav class="top-nav">
-        <div class="nav-wrapper {{config.theme.main}}"><a href="/" class="brand-logo effect-waves">Dash</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              {% for item in config.entries %}
-                <li class="effect-waves"><a href="{{item}}">{{item|capitalize}}</a></li>
-              {% endfor %}
-              {{macro.lnk(item="skills")}}
-              {{macro.lnk(item="status")}}
-            </ul>
-        </div>
-    </nav>
-    {% block content %}{% endblock %}
+  {% include "includes/nav.njk" %}
+  {% block content %}{% endblock %}
+
     <a id="scroll-to-top" class="icon-angle-up"></a>
     {{macro.js(s="jquery")}}
     {{macro.js(s="sortable")}}
-    {{macro.js(s="way")}}
-    {{macro.js(s="highlight")}}
+    {{macro.js(s="src-min-noconflict/ace")}}
     {{macro.js(s="app")}}
-    {{macro.node(s="lodash/dist/lodash")}}
-    {%block scripts%}{% endblock %}
+    {%block scripts%}
+
+
+    {% endblock %}
+    <script>
+    $("#nav-icon").click(function(){
+      $("#nav-icon,#menu").toggleClass("active");
+      //$("#mainContent").toggleClass("active");
+  });
+    </script>
   </body>
 </html>
