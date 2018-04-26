@@ -7,7 +7,7 @@
       <div class="col s6">
         <h4 class="card-title">Website:</h4>
         <h5 class="green">{{config.app.address}}</h5>
-        <h5 class="green">{{pkg.repository.url}}</h5>
+        <h6 class="green">{{pkg.repository.url}}</h6>
       </div>
       <div class=" col s6">
         <h4 class="card-title">Status:</h4>
@@ -20,6 +20,7 @@
 {% endblock %}
 {%block scripts%}
   <script>
+  getApi();
     var p = new Ping();
     p.ping("{{config.app.address}}{{config.app.icon}}", function (err, data) {
       // Also display error if err is returned.

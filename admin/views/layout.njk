@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>{{title}}</title>
+    {{macro.css(s="fonts")}}
+    {{macro.css(s="materialize.min")}}
     {{macro.css(s="style")}}
     {{macro.css(s="atom-one-dark")}}
   </head>
@@ -13,9 +15,11 @@
   {% include "includes/nav.njk" %}
   {% block content %}{% endblock %}
 
-    <a id="scroll-to-top" class="icon-angle-up"></a>
+    <a id="scroll-to-top" class="icon-angle-up blink"></a>
+    <div class="mask"></div>
     {{macro.js(s="jquery")}}
     {{macro.js(s="sortable")}}
+    {{macro.js(s="marked")}}
     {{macro.js(s="src-min-noconflict/ace")}}
     {{macro.js(s="app")}}
     {%block scripts%}
@@ -23,10 +27,7 @@
 
     {% endblock %}
     <script>
-    $("#nav-icon").click(function(){
-      $("#nav-icon,#menu").toggleClass("active");
-      //$("#mainContent").toggleClass("active");
-  });
+
     </script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+{% extends 'layout.njk' %}
+{% block content %}
+<div class="container mt80">
+  <input id="getTitle" type="text" class="form-control">
+  <button id="submt" type="button" class="btn">submit</button>
+  <h3>Total: <span id="npmTotal"></span></h3>
+  <ul class="collection">
+  </ul>
+</div>
+
+{% endblock %}
+{%block scripts%}
+  <script>
+
+    $('#submt').click(function() {
+      $.getJSON('https://api.npms.io/v2/search?q=' + $('#getTitle').val(), function(res, textStatus) {
+          //console.log(JSON.stringify(res))
+          var data = res.results;
+          $('#npmTotal').html(res.total);
+          $('.collection').empty();
+          $(data).each(function(i,el) {
+            console.log(el)
+            $('.collection').append('<li class="collection-item avatar"><i class="fa-npm"></i><span class="title">'+el.package.name+' v'+el.package.version+'</span><p>'+el.package.date.substr(0,10)+'</p><p>'+el.package.description+'</p><a href="#!" class="secondary-content"><i class="fa-chevron-right"></i></a><div class="collapsible-body"><a href="'+el.package.links.repository+'" target="_blank">'+el.package.links.repository+'</a></div></li>');
+          });
+          $(".secondary-content").click(function(){
+            $(this).children("i").toggleClass("fa-chevron-down fa-chevron-right");
+            $(this).next('.collapsible-body').toggle('slow');
+          });
+      });
+    });
+
+  </script>
+{% endblock %}

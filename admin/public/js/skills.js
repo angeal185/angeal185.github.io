@@ -24,6 +24,9 @@ var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight",
     $('.removeBlock').click(function() {
       $(this).parents('.sort').remove();
     });
+    $('.entrytitle').keyup(function() {
+      $(this).parents('.card-panel').find('h5').text(this.value);
+    });
   }
 
   lst.forEach(function(i) {
@@ -39,10 +42,11 @@ var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight",
 
     $('#'+i+'New').click(function() {
       var a = $('.sort').eq(1).clone();
-      a.find('h5').html('<h5>new<span class="showEntries">show</span></h5>');
+      a.find('h5').html('new');
       a.find('.entrytitle,.entrypercent').val('');
       a.prependTo('#'+i+'Container');
-      $('.showEntries,.removeBlock').unbind();
+      $('#otherRightContainer,#otherLeftContainer,#APIRightContainer,#APIRightContainer').find('.entrypercent').parent().remove();
+      $('.showEntries,.removeBlock,.entrytitle').unbind();
       showEntries();
     });
   });
@@ -68,8 +72,7 @@ var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight",
       $(i).each(function(index, el) {
           let inp = $(this).children('.s6');
           e.push({
-              "title":inp.children('.entrytitle').val(),
-              "percent":inp.children('.entrypercent').val()
+              "title":inp.children('.entrytitle').val()
             });
         });
     }
@@ -97,6 +100,22 @@ var lst = ["codeLeft","codeRight","skillsLeft","skillsRight","dbLeft","dbRight",
   });
 
   $('#commit').click(function(e) {
+    $('input').each(function(index, el) {
+        if ((el.value)===('')){
+          console.log('input empty')
+          throw "input empty error";
+        } else {
+          $('.entrypercent').each(function(index, el) {
+            if (((el.value)>=(0))&&((el.value)<=(100))){
+              console.log('ok')
+            } else {
+              console.log('input value error');
+              throw "input value error";
+            }
+          });
+        }
+      });
+
     $('#toUpdate').val(editor.getValue());
     $('#post').submit();
   });

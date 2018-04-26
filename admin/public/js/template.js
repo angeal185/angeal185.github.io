@@ -23,6 +23,9 @@ function showEntries(){
   $('.removeBlock').click(function() {
     $(this).parents('.sort').remove();
   });
+  $('.entrytitle').keyup(function() {
+    $(this).parents('.card-panel').find('h5').text(this.value);
+  });
 }
 
 editor.setTheme("ace/theme/twilight");
@@ -51,16 +54,24 @@ $('#showIt').click(function(event) {
 });
 
 $('#commit').click(function(event) {
+  $('input').each(function(index, el,err) {
+      if ((el.value)===('')){
+        console.log('input empty')
+        throw "input empty"
+      }
+    });
+    console.log(editor.getValue())
   $('#toUpdate').val(editor.getValue());
   $('#post').submit();
 });
 
+
 $('#addNew').click(function() {
   var a = $('.sort').eq(1).clone();
-  a.find('h5').html('<h5>new<span class="showEntries">show</span></h5>');
+  a.find('h5').html('new');
   a.find('.entrytitle,.entrysub,.entryaddress').val('');
   a.prependTo('#sortContainer');
-  $('.showEntries,.removeBlock').unbind();
+  $('.showEntries,.removeBlock,.entrytitle').unbind();
   showEntries();
 });
 showEntries();

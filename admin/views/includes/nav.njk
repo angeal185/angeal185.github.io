@@ -1,18 +1,31 @@
 <nav id="menu">
     <ul class="mobile-nav" id="mobile">
+      {{macro.lnkHead(i="items")}}
+      <div class="subNav">
       {% for item in config.entries %}
-        <li class="effect-waves menu-item"><a href="{{item}}">{{item|capitalize}}</a></li>
+        <li class="effect-waves menu-item"><a class="blink" href="{{item}}">{{item|capitalize}}</a></li>
       {% endfor %}
       {{macro.lnk(item="skills")}}
-      {{macro.lnk(item="status")}}
+      </div>
+      {{macro.lnkHead(i="settings")}}
+      <div class="subNav">
+        {{macro.lnk(item="modules")}}
+        {{macro.lnk(item="status")}}
+      </div>
     </ul>
 </nav>
 <nav class="top-nav">
     <div class="nav-wrapper {{config.theme.main}}">
-      <a class="menu-btn menu-link" id="nav-icon">
+      <a class="menu-btn menu-link blink" id="nav-icon">
         <span></span>
         <span></span>
         <span></span>
       </a>
+      <span class="headLogo blink"><a href="/">Admin</a></span>
+      <div class="right blink">
+          <a href="/" class="breadcrumb ">Admin <i class="fa-chevron-right"></i> </a>
+          <a href="/{{title}}" class="breadcrumb">{{title}}</a>
+        </div>
     </div>
+
 </nav>

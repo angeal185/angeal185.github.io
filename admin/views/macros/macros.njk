@@ -15,31 +15,12 @@
 </div>
 {%- endmacro -%}
 
-{%- macro skills1(t,i) -%}
-<form role="form" way-data="{{i}}">
-    <h5>{{t}}</h5>
-    <div class="form-group"><a href="#" way-action-push="{{i}}">Add entry</a></div>
-    <div class="form-group" way-repeat="{{i}}">
-        <div>
-          <div class="item-entry">
-              {% for item in config.skillsData %}
-              <label>{{item}}</label>
-              <input type="text" class="form-control" placeholder="{{item}}" way-data="{{item}}">
-              {% endfor %}
-            </div>
-        <a href="#" way-action-remove="{{i}}.$$key">Remove entry</a>
-      </div>
-    </div>
-</form>
-{%- endmacro -%}
-
-
 {%- macro skills(n,a,b,x) -%}
 <div class="col s6 sort">
   <div class="card">
   <div class="form-group card-panel">
       <div class="card-title">
-        <h5>{{a}}<span class="showEntries">show</span></h5>
+        <h5 class="inline">{{a}}</h5><span class="showEntries">show</span>
       </div>
       <div class="row card-content {{x}}entry hidden">
         {{entries(n="title",s=a)}}
@@ -56,7 +37,7 @@
   <div class="card">
   <div class="form-group card-panel">
       <div class="card-title">
-        <h5>{{a}}<span class="showEntries">show</span></h5>
+        <h5 class="inline">{{a}}</h5><span class="showEntries">show</span>
       </div>
       <div class="row card-content {{x}}entry hidden">
         {{entries(n="title",s=a)}}
@@ -66,23 +47,9 @@
   </div>
 </div>
 {%- endmacro -%}
-
-{%- macro lnk(item) -%}
-  <li class="effect-waves menu-item"><a href="{{item}}">{{item|capitalize}}</a></li>
+{%- macro lnkHead(i) -%}
+  <li class="effect-waves menu-item mobile-nav-head"><a class="blink">{{i|capitalize}}<span class="fa fa-chevron-right right"></span></a></li>
 {%- endmacro -%}
-
-{%- macro pre(title) -%}
-<div class="col s12 m6">
-    <h3 class="center">JSON output</h3>
-    <pre><code way-data="__all__" way-json="true" way-default="{}" class="javascript"></code></pre>
-    <div class="col s6">
-        <button class="effect-waves btn btn-default" way-clear>Clear data</button>
-    </div>
-    <form role="form" action="/update{{title}}" method="post">
-        <div class="col s6">
-            <button type="submit" class="effect-waves btn btn-default right">Save changes</button>
-        </div>
-        <input type="text" id="toUpdate" name="toUpdate" class="form-control" way-data="__all__" way-json="false" way-default="{}" hidden>
-    </form>
-</div>
+{%- macro lnk(item) -%}
+  <li class="effect-waves menu-item"><a class="blink" href="{{item}}">{{item|capitalize}}</a></li>
 {%- endmacro -%}

@@ -1,0 +1,1063 @@
+{
+  "total": 13836,
+  "results": [{
+    "package": {
+      "name": "express",
+      "scope": "unscoped",
+      "version": "4.16.3",
+      "description": "Fast, unopinionated, minimalist web framework",
+      "keywords": ["express", "framework", "sinatra", "web", "rest", "restful", "router", "app", "api"],
+      "date": "2018-03-12T17:50:14.119Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/express",
+        "homepage": "http://expressjs.com/",
+        "repository": "https://github.com/expressjs/express",
+        "bugs": "https://github.com/expressjs/express/issues"
+      },
+      "author": {
+        "name": "TJ Holowaychuk",
+        "email": "tj@vision-media.ca"
+      },
+      "publisher": {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      "maintainers": [{
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      }, {
+        "username": "hacksparrow",
+        "email": "captain@hacksparrow.com"
+      }, {
+        "username": "jasnell",
+        "email": "jasnell@gmail.com"
+      }, {
+        "username": "mikeal",
+        "email": "mikeal.rogers@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.9641468845527088,
+      "detail": {
+        "quality": 0.9913053934224952,
+        "popularity": 0.9549375374344555,
+        "maintenance": 0.9500775097825738
+      }
+    },
+    "searchScore": 100000.96
+  }, {
+    "package": {
+      "name": "Express",
+      "scope": "unscoped",
+      "version": "3.0.1",
+      "description": "This package was published as a result of a bug, please use the [express](https://www.npmjs.com/package/express) package instead.",
+      "date": "2016-12-07T21:27:27.679Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/Express",
+        "homepage": "https://github.com/npm/deprecate-holder#readme",
+        "repository": "https://github.com/npm/deprecate-holder",
+        "bugs": "https://github.com/npm/deprecate-holder/issues"
+      },
+      "publisher": {
+        "username": "kmanion",
+        "email": "kiera@npmjs.com"
+      },
+      "maintainers": [{
+        "username": "npm",
+        "email": "npm@npmjs.com"
+      }]
+    },
+    "flags": {
+      "deprecated": "Package unsupported. Please use the express package (all lowercase) instead."
+    },
+    "score": {
+      "final": 0.014082604549396324,
+      "detail": {
+        "quality": 0,
+        "popularity": 0.040236012998275214,
+        "maintenance": 0
+      }
+    },
+    "searchScore": 100000.016
+  }, {
+    "package": {
+      "name": "path-to-regexp",
+      "scope": "unscoped",
+      "version": "2.2.0",
+      "description": "Express style path to RegExp utility",
+      "keywords": ["express", "regexp", "route", "routing"],
+      "date": "2018-03-07T06:04:53.987Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/path-to-regexp",
+        "homepage": "https://github.com/pillarjs/path-to-regexp#readme",
+        "repository": "https://github.com/pillarjs/path-to-regexp",
+        "bugs": "https://github.com/pillarjs/path-to-regexp/issues"
+      },
+      "publisher": {
+        "username": "blakeembrey",
+        "email": "hello@blakeembrey.com"
+      },
+      "maintainers": [{
+        "username": "blakeembrey",
+        "email": "hello@blakeembrey.com"
+      }, {
+        "username": "defunctzombie",
+        "email": "shtylman@gmail.com"
+      }, {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      }, {
+        "username": "jonathanong",
+        "email": "jonathanrichardong@gmail.com"
+      }, {
+        "username": "jongleberry",
+        "email": "jonathanrichardong@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.9144305978886154,
+      "detail": {
+        "quality": 0.9994989202561678,
+        "popularity": 0.7560977236187584,
+        "maintenance": 0.9998477672719992
+      }
+    },
+    "searchScore": 0.34190398
+  }, {
+    "package": {
+      "name": "morgan",
+      "scope": "unscoped",
+      "version": "1.9.0",
+      "description": "HTTP request logger middleware for node.js",
+      "keywords": ["express", "http", "logger", "middleware"],
+      "date": "2017-09-27T02:39:05.095Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/morgan",
+        "homepage": "https://github.com/expressjs/morgan#readme",
+        "repository": "https://github.com/expressjs/morgan",
+        "bugs": "https://github.com/expressjs/morgan/issues"
+      },
+      "publisher": {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      "maintainers": [{
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      }]
+    },
+    "score": {
+      "final": 0.9001087044455784,
+      "detail": {
+        "quality": 0.9925458953017012,
+        "popularity": 0.7211377637424814,
+        "maintenance": 0.9998477672719992
+      }
+    },
+    "searchScore": 0.2517785
+  }, {
+    "package": {
+      "name": "cors",
+      "scope": "unscoped",
+      "version": "2.8.4",
+      "description": "Node.js CORS middleware",
+      "keywords": ["cors", "express", "connect", "middleware"],
+      "date": "2017-07-13T02:50:19.018Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/cors",
+        "homepage": "https://github.com/expressjs/cors#readme",
+        "repository": "https://github.com/expressjs/cors",
+        "bugs": "https://github.com/expressjs/cors/issues"
+      },
+      "author": {
+        "name": "Troy Goode",
+        "email": "troygoode@gmail.com",
+        "url": "https://github.com/troygoode/",
+        "username": "troygoode"
+      },
+      "publisher": {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      "maintainers": [{
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      }, {
+        "username": "troygoode",
+        "email": "troygoode@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8728971335223521,
+      "detail": {
+        "quality": 0.9894545326181438,
+        "popularity": 0.6460401576905981,
+        "maintenance": 0.9998477672719992
+      }
+    },
+    "searchScore": 0.13513368
+  }, {
+    "package": {
+      "name": "serve-favicon",
+      "scope": "unscoped",
+      "version": "2.4.5",
+      "description": "favicon serving middleware with caching",
+      "keywords": ["express", "favicon", "middleware"],
+      "date": "2017-09-26T17:14:32.234Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/serve-favicon",
+        "homepage": "https://github.com/expressjs/serve-favicon#readme",
+        "repository": "https://github.com/expressjs/serve-favicon",
+        "bugs": "https://github.com/expressjs/serve-favicon/issues"
+      },
+      "author": {
+        "name": "Douglas Christopher Wilson",
+        "email": "doug@somethingdoug.com",
+        "username": "dougwilson"
+      },
+      "publisher": {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      "maintainers": [{
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      }]
+    },
+    "score": {
+      "final": 0.8540883384225044,
+      "detail": {
+        "quality": 0.9925458953017012,
+        "popularity": 0.5895326915131295,
+        "maintenance": 0.9999660794354253
+      }
+    },
+    "searchScore": 0.08545293
+  }, {
+    "package": {
+      "name": "express-session",
+      "scope": "unscoped",
+      "version": "1.15.6",
+      "description": "Simple session middleware for Express",
+      "date": "2017-09-26T19:13:02.949Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/express-session",
+        "homepage": "https://github.com/expressjs/session#readme",
+        "repository": "https://github.com/expressjs/session",
+        "bugs": "https://github.com/expressjs/session/issues"
+      },
+      "author": {
+        "name": "TJ Holowaychuk",
+        "email": "tj@vision-media.ca",
+        "url": "http://tjholowaychuk.com"
+      },
+      "publisher": {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      "maintainers": [{
+        "username": "defunctzombie",
+        "email": "shtylman@gmail.com"
+      }, {
+        "username": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      }, {
+        "username": "mscdex",
+        "email": "mscdex@mscdex.net"
+      }]
+    },
+    "score": {
+      "final": 0.7773273934257137,
+      "detail": {
+        "quality": 0.9438818818446627,
+        "popularity": 0.6426526598458014,
+        "maintenance": 0.7692411369322409
+      }
+    },
+    "searchScore": 0.079513185
+  }, {
+    "package": {
+      "name": "babel-helper-optimise-call-expression",
+      "scope": "unscoped",
+      "version": "6.24.1",
+      "description": "Helper function to optimise call expression",
+      "date": "2017-04-07T15:19:08.206Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/babel-helper-optimise-call-expression",
+        "homepage": "https://github.com/babel/babel#readme",
+        "repository": "https://github.com/babel/babel",
+        "bugs": "https://github.com/babel/babel/issues"
+      },
+      "publisher": {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      },
+      "maintainers": [{
+        "username": "jmm",
+        "email": "npm-public@jessemccarthy.net"
+      }, {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      }, {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      }, {
+        "username": "thejameskyle",
+        "email": "me@thejameskyle.com"
+      }, {
+        "username": "amasad",
+        "email": "amjad.masad@gmail.com"
+      }, {
+        "username": "sebmck",
+        "email": "sebmck@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8408871203070614,
+      "detail": {
+        "quality": 0.8613084543290155,
+        "popularity": 0.6797222990535503,
+        "maintenance": 0.9845479409703262
+      }
+    },
+    "searchScore": 0.0679611
+  }, {
+    "package": {
+      "name": "babel-helper-explode-assignable-expression",
+      "scope": "unscoped",
+      "version": "6.24.1",
+      "description": "Helper function to explode an assignable expression",
+      "date": "2017-04-07T15:19:12.789Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/babel-helper-explode-assignable-expression",
+        "homepage": "https://github.com/babel/babel#readme",
+        "repository": "https://github.com/babel/babel",
+        "bugs": "https://github.com/babel/babel/issues"
+      },
+      "publisher": {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      },
+      "maintainers": [{
+        "username": "existentialism",
+        "email": "bng412@gmail.com"
+      }, {
+        "username": "thejameskyle",
+        "email": "me@thejameskyle.com"
+      }, {
+        "username": "sebmck",
+        "email": "sebmck@gmail.com"
+      }, {
+        "username": "danez",
+        "email": "daniel@tschinder.de"
+      }, {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      }, {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8314056151396583,
+      "detail": {
+        "quality": 0.8501820621212468,
+        "popularity": 0.6619373730774658,
+        "maintenance": 0.9847797597890605
+      }
+    },
+    "searchScore": 0.055336706
+  }, {
+    "package": {
+      "name": "babel-plugin-transform-do-expressions",
+      "scope": "unscoped",
+      "version": "6.22.0",
+      "description": "Compile do expressions to ES5",
+      "keywords": ["babel-plugin"],
+      "date": "2017-01-20T00:33:49.215Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/babel-plugin-transform-do-expressions",
+        "homepage": "https://github.com/babel/babel#readme",
+        "repository": "https://github.com/babel/babel",
+        "bugs": "https://github.com/babel/babel/issues"
+      },
+      "publisher": {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      },
+      "maintainers": [{
+        "username": "existentialism",
+        "email": "bng412@gmail.com"
+      }, {
+        "username": "thejameskyle",
+        "email": "me@thejameskyle.com"
+      }, {
+        "username": "sebmck",
+        "email": "sebmck@gmail.com"
+      }, {
+        "username": "danez",
+        "email": "daniel@tschinder.de"
+      }, {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      }, {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8280239557177578,
+      "detail": {
+        "quality": 0.8865252261952552,
+        "popularity": 0.621303628120631,
+        "maintenance": 0.9846003371913155
+      }
+    },
+    "searchScore": 0.051886413
+  }, {
+    "package": {
+      "name": "http-proxy-middleware",
+      "scope": "unscoped",
+      "version": "0.18.0",
+      "description": "The one-liner node.js proxy middleware for connect, express and browser-sync",
+      "keywords": ["reverse", "proxy", "middleware", "http", "https", "connect", "express", "browser-sync", "gulp", "grunt-contrib-connect", "websocket", "ws", "cors"],
+      "date": "2018-03-12T22:47:20.345Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/http-proxy-middleware",
+        "homepage": "https://github.com/chimurai/http-proxy-middleware",
+        "repository": "https://github.com/chimurai/http-proxy-middleware",
+        "bugs": "https://github.com/chimurai/http-proxy-middleware/issues"
+      },
+      "author": {
+        "name": "Steven Chim"
+      },
+      "publisher": {
+        "username": "chimurai",
+        "email": "stevenchim@gmail.com"
+      },
+      "maintainers": [{
+        "username": "chimurai",
+        "email": "stevenchim@gmail.com"
+      }]
+    },
+    "flags": {
+      "unstable": true
+    },
+    "score": {
+      "final": 0.8489608636249436,
+      "detail": {
+        "quality": 0.9156370270306062,
+        "popularity": 0.6760557480418673,
+        "maintenance": 0.9647149820031663
+      }
+    },
+    "searchScore": 0.050527986
+  }, {
+    "package": {
+      "name": "webpack-hot-middleware",
+      "scope": "unscoped",
+      "version": "2.21.2",
+      "description": "Webpack hot reloading you can attach to your own server",
+      "keywords": ["webpack", "hmr", "hot", "module", "reloading", "hot-reloading", "middleware", "express"],
+      "date": "2018-03-03T22:31:31.839Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/webpack-hot-middleware",
+        "homepage": "https://github.com/glenjamin/webpack-hot-middleware#readme",
+        "repository": "https://github.com/glenjamin/webpack-hot-middleware",
+        "bugs": "https://github.com/glenjamin/webpack-hot-middleware/issues"
+      },
+      "author": {
+        "name": "Glen Mailer",
+        "email": "glen@stainlessed.co.uk"
+      },
+      "publisher": {
+        "username": "glenjamin",
+        "email": "glenjamin@gmail.com"
+      },
+      "maintainers": [{
+        "username": "glenjamin",
+        "email": "glenjamin@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8389146131728469,
+      "detail": {
+        "quality": 0.978213326094272,
+        "popularity": 0.6036907207231991,
+        "maintenance": 0.9547396088327017
+      }
+    },
+    "searchScore": 0.047676638
+  }, {
+    "package": {
+      "name": "express-validator",
+      "scope": "unscoped",
+      "version": "5.0.3",
+      "description": "Express middleware for the validator module.",
+      "keywords": ["express", "validator", "validation", "validate", "sanitize", "sanitization", "xss"],
+      "date": "2018-03-03T03:32:53.477Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/express-validator",
+        "homepage": "https://github.com/ctavan/express-validator",
+        "repository": "https://github.com/ctavan/express-validator",
+        "bugs": "https://github.com/ctavan/express-validator/issues"
+      },
+      "author": {
+        "name": "Christoph Tavan",
+        "email": "dev@tavan.de",
+        "username": "ctavan"
+      },
+      "publisher": {
+        "username": "gustavohenke",
+        "email": "guhenke@gmail.com"
+      },
+      "maintainers": [{
+        "username": "ctavan",
+        "email": "dev@tavan.de"
+      }, {
+        "username": "gustavohenke",
+        "email": "guhenke@gmail.com"
+      }, {
+        "username": "rustybailey",
+        "email": "rustylbailey@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.7814311129365081,
+      "detail": {
+        "quality": 0.9894545326181438,
+        "popularity": 0.4331288289584186,
+        "maintenance": 0.9514276086160532
+      }
+    },
+    "searchScore": 0.042447545
+  }, {
+    "package": {
+      "name": "express-graphql",
+      "scope": "unscoped",
+      "version": "0.6.12",
+      "description": "Production ready GraphQL HTTP middleware.",
+      "keywords": ["express", "restify", "connect", "http", "graphql", "middleware", "api"],
+      "date": "2018-02-19T20:58:28.585Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/express-graphql",
+        "homepage": "https://github.com/graphql/express-graphql#readme",
+        "repository": "https://github.com/graphql/express-graphql",
+        "bugs": "https://github.com/graphql/express-graphql/issues"
+      },
+      "publisher": {
+        "username": "leebyron",
+        "email": "lee@leebyron.com"
+      },
+      "maintainers": [{
+        "username": "fb",
+        "email": "opensource+npm@fb.com"
+      }, {
+        "username": "leebyron",
+        "email": "lee@leebyron.com"
+      }, {
+        "username": "wincent",
+        "email": "greg@hurrell.net"
+      }]
+    },
+    "flags": {
+      "unstable": true
+    },
+    "score": {
+      "final": 0.777836195626219,
+      "detail": {
+        "quality": 0.9001787199724263,
+        "popularity": 0.45215594777429896,
+        "maintenance": 0.9986514226099614
+      }
+    },
+    "searchScore": 0.041519262
+  }, {
+    "package": {
+      "name": "babel-plugin-syntax-do-expressions",
+      "scope": "unscoped",
+      "version": "6.13.0",
+      "description": "Allow parsing of do expressions",
+      "keywords": ["babel-plugin"],
+      "date": "2016-08-04T23:34:57.317Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/babel-plugin-syntax-do-expressions",
+        "homepage": "https://github.com/babel/babel#readme",
+        "repository": "https://github.com/babel/babel",
+        "bugs": "https://github.com/babel/babel/issues"
+      },
+      "publisher": {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      },
+      "maintainers": [{
+        "username": "existentialism",
+        "email": "bng412@gmail.com"
+      }, {
+        "username": "thejameskyle",
+        "email": "me@thejameskyle.com"
+      }, {
+        "username": "sebmck",
+        "email": "sebmck@gmail.com"
+      }, {
+        "username": "danez",
+        "email": "daniel@tschinder.de"
+      }, {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      }, {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8190062421153864,
+      "detail": {
+        "quality": 0.8871685008358945,
+        "popularity": 0.5943558733558582,
+        "maintenance": 0.9852318176859081
+      }
+    },
+    "searchScore": 0.04124685
+  }, {
+    "package": {
+      "name": "helmet",
+      "scope": "unscoped",
+      "version": "3.12.0",
+      "description": "help secure Express/Connect apps with various HTTP headers",
+      "keywords": ["security", "headers", "express", "connect", "x-frame-options", "x-powered-by", "csp", "hsts", "clickjack"],
+      "date": "2018-03-02T16:38:15.145Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/helmet",
+        "homepage": "https://helmetjs.github.io/",
+        "repository": "https://github.com/helmetjs/helmet",
+        "bugs": "https://github.com/helmetjs/helmet/issues"
+      },
+      "author": {
+        "name": "Adam Baldwin",
+        "email": "baldwin@andyet.net",
+        "url": "http://andyet.net/team/baldwin",
+        "username": "adam_baldwin"
+      },
+      "publisher": {
+        "username": "evanhahn",
+        "email": "me@evanhahn.com"
+      },
+      "maintainers": [{
+        "username": "adam_baldwin",
+        "email": "baldwin@andyet.net"
+      }, {
+        "username": "evanhahn",
+        "email": "me@evanhahn.com"
+      }]
+    },
+    "score": {
+      "final": 0.8382749766435397,
+      "detail": {
+        "quality": 0.9618885765506748,
+        "popularity": 0.5706830722911567,
+        "maintenance": 0.9999123667898069
+      }
+    },
+    "searchScore": 0.034558386
+  }, {
+    "package": {
+      "name": "babel-plugin-transform-es3-member-expression-literals",
+      "scope": "unscoped",
+      "version": "6.22.0",
+      "description": "Ensure that reserved words are quoted in property accesses",
+      "keywords": ["babel-plugin"],
+      "date": "2017-01-20T00:34:03.496Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/babel-plugin-transform-es3-member-expression-literals",
+        "homepage": "https://github.com/babel/babel#readme",
+        "repository": "https://github.com/babel/babel",
+        "bugs": "https://github.com/babel/babel/issues"
+      },
+      "publisher": {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      },
+      "maintainers": [{
+        "username": "existentialism",
+        "email": "bng412@gmail.com"
+      }, {
+        "username": "thejameskyle",
+        "email": "me@thejameskyle.com"
+      }, {
+        "username": "sebmck",
+        "email": "sebmck@gmail.com"
+      }, {
+        "username": "danez",
+        "email": "daniel@tschinder.de"
+      }, {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      }, {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8087724645083196,
+      "detail": {
+        "quality": 0.8871685008358945,
+        "popularity": 0.5639042654263223,
+        "maintenance": 0.9864440610238243
+      }
+    },
+    "searchScore": 0.023535276
+  }, {
+    "package": {
+      "name": "apollo-server-express",
+      "scope": "unscoped",
+      "version": "1.3.2",
+      "description": "Production-ready Node.js GraphQL server for Express and Connect",
+      "keywords": ["GraphQL", "Apollo", "Server", "Express", "Connect", "Javascript"],
+      "date": "2017-12-19T16:03:01.116Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/apollo-server-express",
+        "homepage": "https://github.com/apollographql/apollo-server#readme",
+        "repository": "https://github.com/apollographql/apollo-server",
+        "bugs": "https://github.com/apollographql/apollo-server/issues"
+      },
+      "author": {
+        "name": "Jonas Helfer",
+        "email": "jonas@helfer.email"
+      },
+      "publisher": {
+        "username": "mdg",
+        "email": "npm@meteor.com"
+      },
+      "maintainers": [{
+        "username": "abernix",
+        "email": "npmjs@jro.cc"
+      }, {
+        "username": "freiksenet",
+        "email": "freiksenet@gmail.com"
+      }, {
+        "username": "sashko",
+        "email": "s.stubailo@gmail.com"
+      }, {
+        "username": "mdg",
+        "email": "npm@meteor.com"
+      }, {
+        "username": "martijnwalraven",
+        "email": "martijn@martijnwalraven.com"
+      }]
+    },
+    "score": {
+      "final": 0.7627050909743599,
+      "detail": {
+        "quality": 0.8848931736750294,
+        "popularity": 0.42080233123048627,
+        "maintenance": 0.9998752084033742
+      }
+    },
+    "searchScore": 0.022719039
+  }, {
+    "package": {
+      "name": "escape-string-regexp",
+      "scope": "unscoped",
+      "version": "1.0.5",
+      "description": "Escape RegExp special characters",
+      "keywords": ["escape", "regex", "regexp", "re", "regular", "expression", "string", "str", "special", "characters"],
+      "date": "2016-02-21T12:55:17.074Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/escape-string-regexp",
+        "homepage": "https://github.com/sindresorhus/escape-string-regexp",
+        "repository": "https://github.com/sindresorhus/escape-string-regexp",
+        "bugs": "https://github.com/sindresorhus/escape-string-regexp/issues"
+      },
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com",
+        "username": "sindresorhus"
+      },
+      "publisher": {
+        "username": "jbnicolai",
+        "email": "jappelman@xebia.com"
+      },
+      "maintainers": [{
+        "username": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8441779882877866,
+      "detail": {
+        "quality": 0.8980879861895026,
+        "popularity": 0.6422996396735318,
+        "maintenance": 0.9998477672719992
+      }
+    },
+    "searchScore": 0.019865198
+  }, {
+    "package": {
+      "name": "spdx-expression-parse",
+      "scope": "unscoped",
+      "version": "3.0.0",
+      "description": "parse SPDX license expressions",
+      "keywords": ["SPDX", "law", "legal", "license", "metadata", "package", "package.json", "standards"],
+      "date": "2018-02-27T00:14:18.092Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/spdx-expression-parse",
+        "homepage": "https://github.com/jslicense/spdx-expression-parse.js#readme",
+        "repository": "https://github.com/jslicense/spdx-expression-parse.js",
+        "bugs": "https://github.com/jslicense/spdx-expression-parse.js/issues"
+      },
+      "author": {
+        "name": "Kyle E. Mitchell",
+        "email": "kyle@kemitchell.com",
+        "url": "http://kemitchell.com",
+        "username": "kemitchell"
+      },
+      "publisher": {
+        "username": "kemitchell",
+        "email": "kyle@kemitchell.com"
+      },
+      "maintainers": [{
+        "username": "kemitchell",
+        "email": "kyle@kemitchell.com"
+      }, {
+        "username": "motet-a",
+        "email": "antoine.motet@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.7840203457391473,
+      "detail": {
+        "quality": 0.8515141098521974,
+        "popularity": 0.5102765268773021,
+        "maintenance": 0.9999123667898069
+      }
+    },
+    "searchScore": 0.017822105
+  }, {
+    "package": {
+      "name": "micromatch",
+      "scope": "unscoped",
+      "version": "3.1.9",
+      "description": "Glob matching for javascript/node.js. A drop-in replacement and faster alternative to minimatch and multimatch.",
+      "keywords": ["bash", "expand", "expansion", "expression", "file", "files", "filter", "find", "glob", "globbing", "globs", "globstar", "match", "matcher", "matches", "matching", "micromatch", "minimatch", "multimatch", "path", "pattern", "patterns", "regex", "regexp", "regular", "shell", "wildcard"],
+      "date": "2018-02-24T07:56:12.525Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/micromatch",
+        "homepage": "https://github.com/micromatch/micromatch",
+        "repository": "https://github.com/micromatch/micromatch",
+        "bugs": "https://github.com/micromatch/micromatch/issues"
+      },
+      "author": {
+        "name": "Jon Schlinkert",
+        "url": "https://github.com/jonschlinkert"
+      },
+      "publisher": {
+        "username": "jonschlinkert",
+        "email": "github@sellside.com"
+      },
+      "maintainers": [{
+        "username": "doowb",
+        "email": "brian.woodward@gmail.com"
+      }, {
+        "username": "es128",
+        "email": "elan.shanker+npm@gmail.com"
+      }, {
+        "username": "jonschlinkert",
+        "email": "github@sellside.com"
+      }]
+    },
+    "score": {
+      "final": 0.8655913228773358,
+      "detail": {
+        "quality": 0.9583108885883984,
+        "popularity": 0.6517813106651666,
+        "maintenance": 0.99992742162288
+      }
+    },
+    "searchScore": 0.01729202
+  }, {
+    "package": {
+      "name": "anymatch",
+      "scope": "unscoped",
+      "version": "2.0.0",
+      "description": "Matches strings against configurable strings, globs, regular expressions, and/or functions",
+      "keywords": ["match", "any", "string", "file", "fs", "list", "glob", "regex", "regexp", "regular", "expression", "function"],
+      "date": "2017-12-22T01:14:46.258Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/anymatch",
+        "homepage": "https://github.com/micromatch/anymatch",
+        "repository": "https://github.com/micromatch/anymatch",
+        "bugs": "https://github.com/micromatch/anymatch/issues"
+      },
+      "author": {
+        "name": "Elan Shanker",
+        "url": "http://github.com/es128"
+      },
+      "publisher": {
+        "username": "es128",
+        "email": "elan.shanker+npm@gmail.com"
+      },
+      "maintainers": [{
+        "username": "doowb",
+        "email": "brian.woodward@gmail.com"
+      }, {
+        "username": "jonschlinkert",
+        "email": "github@sellside.com"
+      }, {
+        "username": "phated",
+        "email": "blaine.bublitz@gmail.com"
+      }, {
+        "username": "paulmillr",
+        "email": "paul@paulmillr.com"
+      }, {
+        "username": "es128",
+        "email": "elan.shanker+npm@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8453574375805817,
+      "detail": {
+        "quality": 0.9713199423630559,
+        "popularity": 0.5828357699946111,
+        "maintenance": 0.9999112439244315
+      }
+    },
+    "searchScore": 0.016310923
+  }, {
+    "package": {
+      "name": "conventional-changelog-express",
+      "scope": "unscoped",
+      "version": "0.3.4",
+      "description": "conventional-changelog express preset",
+      "keywords": ["conventional-changelog", "express", "preset"],
+      "date": "2018-02-24T22:12:36.708Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/conventional-changelog-express",
+        "homepage": "https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-express#readme",
+        "repository": "https://github.com/conventional-changelog/conventional-changelog",
+        "bugs": "https://github.com/conventional-changelog/conventional-changelog/issues"
+      },
+      "author": {
+        "name": "Steve Mao"
+      },
+      "publisher": {
+        "username": "hbetts",
+        "email": "hutson@hyper-expanse.net"
+      },
+      "maintainers": [{
+        "username": "bcoe",
+        "email": "ben@npmjs.com"
+      }, {
+        "username": "hbetts",
+        "email": "hutson@hyper-expanse.net"
+      }, {
+        "username": "marionebl",
+        "email": "hello@mario-nebl.de"
+      }, {
+        "username": "nexdrew",
+        "email": "andrewbgoode@gmail.com"
+      }, {
+        "username": "stevemao",
+        "email": "maochenyan@gmail.com"
+      }, {
+        "username": "tapppi",
+        "email": "moilanen.tapani@gmail.com"
+      }]
+    },
+    "flags": {
+      "unstable": true
+    },
+    "score": {
+      "final": 0.7418832202821342,
+      "detail": {
+        "quality": 0.8947606199452642,
+        "popularity": 0.38864272933168315,
+        "maintenance": 0.9640859400927597
+      }
+    },
+    "searchScore": 0.013935556
+  }, {
+    "package": {
+      "name": "ignore",
+      "scope": "unscoped",
+      "version": "3.3.7",
+      "description": "Ignore is a manager and filter for .gitignore rules.",
+      "keywords": ["ignore", ".gitignore", "gitignore", "npmignore", "rules", "manager", "filter", "regexp", "regex", "fnmatch", "glob", "asterisks", "regular-expression"],
+      "date": "2017-10-26T14:00:54.429Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/ignore",
+        "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+        "repository": "https://github.com/kaelzhang/node-ignore",
+        "bugs": "https://github.com/kaelzhang/node-ignore/issues"
+      },
+      "author": {
+        "name": "kael"
+      },
+      "publisher": {
+        "username": "kael",
+        "email": "i@kael.me"
+      },
+      "maintainers": [{
+        "username": "kael",
+        "email": "i@kael.me"
+      }]
+    },
+    "score": {
+      "final": 0.8416707714845151,
+      "detail": {
+        "quality": 0.9713199423630559,
+        "popularity": 0.5723659149439959,
+        "maintenance": 0.9998477672719992
+      }
+    },
+    "searchScore": 0.012520419
+  }, {
+    "package": {
+      "name": "babel-plugin-transform-es2015-typeof-symbol",
+      "scope": "unscoped",
+      "version": "6.23.0",
+      "description": "This transformer wraps all typeof expressions with a method that replicates native behaviour. (ie. returning “symbol” for symbols)",
+      "keywords": ["babel-plugin"],
+      "date": "2017-02-13T23:04:23.043Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/babel-plugin-transform-es2015-typeof-symbol",
+        "homepage": "https://github.com/babel/babel#readme",
+        "repository": "https://github.com/babel/babel",
+        "bugs": "https://github.com/babel/babel/issues"
+      },
+      "publisher": {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      },
+      "maintainers": [{
+        "username": "existentialism",
+        "email": "bng412@gmail.com"
+      }, {
+        "username": "thejameskyle",
+        "email": "me@thejameskyle.com"
+      }, {
+        "username": "sebmck",
+        "email": "sebmck@gmail.com"
+      }, {
+        "username": "danez",
+        "email": "daniel@tschinder.de"
+      }, {
+        "username": "hzoo",
+        "email": "hi@henryzoo.com"
+      }, {
+        "username": "loganfsmyth",
+        "email": "loganfsmyth@gmail.com"
+      }]
+    },
+    "score": {
+      "final": 0.8625004095661738,
+      "detail": {
+        "quality": 0.8865252261952552,
+        "popularity": 0.7192141357639812,
+        "maintenance": 0.9851939834005827
+      }
+    },
+    "searchScore": 0.01226427
+  }]
+}

@@ -2,7 +2,7 @@
   "name": "angeal185.github.io-master",
   "version": "1.0.0",
   "description": "my website",
-  "main": "./admin/app/bin/www",
+  "main": "./admin/app/bin/socketIO",
   "scripts": {
     "start": "nodemon server.js",
     "server": "node server.js"
@@ -26,7 +26,8 @@
     "express": "~4.15.5",
     "jsonminify": "^0.4.1",
     "morgan": "~1.9.0",
-    "nunjucks": "^3.0.1"
+    "nunjucks": "^3.0.1",
+    "socketio": "^1.0.0"
   },
   "devDependencies": {
     "chalk": "latest",

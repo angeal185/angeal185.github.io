@@ -8,7 +8,7 @@
   "verbose": true,
   "execMap": {
     "js": "node",
-	"start": "nodemon ./admin/app/bin/www"
+	"start": "nodemon ./admin/app/bin/socketIO"
   },
   "watch": [
     "app/",
