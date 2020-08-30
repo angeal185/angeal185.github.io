@@ -1,3 +1,57 @@
 {
-  
+  "status": {
+    "employable": "true"
+  },
+  "recent_works": [{
+    "name": "trademeet",
+    "html_url": "https://github.com/angeal185/trademeet",
+    "description": "...",
+    "created_at": "2020-08-16T18:45:19Z",
+    "updated_at": "2020-08-29T04:03:37Z",
+    "git_url": "git://github.com/angeal185/trademeet.git",
+    "language": "JavaScript"
+  }, {
+    "name": "github-forum",
+    "html_url": "https://github.com/angeal185/github-forum",
+    "description": "a github pages forum that requires no db or extra server",
+    "created_at": "2020-08-03T03:32:25Z",
+    "updated_at": "2020-08-29T04:03:31Z",
+    "git_url": "git://github.com/angeal185/github-forum.git",
+    "language": "JavaScript"
+  }],
+  "favorite_works": [{
+    "name": "trademeet",
+    "html_url": "https://github.com/angeal185/trademeet",
+    "description": "...",
+    "created_at": "2020-08-16T18:45:19Z",
+    "updated_at": "2020-08-29T04:03:37Z",
+    "git_url": "git://github.com/angeal185/trademeet.git",
+    "language": "JavaScript"
+  }, {
+    "name": "sicarii",
+    "html_url": "https://github.com/angeal185/sicarii",
+    "description": "The zero dependency http2 nodejs multithreading framework",
+    "created_at": "2020-06-05T19:32:45Z",
+    "updated_at": "2020-07-23T15:41:45Z",
+    "git_url": "git://github.com/angeal185/sicarii.git",
+    "size": 1045,
+    "language": "JavaScript"
+  }],
+  "favorite_animations": [{
+    "title": "fireflies",
+    "url": "/animated-ajax-carosel-portfolio/app/img/fireflies.PNG",
+    "link": "/js-canvas-animations/fireflies"
+  }, {
+    "title": "orb attract",
+    "url": "/animated-ajax-carosel-portfolio/app/img/orb-attract.PNG",
+    "link": "/js-canvas-animations/orb-attract"
+  }, {
+    "title": "animated canvas bubbles",
+    "url": "/animated-ajax-carosel-portfolio/app/img/animated-canvas-bubbles.PNG",
+    "link": "/js-canvas-animations/animated-canvas-bubbles"
+  }, {
+    "title": "particle animation",
+    "url": "/animated-ajax-carosel-portfolio/app/img/particle-animation.PNG",
+    "link": "/js-canvas-animations/particle-animation"
+  }]
 }

@@ -102,8 +102,8 @@ body{
   top: 3rem;
   z-index: 99;
   color: white;
-      background: rgb(19 19 19 / 50%);
-    box-shadow: 0 0 4px black;
+  background: rgb(19 19 19 / 65%);
+  box-shadow: 0 0 4px black;
   transition: left .5s;
 }
 
@@ -118,11 +118,13 @@ body{
   border-bottom: 1px solid #c5c5c5;
   cursor: pointer;
   line-height: 2;
-  transition: padding-right .5s;
+  transition: all .5s;
 }
 
 .sb-lnk:hover {
   padding-right: 1rem;
+  color: #007bff!important;
+  border-bottom: 1px solid #007bff;
 }
 
 .nav-sb.active{
@@ -143,49 +145,8 @@ body{
     transition: color .5s;
 }
 
-.nav-img{
-  margin-right: 1rem;
-  height: 3rem;
-  cursor: pointer;
-      border-radius: 50%;
-}
-
 .nav-lnk:hover{
     color: #ddd;
-}
-
-.cat-info{
-    text-align: right;
-}
-
-.cat-sub{
-
-}
-
-.cat-btn{
-  height: 2rem;
-float: right;
-margin-top: 1rem;
-}
-
-.cat-ico{
-  margin-right: 1rem;
-  cursor: pointer;
-  font-size: .8rem;
-}
-
-.cat-img {
-    height: 3rem;
-    border-radius: 4px;
-    margin-bottom: .5rem;
-    margin-right: 1.5rem;
-}
-
-.min-img {
-    height: 1.5rem;
-    border-radius: 4px;
-    margin-bottom: .5rem;
-    margin-right: 1rem;
 }
 
 .rs-btn{
@@ -251,7 +212,17 @@ margin-top: 1rem;
   float: right;
   line-height: 2;
   margin-right: 1rem;
+  transition: color 1s;
 }
+
+.b-lnks span{
+  transition: color 1s;
+}
+
+.b-lnks span:hover{
+  color: red;
+}
+
 .sh-9, .sh-95 {
   transition: 1s ease
 }
@@ -275,12 +246,16 @@ margin-top: 1rem;
   bottom: 50px;
   right: 20px;
   text-align: center;
-  color: #282c34;
+  color: #fff;
   font-size: 32px;
-      background: rgb(0 0 0 / 70%);
+  background: rgb(0 0 0 / 70%);
   box-shadow: 0 0 6px rgb(0 0 0 / 70%);
   border-radius: 50%;
   cursor: pointer
+}
+
+.totop:hover {
+    color: red;
 }
 
 ::-webkit-scrollbar {
@@ -430,6 +405,18 @@ margin-top: 1rem;
   color: #007bff
 }
 
+.logo-trans{
+    transition: all 1s
+}
+
+.red-txt {
+  color: red;
+}
+
+.logo-txt {
+  margin-left: 4rem;
+}
+
 canvas, .cnv{
   margin: 0;
   overflow: hidden;
@@ -440,4 +427,98 @@ canvas, .cnv{
 
 .fs1{
   font-size: 1rem;
+}
+
+.ani-img{
+  border: 5px solid black;
+box-shadow: 0 0 4px black;
+opacity: .8;
+cursor: pointer;
+}
+
+
+/* Icon 1 */
+
+.ico-bars {
+  top: .3rem;
+  width: 2rem;
+  height: 1.9rem;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.ico-bars span {
+  display: block;
+  position: absolute;
+  height: .25rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.ico-bars span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.ico-bars span:nth-child(2) {
+  top: .5rem;
+  background: red;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.ico-bars span:nth-child(3) {
+      top: 1rem;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.ico-bars.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -0.1rem;
+  left: .5rem;
+}
+
+.ico-bars.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.ico-bars.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: red;
+  left: .5rem;
+  top: 1.35rem;
 }

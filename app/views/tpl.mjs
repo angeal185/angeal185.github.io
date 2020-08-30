@@ -6,12 +6,12 @@ const tpl = {
   menu_main(router){
     let nav_left = x('div', {class: 'nav-left col-6 d-flex'},
       x('div', {
-        class: 'nav-lnk icon-bars mr-2 sh-95',
+        class: 'nav-lnk ico-bars mr-2',
         onclick(){
           window.dispatchEvent(new Event("toggle-sidebar"));
         }
-      }),
-      x('span', 'Ben Eaves')
+      },x('span'),x('span'),x('span')),
+      x('span', {class: 'logo-trans'},'Ben Eaves')
     ),
     nav_right = x('div', {class: 'nav-right col-6'}),
     nav_sb = x('div', {class: 'nav-sb'},
@@ -46,6 +46,15 @@ const tpl = {
 
 
     window.addEventListener('toggle-sidebar', function(evt){
+      let txt = nav_left.lastChild.textContent;
+      nav_left.firstChild.classList.toggle('open');
+      nav_left.parentNode.classList.toggle('red-txt');
+      nav_left.lastChild.classList.toggle('logo-txt');
+      if(txt === 'Ben Eaves'){
+        nav_left.lastChild.textContent = 'Portfolio'
+      } else {
+        nav_left.lastChild.textContent = 'Ben Eaves'
+      }
       nav_sb.classList.toggle('active')
     })
 
@@ -153,6 +162,40 @@ const tpl = {
   lg_active(str){
     return x('div', {class:'list-group mb-4'},
       x('div', {class:'list-group-item active'}, str)
+    )
+  },
+  head_card(str){
+    return x('div', {class: 'card mb-4'},
+      x('div', {class: 'card-body'},
+        x('h4', str))
+    )
+  },
+  dash_card(item, router){
+    return x('div', {class:'col-6 col-lg-3'},
+      x('div', {
+          class:'card sh-95 cp mb-4 text-center',
+          onclick(){
+            router.rout('/'+ item.title)
+          }
+        },
+        x('div', {class:'card-body'},
+          x('h3', {class: 'link-txt capital'},item.title
+          ),
+          x('h6', item.description)
+        )
+      )
+    )
+  },
+  ani_img(res){
+    return x('div', {class: 'col-6 col-lg-3'},
+      x('img', {
+        title: res.title,
+        class: 'img-fluid ani-img sh-95 mb-4',
+        src: xdata.default.origin + res.url,
+        onclick(){
+          window.open(xdata.default.origin + res.link)
+        }
+      })
     )
   }
 }

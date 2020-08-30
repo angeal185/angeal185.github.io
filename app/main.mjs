@@ -15,6 +15,11 @@ router.on('/dashboard', function(request, stream) {
     if(err){return stream.renderErr();}
   })
 })
+.on('/animations', function(request, stream) {
+  stream.render('animations', request.data, function(err){
+    if(err){return stream.renderErr();}
+  })
+})
 .on('/about', function(request, stream) {
   stream.render('about', request.data, function(err){
     if(err){return stream.renderErr();}

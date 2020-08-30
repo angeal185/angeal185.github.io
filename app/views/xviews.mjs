@@ -68,7 +68,7 @@ const xviews = {
       console.log('loading dashboard cache')
       return window.cached.dashboard;
     }
-    let item = x('div', x('p', data.msg));
+    let item = x('div');
 
     utils.get(data.url, xdata.default.stream.fetch, function(err,res){
       if(err){
@@ -76,7 +76,63 @@ const xviews = {
         return console.error(err);
       }
 
+
+      let nav_row = x('div', {class: 'row mb-4 justify-content-center'}),
+      recent_div = x('div', {class: 'row'}),
+      favorite_div = x('div', {class: 'row'}),
+      animations_div = x('div', {class: 'row'});
+
+      for (let i = 0; i < data.nav.length; i++) {
+        nav_row.append(tpl.dash_card(data.nav[i],router))
+      }
+
+      for (let i = 0; i < res.recent_works.length; i++) {
+        recent_div.append(tpl.repo_tpl(res.recent_works[i]));
+      }
+
+      for (let i = 0; i < res.favorite_works.length; i++) {
+        favorite_div.append(tpl.repo_tpl(res.favorite_works[i]));
+      }
+
+      for (let i = 0; i < res.favorite_animations.length; i++) {
+        animations_div.append(tpl.ani_img(res.favorite_animations[i]));
+      }
+
+      item.append(
+        nav_row,
+        tpl.head_card('Recent works'),
+        recent_div,
+        tpl.head_card('Favorite works'),
+        favorite_div,
+        tpl.head_card('Favorite animations'),
+        animations_div
+      );
+
       window.cached.dashboard = item;
+    })
+
+    return item;
+  },
+  animations(stream, data){
+    if(window.cached.animations){
+      console.log('loading skills cache')
+      return window.cached.animations;
+    }
+    let item = x('div', {class: 'row justify-content-center'});
+
+    utils.get(data.url, xdata.default.stream.fetch, function(err,res){
+      if(err){
+        utils.toast('danger', 'failed to load animations data');
+        return console.error(err);
+      }
+
+      let arr = [];
+      for (let i = 0; i < res.length; i++) {
+        arr.push(tpl.ani_img(res[i]))
+      }
+
+      item.append(...arr);
+      window.cached.animations = item;
     })
 
     return item;

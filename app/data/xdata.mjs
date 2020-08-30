@@ -46,12 +46,34 @@ const xdata = {
       name: 'contact',
       ico: 'envelope'
     }],
-    nav_sb: ['dashboard', 'works', 'skills', 'about', 'resume', 'blog', 'links'],
+    nav_sb: ['dashboard', 'works', 'animations', 'skills', 'about', 'resume', 'blog', 'links'],
     animations: 'https://angeal185.github.io/animated-ajax-carosel-portfolio'
   },
   dashboard: {
     msg: 'dashboard page',
-    url: "./api/dashboard.json"
+    url: "./api/dashboard.json",
+    nav: [{
+      title: 'works',
+      description: 'public works portfolio'
+    }, {
+      title: 'animations',
+      description: 'js animations portfolio'
+    }, {
+      title: 'skills',
+      description: 'My skills list'
+    }, {
+      title: 'about',
+      description: 'About me'
+    }, {
+      title: 'resume',
+      description: 'My resume'
+    }, {
+      title: 'blog',
+      description: 'My blog'
+    }, {
+      title: 'links',
+      description: 'My portfolio related links'
+    }]
   },
   about: {
     msg: 'About',
@@ -60,6 +82,10 @@ const xdata = {
   works: {
     msg: 'works page',
     url: "./api/works.json"
+  },
+  animations: {
+    msg: 'animations page',
+    url: "./api/animations.json"
   },
   skills: {
     msg: 'skills page',
