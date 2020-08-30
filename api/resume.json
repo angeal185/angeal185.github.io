@@ -1,0 +1,36 @@
+{
+  "resume": [{
+    "organization": "Xingtai University",
+    "title": "University Lecturer / commercial contractor",
+    "duties": [
+      "Computer science lecturer", "Computer programming lecturer", "Full-stack web-development",
+      "mobile-app development", "reverse-engineering", "penetration-testing", "framework-development"
+    ],
+    "duration": "Dec 2012 - Present",
+    "languages": ["javascript", "nodejs", "python", "html", "css", "rust", "bash", "shell", "json","xml"]
+  },{
+    "organization": "Munich University",
+    "title": "computer science internship (student exchange)",
+    "duties": ["associate lecturer", "Full-stack web-development", "dev-ops"],
+    "duration": "Dec 2008 - Dec 2009",
+    "languages": ["javascript", "nodejs", "python", "html", "css", "json","xml"]
+  },{
+    "organization": "Freelance",
+    "title": "Web-developer / cms-developer / mobile-app-developer / reverse-engineer",
+    "duties": [
+      "Full-stack web-development", "mobile-app development", "desktop-app development", "CMS-development",
+      "reverse-engineering", "penetration-testing", "malware-development"
+    ],
+    "duration": "Dec 2005 - Present",
+    "languages": ["javascript", "nodejs", "python", "html", "css", "rust", "bash", "shell", "php", "c", "c++", "java", "json","xml"]
+  }],
+  "education": [{
+    "title": "Masters, Computer science",
+    "organization": "university of newcastle",
+    "date": "Mar 2010 - Mar 2012"
+  },{
+    "title": "Bachelor, Computer science",
+    "organization": "university of newcastle",
+    "date": "Mar 2005 - Mar 2008"
+  }]
+}

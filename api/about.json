@@ -1,0 +1,78 @@
+{
+  "hireable": "true",
+  "about_me": {
+    "name": "Ben Eaves",
+    "age": "35",
+    "gender": "Male",
+    "place_of_birth": "Australia",
+    "country": "Australia",
+    "city": "Melbourne",
+    "email": "beneaves@protonmail.com",
+    "years_of_programming_experience": "24",
+    "favorite_programming_language": "javascript",
+    "spoken_languages": ["English (Native)", "German (Basic)", "Chinese (Basic)"]
+  },
+  "job_preferences":[{
+    "title": "Preferred job roles",
+    "response": ["Lead Developer", "Full Stack Developer", "Backend Developer", "Frontend Developer", "Penetration Tester", "Web Architect"]
+  },{
+    "title": "Industry",
+    "response": ["Web Development","Software Development"]
+  },{
+    "title": "Contract type",
+    "response": "Full-time / Part-time"
+  },{
+      "title": "Expected role",
+      "response": "lead / senior"
+  },{
+      "title": "Expected salary",
+      "response": "High but negotiable"
+  },{
+      "title": "languages",
+      "response": [
+        "javascript", "nodejs", "python", "html", "css", "rust", "bash", "shell", "php", "c", "c++", "smali", "json","xml"
+      ]
+  },{
+      "title": "preferred languages",
+      "response": ["javascript", "nodejs", "python", "html", "css", "bash"]
+  },{
+      "title": "essential languages",
+      "response": ["javascript"]
+  },{
+      "title": "operating systems",
+      "response": ["linux", "windows", "osx", "android", "ios", "freebsd", "openbsd", "dos"]
+  },{
+      "title": "preferred operating systems",
+      "response": ["linux (ubuntu)", "linux (kali)", "linux (opensuse)"]
+  },{
+    "title": "Accepts equity",
+    "response": "yes"
+  },{
+    "title": "Accepts startup partnership",
+    "response": "you provide the finances, i provide the code"
+  },{
+    "title": "Remote availability",
+    "response": "yes"
+  },{
+    "title": "Relocation status",
+    "response": "Higer salary expected"
+  },{
+    "title": "24/7 oncall",
+    "response": "Higer salary expected"
+  },{
+      "title": "Annual holidays",
+      "response": "4-8 week minimum"
+  },{
+      "title": "Work weekends",
+      "response": "Higer salary expected"
+  },{
+      "title": "Not tolerated",
+      "response": ["workplace bullying", "competition over collaboration", "condescension in any form"]
+  },{
+      "title": "Requested",
+      "response": ["free instant coffee (unlimited)"]
+  },{
+      "title": "Work weekends",
+      "response": "Higer salary expected"
+  }]
+}

@@ -1,55 +1,20 @@
 {
-  "name": "angeal185.github.io-master",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "my website",
-  "main": "./admin/app/bin/socketIO",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "server": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angeal185/angeal185.github.io.git"
+    "url": "git+https://github.com/angeal185/portfolio.git"
   },
-  "keywords": [
-    "jquery"
-  ],
-  "author": "ben eaves",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/angeal185/angeal185.github.io/issues"
+    "url": "https://github.com/angeal185/portfolio/issues"
   },
-  "homepage": "https://github.com/angeal185/angeal185.github.io#readme",
-  "dependencies": {
-    "body-parser": "~1.18.2",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "jsonminify": "^0.4.1",
-    "morgan": "~1.9.0",
-    "nunjucks": "^3.0.1",
-    "socketio": "^1.0.0"
-  },
-  "devDependencies": {
-    "chalk": "latest",
-    "gulp": "^3.9.1",
-    "gulp-coffee": "^2.3.4",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-insert": "^0.5.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-jsonlint": "^1.2.0",
-    "gulp-jsonminify": "^1.0.0",
-    "gulp-merge-json": "^1.0.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.8",
-    "jshint": "^2.9.4",
-    "jshint-stylish": "^2.2.1",
-    "node-static": "^0.7.9",
-    "require-dir": "^0.3.2"
-  }
+  "homepage": "https://github.com/angeal185/portfolio#readme"
 }

@@ -1,7 +1,0 @@
-{
-  "name": "my-website",
-  "serve": "./",
-  "cache": 0,
-  "port": 8000,
-  "debug": true
-}

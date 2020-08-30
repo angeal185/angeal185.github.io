@@ -1,4 +1,0 @@
-{
-    "webDev": ["node.js site development", "node.js App development", "ajax site development", "flask site development", "django site development", "angular.js site development", "cordova App development", "ionic App development", "jquery App development", "jquery mobile App development", "jqueryUI App development"],
-    "cmsDev": ["custom cms development", "django cms site development", "drupal site development", "ghost site development", "apostrophe site development", "grav site development", "bolt cms site development", "joomla site development", "keystone.js site development", "magento site development", "mezzanine site development", "modX site development", "moodle site development", "nodebb site development", "october cms site development", "opencart site development", "oxwall site development", "pencilblue site development", "phpbb site development", "ulbora site development", "wigtail site development", "wordpress site developmen"]
-}
