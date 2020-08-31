@@ -1,7 +1,7 @@
 import { loader } from './modules/ani.mjs';
 import { router, x } from './modules/jsnode.mjs';
 
-//loader();
+loader();
 
 router.on('/dashboard', function(request, stream) {
   stream.render('dashboard', request.data, function(err){
