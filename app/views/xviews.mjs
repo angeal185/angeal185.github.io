@@ -151,11 +151,13 @@ const xviews = {
       }
       let items = Object.keys(res);
 
-      for (let i = 0; i < items.length; i++) {
+      for (let i = 1; i < items.length; i++) {
         item.append(
           x('div', {class:'card mb-4'},
             x('div', {class:'card-header'},
-              x('h4', items[i].replace(/_/g, ' '))
+              x('h4', {class: 'capital'},items[i].replace(/_/g, ' '),
+                x('span', {class: 'float-right fs1 red-txt'}, res.note[items[i]])
+              )
             ),
             function(){
               let div = x('div', {class:'card-body'});
@@ -236,7 +238,8 @@ const xviews = {
       for (let i = 0; i < about_keys.length; i++) {
         if(typeof res.about_me[about_keys[i]] === 'string'){
           about_body.append(x('span', {class:'list-group-item'},
-            about_keys[i].replace(/_/g, ' '), x('span', {class: 'float-right text-right'}, res.about_me[about_keys[i]])
+            x('span', {class: 'capital'}, about_keys[i].replace(/_/g, ' ')),
+            x('span', {class: 'float-right text-right'}, res.about_me[about_keys[i]])
           ))
         } else {
           let div = x('span', {class: 'float-right text-right'});
@@ -246,14 +249,15 @@ const xviews = {
           }
 
           about_body.append(x('span', {class:'list-group-item'},
-            about_keys[i].replace(/_/g, ' '), div
+            x('span', {class: 'capital'},about_keys[i].replace(/_/g, ' ')), div
           ))
         }
       }
 
       for (let i = 0; i < res.job_preferences.length; i++) {
         if(typeof res.job_preferences[i].response === 'string'){
-          job_body.append(x('span', {class:'list-group-item'},res.job_preferences[i].title,
+          job_body.append(x('span', {class:'list-group-item'},
+              x('span', {class: 'capital'}, res.job_preferences[i].title),
               x('span', {class: 'float-right text-right'}, res.job_preferences[i].response)
           ))
         } else {
@@ -261,7 +265,10 @@ const xviews = {
           for (let j = 0; j < res.job_preferences[i].response.length; j++) {
             div.append(x('span', {class: 'badge'}, res.job_preferences[i].response[j]));
           }
-          job_body.append(x('span', {class:'list-group-item'},res.job_preferences[i].title, div));
+          job_body.append(x('span', {class:'list-group-item'},
+            x('span', {class: 'capital'},res.job_preferences[i].title),
+            div)
+          );
         }
       }
 

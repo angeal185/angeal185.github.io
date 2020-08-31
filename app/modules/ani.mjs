@@ -204,4 +204,39 @@ function ani(cnv) {
   }, false);
 }
 
-export { ani }
+
+function loader(){
+  let dv = document.createElement('div'),
+  ul = document.createElement('ul'),
+  li = document.createElement('li'),
+  arr = 'Loading'.split(''),
+  count = 0,
+  item;
+
+  loader = dv.cloneNode();
+  loader.id = 'loader';
+  dv.id = 'smoke';
+  dv.append(ul);
+  loader.append(dv);
+
+  for (let i = 0; i < arr.length; i++) {
+    item = li.cloneNode();
+    item.innerText = arr[i]
+    ul.append(item)
+  }
+
+  document.body.append(loader)
+
+  let x = setInterval(function(){
+    ul.children[count].style.animation = 'smoke 1s linear forwards'
+    count++
+    if(count === arr.length){
+      clearInterval(x)
+      setTimeout(function(){
+       loader.remove();
+      },1000)
+    }
+  },500)
+}
+
+export { ani, loader }

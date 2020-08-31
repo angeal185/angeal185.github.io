@@ -7,15 +7,19 @@ const xdata = {
     params: true,
     error: '/error',
     base_path: '/dashboard',
-    delete_meta: 10000,
     webmanifest: './manifest.webmanifest',
     base_script_name: 'main',
+    meta: [],
     styles:[{
       href: './app/css/bootstrap.min.css',
       rel: 'stylesheet'
     },{
       href: './app/css/main.css',
       rel: 'stylesheet'
+    },{
+      rel: 'shortcut icon',
+      href: './favicon.png',
+      type: 'image/x-icon'
     }],
     js_head:[],
     js_body:[],
@@ -47,7 +51,12 @@ const xdata = {
       ico: 'envelope'
     }],
     nav_sb: ['dashboard', 'works', 'animations', 'skills', 'about', 'resume', 'blog', 'links'],
-    animations: 'https://angeal185.github.io/animated-ajax-carosel-portfolio'
+    animations: 'https://angeal185.github.io/animated-ajax-carosel-portfolio',
+    email: 'beneaves@protonmail.com',
+    linkedin: 'https://www.linkedin.com/in/ben-eaves-996991125',
+    github: 'https://github.com/angeal185',
+    codepen: 'https://codepen.io/angeal185',
+    npm: 'https://www.npmjs.com/~angeal185'
   },
   dashboard: {
     msg: 'dashboard page',

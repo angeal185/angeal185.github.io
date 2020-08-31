@@ -1,4 +1,16 @@
 {
+  "note": {
+    "placement_skills": "in no specific order",
+    "code_skills": "in no specific order",
+    "code_related_skills": "in no specific order",
+    "framework_skills": "i prefer to make my own",
+    "db_skills": "in no specific order",
+    "cms_skills": "i prefer to make my own",
+    "os_skills": "in no specific order",
+    "other_skills": "in no specific order",
+    "api_skills": "i prefer to make my own",
+    "browser_pluggin_developer": "in no specific order"
+  },
   "placement_skills": [
     "lead-developer","full-stack-developer","back-end-developer","front-end-developer","cms-developer","mobile-app-developer","api-developer","desktop-app-developer","penetration-tester","reverse-engineer","browser-pluggin-developer","university-lecturer"
   ],
@@ -9,7 +21,7 @@
     "stylus","pug","dust","handlebars","mustache","coffeescript","scss","less","nunjucks","jinja","django-tpl","twig","ejs","babel"
   ],
   "framework_skills":[
-    "framework-creation","jquery","underscore","angular.js","socket.io","sails.js","total.js","hapi.js","koa.js","adonis.js","three.js","greensock","knockout.js","tween.js","django","web2py","jquerymobile","catberry","we.js","codeigniter","semantic","uikit","materialize","lodash","mean.io","express.js","mean.js","ember.js","meteor","derby.js","ionic","cordova","flask","jqueryui","react","reactive.js","polymer","vue.js","backbone","keystone","mithril","symfony","laravel","bootstrap","foundation","skeleton"
+    "framework-creation","electron","jquery","underscore","angular.js","socket.io","sails.js","total.js","hapi.js","koa.js","adonis.js","three.js","greensock","knockout.js","tween.js","django","web2py","jquerymobile","catberry","we.js","codeigniter","semantic","uikit","materialize","lodash","mean.io","express.js","mean.js","ember.js","meteor","derby.js","ionic","cordova","flask","jqueryui","react","reactive.js","polymer","vue.js","backbone","keystone","mithril","symfony","laravel","bootstrap","foundation","skeleton"
   ],
   "db_skills":[
     "mongodb","couchdb","couchbase","mysql","redis","sqlite","nosql embedded db","rethinkdb","postgresql", "arangodb","orientdb","leveldb","memcached","ravendb","pouchdb","rocksdb"

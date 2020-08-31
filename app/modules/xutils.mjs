@@ -3,6 +3,7 @@ import { x } from './xscript.mjs';
 const xutils = {
   build(xdata, main){
     let css = xdata.default.styles,
+    meta = xdata.default.meta,
     js_head = xdata.default.js_head,
     js_body = xdata.default.js_body,
     head_args = [],
@@ -16,6 +17,12 @@ const xutils = {
         href: xdata.default.webmanifest,
         rel: 'manifest'
       }))
+    }
+
+    if(meta && meta.length){
+      for (let i = 0; i < meta.length; i++) {
+        head_args.push(x('meta', meta[i]))
+      }
     }
 
     if(css && css.length){

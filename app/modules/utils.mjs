@@ -5,6 +5,26 @@ import { tpl } from '../views/tpl.mjs';
 const wcs = window.crypto.subtle;
 
 const utils = {
+  loading(){
+    let arc;
+    if(!window.cached.loading){
+      arc = window.cached.loading = x('div', {class: 'loader-mask'},
+        x('div',{class: 'loader'},
+          x('div',{class: 'arc'}),x('div',{class: 'arc'}),x('div',{class: 'arc'})
+        )
+      )
+    } else {
+      arc = window.cached.loading;
+    }
+    document.body.append(arc);
+    setTimeout(function(){
+      arc.classList.add('fadeout');
+      setTimeout(function(){
+        arc.classList.remove('fadeout');
+        arc.remove();
+      },1000)
+    },1000)
+  },
   get(src, options, cb){
     fetch(new Request(src,options)).then(function(res){
       if (res.status >= 200 && res.status < 300) {

@@ -1,5 +1,6 @@
 import { x, xrender } from './modules/xscript.mjs';
 import { xutils } from './modules/xutils.mjs';
+import { utils } from './modules/utils.mjs';
 import { ani } from './modules/ani.mjs';
 import { xviews } from './views/xviews.mjs';
 import { xdata } from './data/xdata.mjs';
@@ -36,7 +37,7 @@ let defaults = Object.assign(xdata.default, {
   app_main: app_main,
   each: {
     before: function(dest) {
-      // return false;  cancel rout
+      utils.loading();
       return true; // continue to rout
     },
     after: function(dest) {
@@ -53,19 +54,10 @@ let defaults = Object.assign(xdata.default, {
     }
   },
   init: function(){
-    document.body.classList.add('o0')
     document.body.append(...cnv, bg_audio);
     ani(cnv);
 
     xutils.build(xdata, xviews['build'](app_main));
-
-    setTimeout(function(){
-
-      document.body.classList.add('fadeIn')
-      setTimeout(function(){
-        document.body.removeAttribute('class')
-      },2000)
-    },1000)
 
     return this;
   },
