@@ -20,19 +20,31 @@
     margin:0;
     padding:0;
     display:flex;
-
 }
 
 #smoke ul li {
+  color: #fff;
     font-family: sans;
     list-style:none;
     font-weight:bold;
     letter-spacing:20px;
     filter: blur(1px);
-    color:#fff;
     font-size: 3rem;
     border: ndfgdfgdfone;
     display: inline-block;
+}
+
+#smoke ul li:nth-child(2) {
+  color: red;
+}
+#smoke ul li:nth-child(3) {
+  color: #007bff;
+}
+#smoke ul li:nth-child(5) {
+  color: red;
+}
+#smoke ul li:nth-child(6) {
+  color: #007bff;
 }
 
 @keyframes smoke {
