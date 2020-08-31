@@ -10,7 +10,7 @@
 }
 #smoke {
     position:absolute;
-  background-color:#000;
+    background-color:#000;
     top:50%;
     lefT:50%;
     transform:translate(-50%,-50%);
@@ -30,7 +30,7 @@
     letter-spacing:20px;
     filter: blur(1px);
     color:#fff;
-    font-size:6em;
+    font-size: 3rem;
     border: ndfgdfgdfone;
     display: inline-block;
 }

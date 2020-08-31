@@ -9,7 +9,10 @@ const xdata = {
     base_path: '/dashboard',
     webmanifest: './manifest.webmanifest',
     base_script_name: 'main',
-    meta: [],
+    meta: [{
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1.0'
+    }],
     styles:[{
       href: './app/css/bootstrap.min.css',
       rel: 'stylesheet'

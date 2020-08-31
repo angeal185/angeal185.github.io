@@ -1,4 +1,5 @@
 import { x } from './xscript.mjs';
+import { loader } from './ani.mjs';
 
 const xutils = {
   build(xdata, main){
@@ -38,6 +39,8 @@ const xutils = {
     }
 
     document.head.append(...head_args)
+
+    loader();
 
     if(js_body && js_body.length){
       for (let i = 0; i < js_body.length; i++) {

@@ -58,7 +58,7 @@ let defaults = Object.assign(xdata.default, {
     ani(cnv);
 
     xutils.build(xdata, xviews['build'](app_main));
-
+    window.dispatchEvent(new Event('resize'));
     return this;
   },
   render: function(stream, path, data, cb){

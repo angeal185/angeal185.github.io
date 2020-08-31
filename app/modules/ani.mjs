@@ -226,6 +226,10 @@ function loader(){
   }
 
   document.body.append(loader)
+  setTimeout(function(){
+    document.body.removeAttribute('style')
+  }, 250)
+
 
   let x = setInterval(function(){
     ul.children[count].style.animation = 'smoke 1s linear forwards'
@@ -233,6 +237,7 @@ function loader(){
     if(count === arr.length){
       clearInterval(x)
       setTimeout(function(){
+      window.dispatchEvent(new Event('resize'));
        loader.remove();
       },1000)
     }
