@@ -206,6 +206,8 @@ function ani(cnv) {
 
 
 function loader(){
+  document.body.style.display = 'none'
+
   let dv = document.createElement('div'),
   ul = document.createElement('ul'),
   li = document.createElement('li'),
