@@ -218,6 +218,40 @@ const xviews = {
     })
     return item;
   },
+  events(stream, data){
+    if(window.cached.links){
+      console.log('loading links cache')
+      return window.cached.links;
+    }
+    let item = x('div', {class: 'row justify-content-center'});
+
+    utils.get(data.profile, xdata.default.stream.cors, function(err,userData){
+      if(err){
+        utils.toast('danger', 'failed to load profile data');
+        return console.error(err);
+      }
+
+      let div = tpl.lg_active('Recent events')
+
+      utils.get(data.url, xdata.default.stream.cors, function(err,res){
+        if(err){
+          utils.toast('danger', 'failed to load events data');
+          return console.error(err);
+        }
+
+        for (let i = 0; i < res.length; i++) {
+          div.append(tpl.event_tpl(res[i]))
+        }
+
+        item.append(
+          tpl.profile_card(userData),
+          x('div', {class: 'col-8'},div)
+        );
+        window.cached.links = item;
+      })
+    })
+    return item;
+  },
   about(stream, data){
     if(window.cached.about){
       console.log('loading about cache')
@@ -279,7 +313,84 @@ const xviews = {
     return item;
   },
   blog(stream, data){
-    let item = x('div', x('p', data.msg));
+    let item = x('div', {class: 'row'},
+      x('div', {class: 'col-lg-9'})
+    )
+
+    if(window.caches.blog){
+      item.append(window.caches.blog);
+    }
+
+    utils.get(data.url, xdata.default.stream.fetch, function(err,res){
+      if(err){
+        utils.toast('danger', 'failed to load blog data');
+        return console.error(err);
+      }
+
+      if(!window.caches.blog){
+        let cats = tpl.lg_active('Categories'),
+        tags = tpl.lg_active('Tags'),
+        cats_div = x('div', {class:'list-group-item'}),
+        tags_div = x('div', {class:'list-group-item'});
+
+        for (let i = 0; i < res.categories.length; i++) {
+          cats_div.append(x('span', {
+            class: 'badge sh-95 mb-2 cp',
+            onclick(){
+              router.rout('/blog?category='+ encodeURIComponent(res.categories[i]))
+            }
+          }, res.categories[i]))
+        }
+        for (let i = 0; i < res.tags.length; i++) {
+          tags_div.append(x('span', {
+            class: 'badge sh-95 mb-2 cp',
+            onclick(){
+              router.rout('/blog?tag='+ encodeURIComponent(res.tags[i]))
+            }
+          }, res.tags[i]))
+        }
+
+        cats.append(cats_div);
+        tags.append(tags_div);
+
+        let sbr = x('div', {class: 'col-lg-3'},cats, tags)
+
+        window.caches.blog = sbr;
+        item.append(sbr);
+      }
+
+      let post_div = x('div'),
+      fltr = null;
+
+      if(data.category){
+        fltr = decodeURIComponent(data.category);
+        for (let i = 0; i < res.posts.length; i++) {
+          if(res.posts[i].category === fltr){
+            post_div.append(tpl.blog_post(res.posts[i],router))
+          }
+        }
+      } else if(data.tag){
+        fltr = decodeURIComponent(data.tag);
+        for (let i = 0; i < res.posts.length; i++) {
+          if(res.posts[i].tags.indexOf(fltr) !== -1){
+            post_div.append(tpl.blog_post(res.posts[i],router))
+          }
+        }
+      } else if(data.author){
+        fltr = decodeURIComponent(data.author);
+        for (let i = 0; i < res.posts.length; i++) {
+          if(res.posts[i].author === fltr){
+            post_div.append(tpl.blog_post(res.posts[i],router))
+          }
+        }
+      } else {
+        for (let i = 0; i < res.posts.length; i++) {
+          post_div.append(tpl.blog_post(res.posts[i],router))
+        }
+      }
+
+      item.firstChild.append(post_div)
+    })
 
     return item;
   },

@@ -1,0 +1,12 @@
+{
+  "categories": ["news"],
+  "tags": ["release", "info"],
+  "posts":  [{
+    "title": "Profile updated",
+    "body": "Personal profile website updated to v2.0.0",
+    "category": "news",
+    "author": "ben eaves",
+    "tags": ["release", "info"],
+    "date": 1598902620500
+  }]
+}

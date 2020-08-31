@@ -15,6 +15,11 @@ router.on('/dashboard', function(request, stream) {
     if(err){return stream.renderErr();}
   })
 })
+.on('/events', function(request, stream) {
+  stream.render('events', request.data, function(err){
+    if(err){return stream.renderErr();}
+  })
+})
 .on('/animations', function(request, stream) {
   stream.render('animations', request.data, function(err){
     if(err){return stream.renderErr();}
@@ -26,6 +31,17 @@ router.on('/dashboard', function(request, stream) {
   })
 })
 .on('/blog', function(request, stream) {
+
+  if(request.params){
+    if(request.params.get('tag')){
+      request.data.tag = request.params.get('tag')
+    } else if(request.params.get('author')){
+      request.data.author = request.params.get('author')
+    } else if(request.params.get('category')){
+      request.data.category = request.params.get('category')
+    }
+  }
+
   stream.render('blog', request.data, function(err){
     if(err){return stream.renderErr();}
   })

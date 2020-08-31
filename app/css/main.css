@@ -349,6 +349,10 @@ body{
   cursor: pointer;
 }
 
+.ch{
+  cursor: help;
+}
+
 
 .show{
   display: block;
@@ -560,6 +564,12 @@ cursor: pointer;
   background: red;
   left: .5rem;
   top: 1.35rem;
+}
+
+
+.profile-img{
+  width: 14rem;
+  height: 14rem;
 }
 
 .loader-mask{

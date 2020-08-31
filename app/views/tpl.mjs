@@ -15,8 +15,15 @@ const tpl = {
     ),
     nav_right = x('div', {class: 'nav-right col-6'},
       x('div', {
+        class: 'nav-lnk sh-95 icon-bell',
+        title: 'Recent events',
+        onclick(){
+          router.rout('/events')
+        }
+      }),
+      x('div', {
         class: 'nav-lnk sh-95 icon-envelope',
-        title: 'contact',
+        title: 'Contact me',
         onclick(){
           window.open('mailto://'+ xdata.base.email)
         }
@@ -80,9 +87,9 @@ const tpl = {
       }),
       x('span', {
         class: 'icon-rss cp ml-2',
-        title: 'atom feeds',
+        title: 'recent activity feed',
         onclick(){
-          router.rout('/atom', {})
+          window.open(xdata.base.atom)
         }
       }),
       x('span', {
@@ -137,8 +144,23 @@ const tpl = {
           ),
           x('span', {class:'icon-git-alt black-txt fs1 d-block cp', title: 'git url'},
             x('small', {class:'ml-2 link-txt'}, res.git_url || '')
+          ),
+          x('span', {class:'icon-cloud-download-alt black-txt fs1 d-block cp', title: res.name +' download'},
+            x('small', {
+              class:'ml-2 link-txt',
+              onclick(){
+                window.open(res.html_url +'/archive/master.zip')
+              }
+            }, 'zip')
+          ),
+          x('span', {class:'icon-rss black-txt fs1 d-block cp', title: res.name +' Atom feed'},
+            x('small', {
+              class:'ml-2 link-txt',
+              onclick(){
+                window.open(res.html_url +'/commits.atom')
+              }
+            }, 'Atom feed')
           )
-
         )
       )
     )
@@ -231,6 +253,82 @@ const tpl = {
           window.open(xdata.default.origin + res.link)
         }
       })
+    )
+  },
+  profile_card(res){
+    return x('div', {class: 'col-lg-6'},
+      x('div', {class: 'card mb-4'},
+        x('div', {class: 'card-body text-center'},
+          x('img', {
+            src: './app/img/avatar.jpg',
+            class: 'profile-img mb-2'
+          }),
+          x('h4', {class:'link-txt mb-4'}, res.login),
+          x('p', {class:'font-weight-light'}, res.location),
+          x('p','Since '+ new Date(res.created_at).toLocaleString().split(',')[0]),
+          x('small', res.public_repos + ' public unforked repos')
+        )
+      )
+    )
+  },
+  event_tpl(res){
+    return x('div',{class:'list-group-item'},
+      x('p', {class: 'link-txt icon-git-alt ch', title: 'destination'},
+        x('span', {class: 'float-right red-txt'}, res.repo.name)
+      ),
+      x('p', {class: 'link-txt'}, 'Event type',
+        x('span', {class: 'float-right red-txt'}, res.type)
+      ),
+      x('p', {class: 'link-txt'}, 'Event date',
+        x('span', {class: 'float-right red-txt'}, new Date(res.created_at).toLocaleString())
+      )
+
+    )
+  },
+  blog_post(res, router){
+    return x('div', {class: 'card mb-4'},
+      x('div', {class: 'card-body'},
+        x('h3', {class: 'red-txt'}, res.title),
+        x('p', res.body),
+        x('div', {class: 'd-block mb-2'},
+          x('span', {class: 'icon-user ch', title: 'author'},
+            x('span', {
+              class: 'ml-1 badge cp sh-95 link-txt',
+              onclick(){
+                router.rout('/blog?author='+ encodeURIComponent(res.author))
+              }
+            }, res.author)
+          ),
+          x('span', {class: 'icon-calendar ch ml-4', title: 'date'},
+            x('span', {class: 'ml-1 link-txt'}, new Date(res.date).toLocaleString().split(',')[0])
+          ),
+          x('span', {class: 'icon-clock ch ml-4', title: 'time'},
+            x('span', {class: 'ml-1 link-txt'}, new Date(res.date).toLocaleString().split(',')[1].trim())
+          )
+        ),
+        x('span', {class: 'icon-tag ch mb-2', title: 'category'},
+          x('span', {
+            class: 'ml-1 badge cp sh-95 link-txt',
+            title: res.category,
+            onclick(){
+              router.rout('/blog?category='+ encodeURIComponent(res.category))
+            }
+          }, res.category)
+        ),
+        function(){
+          let div = x('span', {class: 'icon-tags ch ml-4 mb-2', title: 'tags'})
+          for (let i = 0; i < res.tags.length; i++) {
+            div.append(x('span', {
+              class: 'ml-1 badge cp sh-95 link-txt',
+              title: res.tags[i],
+              onclick(){
+                router.rout('/blog?tag='+ encodeURIComponent(res.tags[i]))
+              }
+            }, res.tags[i]))
+          }
+          return div
+        }
+      )
     )
   }
 }

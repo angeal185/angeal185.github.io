@@ -23,6 +23,11 @@ const xdata = {
       rel: 'shortcut icon',
       href: './favicon.png',
       type: 'image/x-icon'
+    },{
+      rel:'alternate',
+      href: 'https://github.com/angeal185.atom',
+      type: 'application/atom+xml',
+      title: 'ben eaves - recent activity feed'
     }],
     js_head:[],
     js_body:[],
@@ -45,6 +50,16 @@ const xdata = {
           'Content-Type': 'application/json',
           'Sec-Fetch-Dest': 'object'
         }
+      },
+      cors: {
+        method: 'GET',
+        mode: 'cors',
+        redirect: 'error',
+        referrer: 'no-referrer',
+        headers: {
+          'Content-Type': 'application/json',
+          'Sec-Fetch-Dest': 'object'
+        }
       }
     }
   },
@@ -59,7 +74,9 @@ const xdata = {
     linkedin: 'https://www.linkedin.com/in/ben-eaves-996991125',
     github: 'https://github.com/angeal185',
     codepen: 'https://codepen.io/angeal185',
-    npm: 'https://www.npmjs.com/~angeal185'
+    npm: 'https://www.npmjs.com/~angeal185',
+    atom: 'https://github.com/angeal185.atom'
+
   },
   dashboard: {
     msg: 'dashboard page',
@@ -103,8 +120,14 @@ const xdata = {
     msg: 'skills page',
     url: "./api/skills.json"
   },
+  events: {
+    msg: 'events page',
+    url: 'https://api.github.com/users/angeal185/events',
+    profile: 'https://api.github.com/users/angeal185'
+  },
   blog: {
-    msg: 'silence is golden'
+    msg: 'silence is golden',
+    url: "./api/blog.json"
   },
   resume: {
     msg: 'Resume',
