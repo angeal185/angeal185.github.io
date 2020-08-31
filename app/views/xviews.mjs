@@ -184,7 +184,7 @@ const xviews = {
 
     utils.get(data.url, xdata.default.stream.fetch, function(err,res){
       if(err){
-        utils.toast('danger', 'failed to load links data');
+        utils.toast('danger', 'failed to load works data');
         return console.error(err);
       }
       let div = x('div', {class: 'row'});
@@ -219,9 +219,9 @@ const xviews = {
     return item;
   },
   events(stream, data){
-    if(window.cached.links){
+    if(window.cached.events){
       console.log('loading links cache')
-      return window.cached.links;
+      return window.cached.events;
     }
     let item = x('div', {class: 'row justify-content-center'});
 
@@ -247,7 +247,7 @@ const xviews = {
           tpl.profile_card(userData),
           x('div', {class: 'col-8'},div)
         );
-        window.cached.links = item;
+        window.cached.events = item;
       })
     })
     return item;
@@ -403,7 +403,7 @@ const xviews = {
 
     utils.get(data.url, xdata.default.stream.fetch, function(err,res){
       if(err){
-        utils.toast('danger', 'failed to load about data');
+        utils.toast('danger', 'failed to load resume data');
         return console.error(err);
       }
 
