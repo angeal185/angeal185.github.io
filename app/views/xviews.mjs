@@ -50,11 +50,11 @@ const xviews = {
       for (let i = 0; i < items.length; i++) {
         items[i] = items[i].split('?')[0];
         arr.push(x('span',
-          x('i', {class: 'icon-chevron-right'},
-          items[i]
+          x('i', {class: 'icon-chevron-right red-txt'},
+          x('span', {class: 'link-txt'},items[i])
         )))
       }
-      utils.empty(bc.lastChild).append(...arr)
+      utils.empty(bc.lastChild).append(...arr);
     })
 
     xviews.build = null;
@@ -187,7 +187,9 @@ const xviews = {
         utils.toast('danger', 'failed to load works data');
         return console.error(err);
       }
+
       let div = x('div', {class: 'row'});
+
       for (let i = 0; i < res.length; i++) {
         div.append(tpl.repo_tpl(res[i]));
       }
@@ -353,7 +355,19 @@ const xviews = {
         cats.append(cats_div);
         tags.append(tags_div);
 
-        let sbr = x('div', {class: 'col-lg-3'},cats, tags)
+        let sbr = x('div', {class: 'col-lg-3'},
+        x('div', {class:'form-group'},
+          x('input', {
+            class:'form-control srch-inp',
+            placeHolder: 'Search...',
+            onkeyup:utils.debounce(function(evt){
+              let val = evt.target.value;
+              if(val){
+                router.rout('/blog?q='+ encodeURIComponent(val))
+              }
+            },2000)
+          })
+        ),cats, tags)
 
         window.caches.blog = sbr;
         item.append(sbr);
@@ -380,6 +394,14 @@ const xviews = {
         fltr = decodeURIComponent(data.author);
         for (let i = 0; i < res.posts.length; i++) {
           if(res.posts[i].author === fltr){
+            post_div.append(tpl.blog_post(res.posts[i],router))
+          }
+        }
+      } else if(data.q){
+        fltr = decodeURIComponent(data.q).toLowerCase();
+        console.log(fltr)
+        for (let i = 0; i < res.posts.length; i++) {
+          if(res.posts[i].title.toLowerCase().match(fltr)){
             post_div.append(tpl.blog_post(res.posts[i],router))
           }
         }

@@ -133,16 +133,16 @@ const tpl = {
             href: res.html_url
           },res.name)),
           x('h5', {class: 'font-weight-normal mb-4'}, res.description || 'no description provided'),
-          x('span', {class: 'icon-calendar black-txt d-block fs1 cp', title: 'Created'},
+          x('span', {class: 'icon-calendar black-txt d-block fs1 ch', title: 'Created'},
             x('span', {class: 'ml-2 red-txt'}, new Date(res.created_at).toLocaleString())
           ),
-          x('span', {class: 'icon-calendar black-txt d-block fs1 cp', title: 'Last updated'},
+          x('span', {class: 'icon-calendar black-txt d-block fs1 ch', title: 'Last updated'},
             x('span', {class: 'ml-2 red-txt'}, new Date(res.updated_at).toLocaleString())
           ),
           x('span', {class: 'icon-code black-txt fs1 d-block cp', title: 'Language'},
             x('span', {class: 'ml-2 red-txt badge'}, res.language || 'other')
           ),
-          x('span', {class:'icon-git-alt black-txt fs1 d-block cp', title: 'git url'},
+          x('span', {class:'icon-git-alt black-txt fs1 d-block ch', title: 'git url'},
             x('small', {class:'ml-2 link-txt'}, res.git_url || '')
           ),
           x('span', {class:'icon-cloud-download-alt black-txt fs1 d-block cp', title: res.name +' download'},

@@ -39,6 +39,8 @@ router.on('/dashboard', function(request, stream) {
       request.data.author = request.params.get('author')
     } else if(request.params.get('category')){
       request.data.category = request.params.get('category')
+    } else if(request.params.get('q')){
+      request.data.q = request.params.get('q')
     }
   }
 

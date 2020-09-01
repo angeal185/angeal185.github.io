@@ -14,10 +14,7 @@ const xdata = {
       content: 'width=device-width, initial-scale=1.0'
     }],
     styles:[{
-      href: './app/css/bootstrap.min.css',
-      rel: 'stylesheet'
-    },{
-      href: './app/css/main.css',
+      href: './app/css/main.min.css',
       rel: 'stylesheet'
     },{
       rel: 'shortcut icon',
