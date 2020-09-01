@@ -51,7 +51,7 @@ function ani(cnv) {
     };
 
     this.init = function() {
-      var x, y, a, ba = PI / 3,
+      var x, y, a, ba = Math.PI / 3,
         ri = HEX_CRAD - .5 * HEX_HLW;
       for (var i = 0; i < 6; i++) {
         a = i * ba;

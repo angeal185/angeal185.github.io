@@ -54,10 +54,10 @@ let defaults = Object.assign(xdata.default, {
     }
   },
   init: function(){
-    document.body.append(...cnv, bg_audio);
-    ani(cnv);
 
+    document.body.append(x('app-sub', ...cnv));
     xutils.build(xdata, xviews['build'](app_main));
+    ani(cnv);
     window.dispatchEvent(new Event('resize'));
     return this;
   },
