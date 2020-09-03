@@ -1,21 +1,21 @@
 {
   "note": {
     "placement_skills": "in no specific order",
-    "code_skills": "in no specific order",
+    "code_skills": "in order of experience",
     "code_related_skills": "in no specific order",
-    "framework_skills": "i prefer to make my own",
+    "framework_skills": "incomplete and i prefer to make my own",
     "db_skills": "in no specific order",
     "cms_skills": "i prefer to make my own",
-    "os_skills": "in no specific order",
-    "other_skills": "in no specific order",
-    "api_skills": "i prefer to make my own",
-    "browser_pluggin_developer": "in no specific order"
+    "os_skills": "in order of experience",
+    "other_skills": "incomplete and in no specific order",
+    "api_skills": "incomplete and i prefer to make my own",
+    "browser_pluggin_developer": "in order of experience"
   },
   "placement_skills": [
     "lead-developer","full-stack-developer","back-end-developer","front-end-developer","cms-developer","mobile-app-developer","api-developer","desktop-app-developer","penetration-tester","reverse-engineer","browser-pluggin-developer","university-lecturer"
   ],
   "code_skills":[
-    "javascript","nodejs","css","xml","php","bash","html","python","rust","json","shell","smali","c","c++"
+    "javascript","nodejs","json","html","css","python","xml","bash","shell","rust","php","smali","c++","c"
   ],
   "code_related_skills":[
     "stylus","pug","dust","handlebars","mustache","coffeescript","scss","less","nunjucks","jinja","django-tpl","twig","ejs","babel"
@@ -30,7 +30,7 @@
     "cms-creation","cody","taracot","keystone cms","pencilblue","django cms","october cms","phpbb","grav","wagtail","ghost","oxwall","magento","apostrophe","ulbora","nodebb","mezzanine","wordpress","drupal","joomla","bolt","modx","moodle","pyro","opencart"
   ],
   "os_skills":[
-    "ubuntu","suse","fendora","kali","windows(all)","osx","ios","android","debian","mint","dos","freebsd","openbsd"
+    "ubuntu","kali","suse","debian","fendora","mint","windows(all)","android","osx","ios","dos","freebsd","openbsd"
   ],
   "other_skills":[
     "gulp","npm","composer","seo","aws","docker","digitalocean","azure","bitbucket","soap","wamp stack","lamp stack","devops","travis ci","grunt","bower","webpack","rest","heroku","bitnami","firebase","github","gitlab","stormpath","okta","mvc\/mvvm\/mvp","yeoman","slack","codacy"

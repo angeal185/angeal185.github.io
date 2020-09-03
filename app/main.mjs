@@ -10,6 +10,16 @@ router.on('/dashboard', function(request, stream) {
     if(err){return stream.renderErr();}
   })
 })
+.on('/cryptography', function(request, stream) {
+  stream.render('cryptography', request.data, function(err){
+    if(err){return stream.renderErr();}
+  })
+})
+.on('/malicious', function(request, stream) {
+  stream.render('malicious', request.data, function(err){
+    if(err){return stream.renderErr();}
+  })
+})
 .on('/links', function(request, stream) {
   stream.render('links', request.data, function(err){
     if(err){return stream.renderErr();}

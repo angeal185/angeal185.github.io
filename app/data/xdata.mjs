@@ -65,7 +65,7 @@ const xdata = {
       name: 'contact',
       ico: 'envelope'
     }],
-    nav_sb: ['dashboard', 'works', 'animations', 'skills', 'about', 'resume', 'blog', 'links'],
+    nav_sb: ['dashboard', 'works', 'animations', 'cryptography', 'malicious','skills', 'about', 'resume', 'blog', 'links'],
     animations: 'https://angeal185.github.io/animated-ajax-carosel-portfolio',
     email: 'beneaves@protonmail.com',
     linkedin: 'https://www.linkedin.com/in/ben-eaves-996991125',
@@ -84,6 +84,12 @@ const xdata = {
     }, {
       title: 'animations',
       description: 'js animations portfolio'
+    }, {
+      title: 'cryptography',
+      description: 'crypto portfolio'
+    }, {
+      title: 'malicious',
+      description: 'academic malicious warez'
     }, {
       title: 'skills',
       description: 'My skills list'
@@ -108,6 +114,14 @@ const xdata = {
   works: {
     msg: 'works page',
     url: "./api/works.json"
+  },
+  cryptography: {
+    msg: 'cryptography page',
+    url: "./api/cryptography.json"
+  },
+  malicious: {
+    msg: 'My public malicious script example attack bases for academic purposes only. I have private collection, the contents of which is both larger and more devastating, which is available on request to those who have a valid reason',
+    url: "./api/malicious.json"
   },
   animations: {
     msg: 'animations page',

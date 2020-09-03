@@ -199,6 +199,56 @@ const xviews = {
 
     return item;
   },
+  malicious(stream, data){
+    if(window.cached.malicious){
+      console.log('loading malicious cache')
+      return window.cached.malicious;
+    }
+    let item = x('div',
+      tpl.head_card(data.msg)
+    );
+
+    utils.get(data.url, xdata.default.stream.fetch, function(err,res){
+      if(err){
+        utils.toast('danger', 'failed to load malicious data');
+        return console.error(err);
+      }
+
+      let div = x('div', {class: 'row'});
+
+      for (let i = 0; i < res.length; i++) {
+        div.append(tpl.repo_tpl(res[i]));
+      }
+      item.append(div);
+      window.cached.malicious = item;
+    })
+
+    return item;
+  },
+  cryptography(stream, data){
+    if(window.cached.cryptography){
+      console.log('loading cryptography cache')
+      return window.cached.cryptography;
+    }
+    let item = x('div');
+
+    utils.get(data.url, xdata.default.stream.fetch, function(err,res){
+      if(err){
+        utils.toast('danger', 'failed to load cryptography data');
+        return console.error(err);
+      }
+
+      let div = x('div', {class: 'row'});
+
+      for (let i = 0; i < res.length; i++) {
+        div.append(tpl.repo_tpl(res[i]));
+      }
+      item.append(div);
+      window.cached.cryptography = item;
+    })
+
+    return item;
+  },
   links(stream, data){
     if(window.cached.links){
       console.log('loading links cache')
