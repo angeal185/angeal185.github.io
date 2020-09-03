@@ -161,7 +161,8 @@ const tpl = {
               }
             }, 'Atom feed')
           )
-        )
+        ),
+        x('span', {class: 'icon-github bg-ico'})
       )
     )
   },
