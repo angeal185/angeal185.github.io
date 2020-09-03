@@ -34,7 +34,7 @@
       ]
   },{
       "title": "preferred languages",
-      "response": ["javascript", "nodejs", "python", "html", "css", "bash"]
+      "response": ["javascript", "nodejs","json","python", "html", "css", "bash"]
   },{
       "title": "essential languages",
       "response": ["javascript"]
@@ -55,9 +55,12 @@
     "response": "yes"
   },{
     "title": "Relocation status",
-    "response": "Higer salary expected"
+    "response": "Higer salary and relocation allowance expected"
   },{
     "title": "24/7 oncall",
+    "response": "Higer salary expected"
+  },{
+    "title": "Graveyard shift",
     "response": "Higer salary expected"
   },{
       "title": "Annual holidays",
@@ -74,5 +77,14 @@
   },{
       "title": "Work weekends",
       "response": "Higer salary expected"
+  },{
+      "title": "Willing to train/mentor co-workers",
+      "response": "yes"
+  },{
+      "title": "Willing to sign nondisclosure/confidentiality agreements",
+      "response": "yes"
+  },{
+      "title": "Prior kept nondisclosure/confidentiality agreements",
+      "response": "342"
   }]
 }
