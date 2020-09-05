@@ -28,8 +28,9 @@ document.onclick = function(){
 }
 
 window.rmaudio = function(){
-  window.rmaudio = null;
+  bg_audio.pause();
   bg_audio.remove();
+  window.rmaudio = null;
 }
 
 // app default functions

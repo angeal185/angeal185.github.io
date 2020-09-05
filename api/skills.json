@@ -15,13 +15,13 @@
     "lead-developer","full-stack-developer","back-end-developer","front-end-developer","cms-developer","mobile-app-developer","api-developer","desktop-app-developer","penetration-tester","reverse-engineer","browser-pluggin-developer","university-lecturer"
   ],
   "code_skills":[
-    "javascript","nodejs","json","html","css","python","xml","bash","shell","rust","php","smali","c++","c"
+    "javascript","nodejs","json","html","css","python","xml","bash","shell","rust","php","smali","WebAssembly","c++","c"
   ],
   "code_related_skills":[
     "stylus","pug","dust","handlebars","mustache","coffeescript","scss","less","nunjucks","jinja","django-tpl","twig","ejs","babel"
   ],
   "framework_skills":[
-    "framework-creation","electron","jquery","underscore","angular.js","socket.io","sails.js","total.js","hapi.js","koa.js","adonis.js","three.js","greensock","knockout.js","tween.js","django","web2py","jquerymobile","catberry","we.js","codeigniter","semantic","uikit","materialize","lodash","mean.io","express.js","mean.js","ember.js","meteor","derby.js","ionic","cordova","flask","jqueryui","react","reactive.js","polymer","vue.js","backbone","keystone","mithril","symfony","laravel","bootstrap","foundation","skeleton"
+    "framework-creation","electron","jquery","framework7","underscore","angular.js","socket.io","sails.js","total.js","hapi.js","koa.js","adonis.js","three.js","greensock","knockout.js","tween.js","django","web2py","jquerymobile","catberry","we.js","codeigniter","semantic","uikit","materialize","lodash","mean.io","express.js","mean.js","ember.js","meteor","derby.js","ionic","cordova","flask","jqueryui","react","reactive.js","polymer","vue.js","backbone","keystone","mithril","symfony","laravel","bootstrap","foundation","skeleton"
   ],
   "db_skills":[
     "mongodb","couchdb","couchbase","mysql","redis","sqlite","nosql embedded db","rethinkdb","postgresql", "arangodb","orientdb","leveldb","memcached","ravendb","pouchdb","rocksdb"
@@ -33,7 +33,7 @@
     "ubuntu","kali","suse","debian","fendora","mint","windows(all)","android","osx","ios","dos","freebsd","openbsd"
   ],
   "other_skills":[
-    "gulp","npm","composer","seo","aws","docker","digitalocean","azure","bitbucket","soap","wamp stack","lamp stack","devops","travis ci","grunt","bower","webpack","rest","heroku","bitnami","firebase","github","gitlab","stormpath","okta","mvc\/mvvm\/mvp","yeoman","slack","codacy"
+    "gulp","npm","composer","seo","aws","docker","digitalocean","azure","bitbucket","ws/wss","http/https/http2","soap","wamp stack","lamp stack","devops","travis ci","grunt","bower","webpack","rest","heroku","webGL","bitnami","firebase","github","gitlab","stormpath","okta","mvc\/mvvm\/mvp","yeoman","slack","codacy","openssl","webRTC"
   ],
   "api_skills":[
     "facebook api","twitter api","github api","pinterest api","paypal api","snipcart api","codepen api","disqus api","unsplash api","openweather api","tawk.to api","hackernews api","linkedin api","google api","youtube api","vimeo api","flickr api","amazon api","ebay api","instagram api","fixer.io api","reddit api","livefyre api","discourse api"
