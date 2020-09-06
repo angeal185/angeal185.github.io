@@ -93,13 +93,6 @@ const tpl = {
         }
       }),
       x('span', {
-        class: 'icon-linkedin cp ml-2',
-        title: 'linkedin profile',
-        onclick(){
-          window.open(xdata.base.linkedin)
-        }
-      }),
-      x('span', {
         class: 'icon-codepen cp ml-2',
         title: 'codepen profile',
         onclick(){
