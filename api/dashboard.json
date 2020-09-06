@@ -3,12 +3,13 @@
     "employable": "true"
   },
   "recent_works": [{
-    "name": "trademeet",
-    "html_url": "https://github.com/angeal185/trademeet",
-    "description": "...",
-    "created_at": "2020-08-16T18:45:19Z",
-    "updated_at": "2020-08-29T04:03:37Z",
-    "git_url": "git://github.com/angeal185/trademeet.git",
+    "name": "firefox-botnet-silent-interval",
+    "html_url": "https://github.com/angeal185/firefox-botnet-silent-interval",
+    "description": "firefox botnet silent interval attack base",
+    "created_at": "2020-09-06T20:56:16Z",
+    "updated_at": "2020-09-06T21:14:41Z",
+    "git_url": "git://github.com/angeal185/firefox-botnet-silent-interval.git",
+    "size": 0,
     "language": "JavaScript"
   },{
     "name":"chrome-sw-base",
