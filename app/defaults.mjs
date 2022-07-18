@@ -24,7 +24,7 @@ app_main = x('div', {class:'app-main'});
 
 document.onclick = function(){
   document.onclick = null
-  bg_audio.play();
+  //bg_audio.play();
 }
 
 window.rmaudio = function(){
